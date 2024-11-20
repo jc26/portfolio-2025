@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Design System",
+    "client": "Acme Corp",
+    "year": "2024",
+    "description": "Built a comprehensive design system for a large enterprise application."
+  },
+  {
+    "id": 2,
+    "title": "Mobile App",
+    "client": "Startup Inc",
+    "year": "2023",
+    "description": "Developed a cross-platform mobile application for task management."
+  },
+  {
+    "id": 3,
+    "title": "Website Redesign",
+    "client": "Tech Co",
+    "year": "2023",
+    "description": "Complete overhaul of company website with focus on accessibility."
+  }
+] 
