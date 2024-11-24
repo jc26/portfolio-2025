@@ -13,7 +13,9 @@ export function ContentRenderer({ block }: { block: ContentBlock }) {
       {block.type === 'text' && block.content.text && (
         <TextBlock 
           title={block.content.title} 
-          text={block.content.text} 
+          text={block.content.text}
+          buttonText={block.content.buttonText}
+          url={block.content.url}
         />
       )}
       {block.type === 'image' && block.content.mediaUrl && (
@@ -21,6 +23,7 @@ export function ContentRenderer({ block }: { block: ContentBlock }) {
           url={block.content.mediaUrl} 
           alt={block.content.mediaAlt || ''} 
           aspectRatio={block.content.aspectRatio}
+          width={block.width}
         />
       )}
       {block.type === 'video' && block.content.mediaUrl && (

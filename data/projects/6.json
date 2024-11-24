@@ -16,8 +16,7 @@
         "width": "wide",
         "content": {
             "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423602/nfl-hero_xtgoph.jpg",
-            "mediaAlt": "NFL+ brand identity",
-            "aspectRatio": "16/9"
+            "mediaAlt": "NFL+ brand identity"
         }
       },
       {
@@ -35,8 +34,95 @@
         "width": "wide",
         "content": {
             "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423961/Free_Citylight_Mockup_4-min_xkwzso.jpg",
-            "mediaAlt": "NFL+ brand identity",
-            "aspectRatio": "16/9"
+            "mediaAlt": "NFL+ brand identity"
+        }
+      },
+      {
+        "id": "block-1",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Live Amplified.",
+          "text": ["NFL+ means to live an amplified life. Whether you’re on the bus or at your kid’s soccer game, there’s no reason to miss the game. You have quick access to NFL’s official, centralized hub for all things football right at your fingertips.", 
+          "It also redefines the meaning of a live game. With reliable access to replays and a lack of tolerance for spoilers, live football takes on a new meaning with NFL+.", 
+          "Below are some early landing page explorations."]
+        }
+      },
+      {
+        "id": "exploration-1",
+        "type": "image",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-1-min_lccb9y.jpg",
+            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+        }
+      },
+      {
+        "id": "exploration-2",
+        "type": "image",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429990/exploration-2-min_tqtdvj.jpg",
+            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+        }
+      },
+      {
+        "id": "exploration-3",
+        "type": "image",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429991/exploration-3-min_quhve2.jpg",
+            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+        }
+      },
+      {
+        "id": "exploration-4",
+        "type": "image",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-4-min_lezx4s.jpg",
+            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+        }
+      },
+      {
+        "id": "block-2",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "We All Football.",
+          "text": ["There is an indisputable brand equity to the “NFL”. No other brand comes to mind when you think of American football. Hence, there’s no need to oversell something that simply needs no further explanation. The identity, copy, audio design, image treatment, type, and user experience should holistically reflect a minimalistic confidence."]
+        }
+      },
+      {
+        "id": "tv",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429989/ctv-mockup-min_ww9xdb.png",
+            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+        }
+      },
+      {
+        "id": "logo-lockup",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429987/3drender-branding-min_q4xxyl.jpg",
+            "mediaAlt": "NFL+ logo lockup"
+        }
+      },
+      {
+        "id": "mobile-mockups",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430086/mobile-min_wssl1f.jpg",
+            "mediaAlt": "NFL+ mobile mockups"
+        }
+      },
+      {
+        "id": "block-3",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Our approach is inspired by the confidence of the Swiss aesthetic, a careful balance between visual order and chaos.",
+          "text": ["With the wealth of flashing lights and 3D type that over-saturates sports imagery, we felt the space was in dire need of restraint. We sought to honor simplicity as a virtue. The NFL need not aggressively claim the football space, much less a streaming platform for all things football. The NFL is football."]
         }
       },
       {
@@ -45,6 +131,35 @@
         "width": "wide",
         "content": {
           "mediaUrl": "landing-page-recording.mp4"
+        }
+      },
+      {
+        "id": "alternate-full-page-mockup",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732446728/Landing_Page_B_-_Dark-min_hocicr.jpg",
+            "mediaAlt": "Alternate full page mockup for NFL+"
+        }
+      },
+      {
+        "id": "block-4",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "The Response to NFL+",
+          "text": ["The NFL was able to kick off the new season with a bang and confidently accommodate many new subscribers to NFL+."],
+          "buttonText": "Read more",
+          "url": "https://www.lavisual.com/work/nfl-plus"
+        }
+      },
+      {
+        "id": "good-response-twitter",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430087/social_response-min_pk1wgc.png",
+            "mediaAlt": "Alternate full page mockup for NFL+"
         }
       }
     ]

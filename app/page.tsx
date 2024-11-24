@@ -1,104 +1,45 @@
 'use client'
 
-import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Moon, Sun, Contact } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
-import { Button } from "@/components/ui/button"
 import projects from '@/data/projects.json'
-import { ContactDrawer } from '@/components/contact-drawer'
-import { SiteHeader } from '@/components/site-header'
-
-type Project = {
-  id: number
-  title: string
-  client: string
-  year: string
-  description: string
-}
 
 export default function Component() {
-  const [isDark, setIsDark] = useState(false)
-  const [contactOpen, setContactOpen] = useState(false)
-
-  const toggleDark = () => {
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle('dark')
-  }
-
   return (
-    <div className="min-h-screen transition-colors">
-      <SiteHeader />
-
-      <div className="fixed bottom-10 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-background/80 backdrop-blur-sm rounded-full border shadow-lg z-50">
-        <Button variant="default" size="lg" onClick={() => setContactOpen(true)} className="flex gap-2 relative z-50 rounded-full">
-          <Contact className="h-8 w-8" />
-          Contact
-        </Button>
-        <Button variant="secondary" size="lg" onClick={toggleDark} aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"} className="relative z-50 rounded-full">
-          {isDark ? <Sun className="h-8 w-8" /> : <Moon className="h-8 w-8" />}
-        </Button>
-      </div>
-
-      <ContactDrawer open={contactOpen} onOpenChange={setContactOpen} />
-
-      <div className="content-container">
-        <motion.div
-          key="list"
-          initial={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
-          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          exit={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
-          transition={{ duration: 0.6, ease: 'easeInOut' }}
-        >
-          <section className="mb-12">
-            <div className="mb-4">
-              <h1 className="text-base font-semibold">Jason Chang</h1>
-              <p className="text-base">Product Designer at <a href="https://procreate.com" target="_blank" rel="noopener noreferrer" className="">Procreate</a> and <a href="https://antiwork.com" target="_blank" rel="noopener noreferrer" className="">Antiwork</a></p>
-            </div>
-            <p className="text-base mt-4">
-              I craft human interfaces that conform necessary function into intuitive form.
-            </p>
-          </section>
-          
-          <section className="mb-12">
-            <h2 className="text-base font-semibold mb-6">Work</h2>
-            <div className="space-y-6">
-              {projects.map((project) => (
-                <div key={project.id}>
-                  <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-lg transition-colors">
-                    <div className="flex justify-between items-start">
-                      <h3 className="text-base font-medium">{project.title}</h3>
-                    </div>
-                    <p className="text-base text-muted-foreground">{project.year} • {project.client}</p>
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <footer className="space-y-6">
-            <p className="text-base">
-              Currently based in{' '}
-              <a href="https://maps.app.goo.gl/YwRzZKtWMD7SivreA" target="_blank" rel="noopener noreferrer">
-                🌏 Tasmania, Australia
-              </a>
-            </p>
-            <div>
-              <p className="text-base">
-                <a href="https://x.com/jchang" target="_blank" rel="noopener noreferrer">X</a>
-              </p>
-              <p className="text-base">
-                <a href="https://read.cv/jchang" target="_blank" rel="noopener noreferrer">Read.cv</a>
-              </p>
-              <p className="text-base">
-                <a href="https://linkedin.com/in/jchang" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              </p>
-            </div>
-            <p className="text-base">J/CHANG © 2024</p>
-          </footer>
-        </motion.div>
-      </div>
+    <div className="content-container">
+      <motion.div
+        key="list"
+        initial={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+        exit={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
+        transition={{ duration: 0.6, ease: 'easeInOut' }}
+      >
+        <section className="mb-16">
+          <div className="mb-4">
+            <h1 className="text-base font-semibold">Jason Chang</h1>
+            <p className="text-base font-medium">Product Designer at <a href="https://procreate.com" target="_blank" rel="noopener noreferrer">Procreate</a> and <a href="https://antiwork.com" target="_blank" rel="noopener noreferrer">Antiwork</a></p>
+          </div>
+          <p className="text-base mt-4">
+            I craft human interfaces that conform necessary function into intuitive form.
+          </p>
+        </section>
+        
+        <section className="mb-16">
+          <h2 className="text-base font-semibold mb-6">Work</h2>
+          <div className="space-y-6">
+            {projects.map((project) => (
+              <div key={project.id}>
+                <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-lg transition-colors">
+                  <div className="flex justify-between items-start">
+                    <h3 className="text-base font-medium">{project.title}</h3>
+                  </div>
+                  <p className="text-base text-muted-foreground">{project.year} • {project.client}</p>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+      </motion.div>
     </div>
   )
 }

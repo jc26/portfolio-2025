@@ -73,7 +73,7 @@ body {
   }
 }
 
-/* a[href^="http"] {
+a[href^="http"] {
   text-decoration-line: underline;
   text-decoration-color: hsl(var(--border));
   text-underline-offset: 4px;
@@ -82,7 +82,11 @@ body {
 
 a[href^="http"]:hover {
   text-decoration-color: hsl(var(--foreground));
-} */
+}
+
+.btn-no-underline {
+  text-decoration-line: none !important;
+}
 
 img {
   border-radius: 8px;

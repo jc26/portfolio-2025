@@ -15,16 +15,15 @@ export default function ProjectPage() {
 
   return (
     <div>
-      <SiteHeader />
       <motion.article
         key="detail"
-        initial={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
+        initial={{ opacity: 0, y: '4%', filter: 'blur(10px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-        exit={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
-        transition={{ duration: 0.6, ease: 'easeInOut' }}
+        exit={{ opacity: 0, y: '4%', filter: 'blur(10px)' }}
+        transition={{ duration: 0.8, ease: 'easeInOut' }}
         className="relative mt-14"
       >
-        <div className="content-container mb-16">
+        <div className="content-container mb-8 md:mb-16">
           <h1 className="text-base font-semibold mb-2">{project.heading}</h1>
           <p className="mb-4">{project.description}</p>
           {project.action && (
