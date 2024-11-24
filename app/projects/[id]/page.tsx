@@ -14,7 +14,7 @@ export default function ProjectPage() {
   if (!project) return null
 
   return (
-    <div className="p-4 md:p-8">
+    <div>
       <SiteHeader />
       <motion.article
         initial={{ opacity: 0 }}
@@ -22,7 +22,7 @@ export default function ProjectPage() {
         exit={{ opacity: 0 }}
         className="relative mt-14"
       >
-        <div className="max-w-2xl mx-auto mb-16">
+        <div className="content-container mb-16">
           <h1 className="text-base font-semibold mb-2">{project.heading}</h1>
           <p className="mb-4">{project.description}</p>
           {project.action && (

@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className={geistSans.variable}>
       <body className="antialiased bg-background text-foreground">
         <AnimatePresence mode="wait">
-          <div key={pathname}>
+          <div key={pathname} className="min-h-screen px-6 py-16 md:px-24 md:py-24">
             {children}
           </div>
         </AnimatePresence>

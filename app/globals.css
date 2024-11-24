@@ -87,3 +87,9 @@ a[href^="http"]:hover {
 img {
   border-radius: 8px;
 }
+
+@layer components {
+  .content-container {
+    @apply max-w-2xl mx-auto;
+  }
+}

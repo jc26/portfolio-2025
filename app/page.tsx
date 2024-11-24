@@ -7,7 +7,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 import { Button } from "@/components/ui/button"
 import projects from '@/data/projects.json'
-import articles from '@/data/articles.json'
 import { ContactDrawer } from '@/components/contact-drawer'
 import { SiteHeader } from '@/components/site-header'
 
@@ -38,7 +37,7 @@ export default function Component() {
   }
 
   return (
-    <div className={`min-h-screen p-4 md:p-8 transition-colors ${isDark ? 'dark' : ''}`}>
+    <div className="min-h-screen transition-colors">
       <SiteHeader />
 
       <div className="fixed bottom-10 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-background/80 backdrop-blur-sm rounded-full border shadow-lg z-50">
@@ -54,7 +53,7 @@ export default function Component() {
 
       <ContactDrawer open={contactOpen} onOpenChange={setContactOpen} />
 
-      <div className="max-w-2xl mx-auto">
+      <div className="content-container">
         <AnimatePresence mode="wait">
           {selectedItem ? (
             <motion.div
@@ -85,10 +84,10 @@ export default function Component() {
           ) : (
             <motion.div
               key="list"
-              initial={{ opacity: 0, y: '20%', filter: 'blur(10px)' }}
+              initial={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
               animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, y: '20%', filter: 'blur(10px)' }}
-              transition={{ duration: 0.7, ease: 'easeInOut' }}
+              exit={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
+              transition={{ duration: 0.6, ease: 'easeInOut' }}
             >
               <section className="mb-12">
                 <div className="mb-4">
@@ -117,22 +116,27 @@ export default function Component() {
                 </div>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-base mb-4">Writing</h2>
-                <div className="space-y-4">
-                  {articles.map((article) => (
-                    <div key={article.id}>
-                      <motion.div
-                        onClick={() => setSelectedItem(article)}
-                        className="cursor-pointer rounded-lg transition-colors"
-                      >
-                        <h3 className="text-base">{article.title}</h3>
-                        <p className="text-base text-muted-foreground">{article.year}</p>
-                      </motion.div>
-                    </div>
-                  ))}
+              <footer className="space-y-6">
+                <p className="text-base">
+                  Currently based in{' '}
+                  <a href="https://maps.app.goo.gl/YwRzZKtWMD7SivreA" target="_blank" rel="noopener noreferrer">
+                    🌏 Tasmania, Australia
+                  </a>
+                </p>
+                <div>
+                  <p className="text-base">
+                    <a href="https://x.com/jchang" target="_blank" rel="noopener noreferrer">X</a>
+                  </p>
+                  <p className="text-base">
+                    <a href="https://read.cv/jchang" target="_blank" rel="noopener noreferrer">Read.cv</a>
+                  </p>
+                  <p className="text-base">
+                    <a href="https://linkedin.com/in/jchang" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                  </p>
                 </div>
-              </section>
+                <p className="text-base">J/CHANG © 2024</p>
+              </footer>
+
             </motion.div>
           )}
         </AnimatePresence>

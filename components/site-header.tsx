@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function SiteHeader() {
   return (
-    <header className="max-w-2xl mx-auto mt-12 mb-6">
+    <header className="max-w-2xl mx-auto mb-6">
       <Link href="/" className="block">
         <svg 
           width="26" 
