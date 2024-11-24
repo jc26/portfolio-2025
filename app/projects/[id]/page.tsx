@@ -17,9 +17,11 @@ export default function ProjectPage() {
     <div>
       <SiteHeader />
       <motion.article
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        key="detail"
+        initial={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
+        animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+        exit={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
+        transition={{ duration: 0.6, ease: 'easeInOut' }}
         className="relative mt-14"
       >
         <div className="content-container mb-16">

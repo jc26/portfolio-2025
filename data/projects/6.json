@@ -11,22 +11,32 @@
     },
     "content": [
       {
-        "id": "intro",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Challenge",
-          "text": ["Paragraph 1...", "Paragraph 2..."]
-        }
-      },
-      {
         "id": "hero",
         "type": "image",
         "width": "wide",
         "content": {
-          "mediaUrl": "/projects/6/hero.jpg",
-          "mediaAlt": "NFL+ brand identity",
-          "aspectRatio": "16/9"
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423602/nfl-hero_xtgoph.jpg",
+            "mediaAlt": "NFL+ brand identity",
+            "aspectRatio": "16/9"
+        }
+      },
+      {
+        "id": "intro",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "A new identity for NFL+",
+          "text": ["Faced with a tight timeline, our team had to design a new identity for NFL+, translate the new identity to a pre-built landing page, and design a blue-sky landing page for post-launch."]
+        }
+      },
+      {
+        "id": "poster",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423961/Free_Citylight_Mockup_4-min_xkwzso.jpg",
+            "mediaAlt": "NFL+ brand identity",
+            "aspectRatio": "16/9"
         }
       },
       {
@@ -34,7 +44,7 @@
         "type": "video",
         "width": "wide",
         "content": {
-          "mediaUrl": "/projects/1/demo.mp4"
+          "mediaUrl": "landing-page-recording.mp4"
         }
       }
     ]

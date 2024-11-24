@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { ArrowLeft, Moon, Sun, Twitter, Github, Mail, Contact } from 'lucide-react'
+import { Moon, Sun, Contact } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import { Button } from "@/components/ui/button"
@@ -18,17 +18,8 @@ type Project = {
   description: string
 }
 
-type Article = {
-  id: number
-  title: string
-  year: string
-  isNew?: boolean
-  description: string
-}
-
 export default function Component() {
   const [isDark, setIsDark] = useState(false)
-  const [selectedItem, setSelectedItem] = useState<Project | Article | null>(null)
   const [contactOpen, setContactOpen] = useState(false)
 
   const toggleDark = () => {
@@ -45,7 +36,6 @@ export default function Component() {
           <Contact className="h-8 w-8" />
           Contact
         </Button>
-        {/* <div className="w-px bg-border" /> */}
         <Button variant="secondary" size="lg" onClick={toggleDark} aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"} className="relative z-50 rounded-full">
           {isDark ? <Sun className="h-8 w-8" /> : <Moon className="h-8 w-8" />}
         </Button>
@@ -54,92 +44,60 @@ export default function Component() {
       <ContactDrawer open={contactOpen} onOpenChange={setContactOpen} />
 
       <div className="content-container">
-        <AnimatePresence mode="wait">
-          {selectedItem ? (
-            <motion.div
-              key="detail"
-              initial={{ opacity: 0, x: '30%', filter: 'blur(10px)' }}
-              animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, x: '30%', filter: 'blur(10px)' }}
-              transition={{ duration: 0.7, ease: 'easeInOut' }}
-              className="mb-8"
-            >
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => setSelectedItem(null)}
-                className="mb-4"
-                aria-label="Go back"
-              >
-                <ArrowLeft className="h-5 w-5" />
-              </Button>
-              <h2 className="text-base mb-2">{selectedItem.title}</h2>
-              {'client' in selectedItem && (
-                <p className="text-base text-muted-foreground mb-4">
-                  {selectedItem.client} • {selectedItem.year}
-                </p>
-              )}
-              <p className="text-base text-muted-foreground">{selectedItem.description}</p>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="list"
-              initial={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
-              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
-              transition={{ duration: 0.6, ease: 'easeInOut' }}
-            >
-              <section className="mb-12">
-                <div className="mb-4">
-                  <h1 className="text-base font-semibold">Jason Chang</h1>
-                  <p className="text-base">Product Designer at <a href="https://procreate.com" target="_blank" rel="noopener noreferrer" className="">Procreate</a> and <a href="https://antiwork.com" target="_blank" rel="noopener noreferrer" className="">Antiwork</a></p>
-                </div>
-                <p className="text-base mt-4">
-                  I craft human interfaces that conform necessary function into intuitive form.
-                </p>
-              </section>
-              
-
-              <section className="mb-12">
-                <h2 className="text-base font-semibold mb-6">Work</h2>
-                <div className="space-y-6">
-                  {projects.map((project) => (
-                    <div key={project.id}>
-                      <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-lg transition-colors">
-                        <div className="flex justify-between items-start">
-                          <h3 className="text-base font-medium">{project.title}</h3>
-                        </div>
-                        <p className="text-base text-muted-foreground">{project.year} • {project.client}</p>
-                      </Link>
+        <motion.div
+          key="list"
+          initial={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
+          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          exit={{ opacity: 0, y: '10%', filter: 'blur(10px)' }}
+          transition={{ duration: 0.6, ease: 'easeInOut' }}
+        >
+          <section className="mb-12">
+            <div className="mb-4">
+              <h1 className="text-base font-semibold">Jason Chang</h1>
+              <p className="text-base">Product Designer at <a href="https://procreate.com" target="_blank" rel="noopener noreferrer" className="">Procreate</a> and <a href="https://antiwork.com" target="_blank" rel="noopener noreferrer" className="">Antiwork</a></p>
+            </div>
+            <p className="text-base mt-4">
+              I craft human interfaces that conform necessary function into intuitive form.
+            </p>
+          </section>
+          
+          <section className="mb-12">
+            <h2 className="text-base font-semibold mb-6">Work</h2>
+            <div className="space-y-6">
+              {projects.map((project) => (
+                <div key={project.id}>
+                  <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-lg transition-colors">
+                    <div className="flex justify-between items-start">
+                      <h3 className="text-base font-medium">{project.title}</h3>
                     </div>
-                  ))}
+                    <p className="text-base text-muted-foreground">{project.year} • {project.client}</p>
+                  </Link>
                 </div>
-              </section>
+              ))}
+            </div>
+          </section>
 
-              <footer className="space-y-6">
-                <p className="text-base">
-                  Currently based in{' '}
-                  <a href="https://maps.app.goo.gl/YwRzZKtWMD7SivreA" target="_blank" rel="noopener noreferrer">
-                    🌏 Tasmania, Australia
-                  </a>
-                </p>
-                <div>
-                  <p className="text-base">
-                    <a href="https://x.com/jchang" target="_blank" rel="noopener noreferrer">X</a>
-                  </p>
-                  <p className="text-base">
-                    <a href="https://read.cv/jchang" target="_blank" rel="noopener noreferrer">Read.cv</a>
-                  </p>
-                  <p className="text-base">
-                    <a href="https://linkedin.com/in/jchang" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                  </p>
-                </div>
-                <p className="text-base">J/CHANG © 2024</p>
-              </footer>
-
-            </motion.div>
-          )}
-        </AnimatePresence>
+          <footer className="space-y-6">
+            <p className="text-base">
+              Currently based in{' '}
+              <a href="https://maps.app.goo.gl/YwRzZKtWMD7SivreA" target="_blank" rel="noopener noreferrer">
+                🌏 Tasmania, Australia
+              </a>
+            </p>
+            <div>
+              <p className="text-base">
+                <a href="https://x.com/jchang" target="_blank" rel="noopener noreferrer">X</a>
+              </p>
+              <p className="text-base">
+                <a href="https://read.cv/jchang" target="_blank" rel="noopener noreferrer">Read.cv</a>
+              </p>
+              <p className="text-base">
+                <a href="https://linkedin.com/in/jchang" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </p>
+            </div>
+            <p className="text-base">J/CHANG © 2024</p>
+          </footer>
+        </motion.div>
       </div>
     </div>
   )
