@@ -1,0 +1,41 @@
+{
+    "id": 6,
+    "title": "Launching NFL+, a new streaming service",
+    "heading": "Paving the way for NFL+, a new streaming platform for all things football.",
+    "client": "NFL+",
+    "year": "2022",
+    "description": "Our team at La Visual refreshed the NFL+ brand identity for a 2022 launch with a strong visual identity centered around a Live Game mobile experience.",
+    "action": {
+      "text": "Visit site",
+      "url": "https://www.nfl.com/plus/learn-more"
+    },
+    "content": [
+      {
+        "id": "intro",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Challenge",
+          "text": ["Paragraph 1...", "Paragraph 2..."]
+        }
+      },
+      {
+        "id": "hero",
+        "type": "image",
+        "width": "wide",
+        "content": {
+          "mediaUrl": "/projects/6/hero.jpg",
+          "mediaAlt": "NFL+ brand identity",
+          "aspectRatio": "16/9"
+        }
+      },
+      {
+        "id": "demo",
+        "type": "video",
+        "width": "wide",
+        "content": {
+          "mediaUrl": "/projects/1/demo.mp4"
+        }
+      }
+    ]
+  } 

@@ -1,0 +1,41 @@
+{
+  "id": 1,
+  "title": "Publishing Gumroad's Design System",
+  "heading": "Gumroad Design System: Unifying Platform Experience",
+  "client": "Antiwork",
+  "year": "2024",
+  "description": "Led the design and development of Gumroad's first public design system...",
+  "action": {
+    "text": "View Design System",
+    "url": "https://design.gumroad.com"
+  },
+  "content": [
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Challenge",
+        "text": ["Paragraph 1...", "Paragraph 2..."]
+      }
+    },
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "/projects/6/hero.jpg",
+        "mediaAlt": "Gumroad Design System components",
+        "aspectRatio": "16/9"
+      }
+    },
+    {
+      "id": "demo",
+      "type": "video",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "/projects/1/demo.mp4"
+      }
+    }
+  ]
+} 

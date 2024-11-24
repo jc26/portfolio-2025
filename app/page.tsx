@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import projects from '@/data/projects.json'
 import articles from '@/data/articles.json'
 import { ContactDrawer } from '@/components/contact-drawer'
+import { SiteHeader } from '@/components/site-header'
 
 type Project = {
   id: number
@@ -38,6 +39,8 @@ export default function Component() {
 
   return (
     <div className={`min-h-screen p-4 md:p-8 transition-colors ${isDark ? 'dark' : ''}`}>
+      <SiteHeader />
+
       <div className="fixed bottom-10 left-1/2 -translate-x-1/2 flex gap-2 p-2 bg-background/80 backdrop-blur-sm rounded-full border shadow-lg z-50">
         <Button variant="default" size="lg" onClick={() => setContactOpen(true)} className="flex gap-2 relative z-50 rounded-full">
           <Contact className="h-8 w-8" />
@@ -51,21 +54,7 @@ export default function Component() {
 
       <ContactDrawer open={contactOpen} onOpenChange={setContactOpen} />
 
-      <div className="max-w-2xl mx-auto mt-12">
-        <header className="flex justify-between items-center mb-12">
-          <div>
-            <h1 className="text-base font-semibold">Jason Chang</h1>
-            <p className="text-base text-muted-foreground">Product Designer</p>
-          </div>
-        </header>
-
-        <p className="text-base mt-4">
-          I work with founders to design and ship timeless products.
-        </p>
-        <p className="text-base mb-12">
-          Currently at <a href="https://procreate.com" target="_blank" rel="noopener noreferrer" className="underline">Procreate</a> and <a href="https://antiwork.com" target="_blank" rel="noopener noreferrer" className="underline">Antiwork</a>, reinventing the way we create.
-        </p>
-
+      <div className="max-w-2xl mx-auto">
         <AnimatePresence mode="wait">
           {selectedItem ? (
             <motion.div
@@ -96,25 +85,33 @@ export default function Component() {
           ) : (
             <motion.div
               key="list"
-              initial={{ opacity: 0, x: '-30%', filter: 'blur(10px)' }}
-              animate={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
-              exit={{ opacity: 0, x: '-30%', filter: 'blur(10px)' }}
+              initial={{ opacity: 0, y: '20%', filter: 'blur(10px)' }}
+              animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+              exit={{ opacity: 0, y: '20%', filter: 'blur(10px)' }}
               transition={{ duration: 0.7, ease: 'easeInOut' }}
             >
               <section className="mb-12">
-                <h2 className="text-base mb-4">Projects</h2>
-                <div className="space-y-4">
+                <div className="mb-4">
+                  <h1 className="text-base font-semibold">Jason Chang</h1>
+                  <p className="text-base">Product Designer at <a href="https://procreate.com" target="_blank" rel="noopener noreferrer" className="">Procreate</a> and <a href="https://antiwork.com" target="_blank" rel="noopener noreferrer" className="">Antiwork</a></p>
+                </div>
+                <p className="text-base mt-4">
+                  I craft human interfaces that conform necessary function into intuitive form.
+                </p>
+              </section>
+              
+
+              <section className="mb-12">
+                <h2 className="text-base font-semibold mb-6">Work</h2>
+                <div className="space-y-6">
                   {projects.map((project) => (
                     <div key={project.id}>
-                      <motion.div
-                        onClick={() => setSelectedItem(project)}
-                        className="cursor-pointer rounded-lg transition-colors"
-                      >
+                      <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-lg transition-colors">
                         <div className="flex justify-between items-start">
-                          <h3 className="text-base">{project.title}</h3>
+                          <h3 className="text-base font-medium">{project.title}</h3>
                         </div>
-                        <p className="text-base text-muted-foreground">{project.client} • {project.year}</p>
-                      </motion.div>
+                        <p className="text-base text-muted-foreground">{project.year} • {project.client}</p>
+                      </Link>
                     </div>
                   ))}
                 </div>

@@ -4,6 +4,7 @@
 
 body {
   font-family: "Geist", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.04px;
 }
 
 @layer base {
@@ -16,7 +17,7 @@ body {
     --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
+    --secondary: 0 0% 93.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
@@ -70,4 +71,19 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* a[href^="http"] {
+  text-decoration-line: underline;
+  text-decoration-color: hsl(var(--border));
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+a[href^="http"]:hover {
+  text-decoration-color: hsl(var(--foreground));
+} */
+
+img {
+  border-radius: 8px;
 }

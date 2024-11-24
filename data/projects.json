@@ -1,23 +1,82 @@
 [
   {
     "id": 1,
-    "title": "Design System",
-    "client": "Acme Corp",
+    "title": "Publishing Gumroad's Design System",
+    "heading": "Gumroad Design System: Unifying Platform Experience",
+    "client": "Antiwork",
     "year": "2024",
-    "description": "Built a comprehensive design system for a large enterprise application."
+    "description": "Led the design and development of Gumroad's first public design system, establishing a cohesive visual language and component library for the platform."
   },
   {
     "id": 2,
-    "title": "Mobile App",
-    "client": "Startup Inc",
-    "year": "2023",
-    "description": "Developed a cross-platform mobile application for task management."
+    "title": "Redesigning Gumroad Discover",
+    "heading": "Reimagining Discovery on Gumroad's Marketplace",
+    "client": "Antiwork", 
+    "year": "2024",
+    "description": "Reimagined the discovery experience for Gumroad's marketplace, improving creator visibility and buyer engagement."
   },
   {
     "id": 3,
-    "title": "Website Redesign",
-    "client": "Tech Co",
+    "title": "\"AI is not our future\" Campaign",
+    "heading": "Championing Human Creativity in an AI World",
+    "client": "Procreate",
+    "year": "2024",
+    "description": "Spearheaded a global campaign highlighting the importance of human creativity in an AI-dominated landscape."
+  },
+  {
+    "id": 4,
+    "title": "Apple's May 2024 Keynote",
+    "heading": "Procreate × Apple: Spring 2024 Keynote",
+    "client": "Procreate",
+    "year": "2024",
+    "description": "Collaborated with Apple to showcase Procreate's latest innovations at their spring keynote event."
+  },
+  {
+    "id": 5,
+    "title": "Reveal and Launch of Procreate Dreams",
+    "heading": "Procreate Dreams: The Future of Digital Animation",
+    "client": "Procreate",
     "year": "2023",
-    "description": "Complete overhaul of company website with focus on accessibility."
+    "description": "Led the product design for Procreate Dreams, revolutionizing animation tools for digital artists."
+  },
+  {
+    "id": 6,
+    "title": "Launching NFL+, a new streaming service",
+    "heading": "Paving the way for NFL+, a new streaming platform for all things football.",
+    "client": "NFL+",
+    "year": "2022",
+    "description": "Our team at La Visual refreshed the NFL+ brand identity for a 2022 launch with a strong visual identity centered around a Live Game mobile experience."
+  },
+  {
+    "id": 7,
+    "title": "Designing a Web3 Wallet",
+    "heading": "Simplifying Crypto: A Human-First Web3 Wallet",
+    "client": "Independent",
+    "year": "2022",
+    "description": "Created a user-friendly cryptocurrency wallet focused on simplifying the Web3 experience."
+  },
+  {
+    "id": 8,
+    "title": "Civil Rights Data Collection",
+    "heading": "Modernizing Civil Rights Data Collection",
+    "client": "US Department of Education",
+    "year": "2022",
+    "description": "Redesigned the data collection interface for the Civil Rights Data Collection (CRDC) system."
+  },
+  {
+    "id": 9,
+    "title": "Education Data Submission",
+    "heading": "Transforming Education Data Management",
+    "client": "US Department of Education",
+    "year": "2022",
+    "description": "Streamlined the education data submission process for state and local education agencies."
+  },
+  {
+    "id": 10,
+    "title": "War of Art",
+    "heading": "War of Art: Conflict Through a Creative Lens",
+    "client": "Coursework",
+    "year": "2018",
+    "description": "An experimental digital exhibition exploring the intersection of conflict and creativity."
   }
-] 
+]
