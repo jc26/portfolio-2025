@@ -1,28 +1,132 @@
 {
   "id": 11,
   "title": "War of Art",
-  "heading": "War of Art: Conflict Through a Creative Lens",
-  "client": "Coursework",
-  "year": "2018",
-  "description": "An experimental digital exhibition exploring the intersection of conflict and creativity.",
+  "heading": "Overcoming your demons in The War of Art, an interactive journal made with AFrame",
+  "client": "Independent Project",
+  "year": "2018", 
+  "description": "Created an interactive VR experience to help creatives battle their inner demons of procrastination and self-doubt.",
+  "action": {
+    "text": "Experience site",
+    "url": "https://jc26.github.io/War_of_Art_AFrame/"
+  },
   "content": [
     {
       "id": "hero",
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "War of Art exhibition preview"
+        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534131/war_of_art_hero-min_xctiud.jpg",
+        "mediaAlt": "Screenshot of War of Art VR interface"
       }
     },
     {
       "id": "intro",
+      "type": "text", 
+      "width": "contained",
+      "content": {
+        "title": "Personifying your demons makes defeating them that much more palpable",
+        "text": ["[The War of Art](https://www.amazon.com/War-Art-Through-Creative-Battles/dp/0446691437), by Steven Pressfield, was the perfect catalyst for my adventure as a creative. I never found it helpful when others have told me to follow my passion or to believe in myself. We all certainly have great capacity for excellence, but also an equally great capacity for nihilism and the love of comfort. I wanted to help others battle these demons together."]
+      }
+    },
+    {
+      "id": "hero-2",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534104/jc26.github.io_War_of_Art_AFrame__qm0j8i.png",
+        "mediaAlt": "Screenshot of War of Art VR interface"
+      }
+    },
+    {
+      "id": "concept",
+      "type": "text",
+      "width": "contained", 
+      "content": {
+        "title": "We are daily surrounded by temptations that hinder our work",
+        "text": ["The book personifies procrastination, self-pity, and a host of other toxic attributes that prevent people from manifesting the work they need to do, attributes encompassed in an entity known as Resistance. Each chapter tackles an attribute of Resistance, defining it, explaining why we must fight it our own lives, and how we can fight it."]
+      }
+    },
+    {
+      "id": "third-person",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534103/render_1-min_s23o9g.jpg",
+            "alt": "Third person view of circle of enemies"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534104/render_3-min_ex9kdp.jpg",
+            "alt": "First person view of circle of enemies"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534117/prototype-camera-animation-resize_cyzrol.gif",
+            "alt": "Third person view of circle of enemies"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534107/render_8-min_fxhtci.jpg",
+            "alt": "Third person view of circle of enemies"
+          }
+        ]
+      }
+    },
+    {
+      "id": "design",
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Art in times of conflict",
-        "text": ["An exploration of how artists respond to and interpret conflict, examining the role of creativity in processing and documenting turbulent times."]
+        "title": "Visual identity of tension and contrast",
+        "text": ["The book is obviously an allusion to The Art of War, written by a Chinese military strategist, Sun Tzu. Viewing art in the mindset of a battle makes this allusion very fitting. Therefore my choices in designing the logotype, the colors, and the typeface pairings deliberately stress tension and high contrast."]
+      }
+    },
+    {
+      "id": "intro-video",
+      "type": "video",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "war-art-intro-min.mp4"
+      }
+    },
+    {
+      "id": "interaction",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "The VR Experience",
+        "text": ["Defeating Resistance one enemy at a time will darken the enemy’s spotlight and progressively reveal you’re surrounded not by obstacles, but by opportunity.",
+        "I prototyped in Cinema4D to see what my representations of Resistance in a VR environment would look like. The optimal experience is on desktop with a VR headset plugged in. Since there are links and buttons the user has to press, using the controls on the desktop is necessary. The site can be used without a headset as well."]
+      }
+    },
+    {
+      "id": "exploration-video",
+      "type": "video",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "war-art-exploration.mp4"
+      }
+    },
+    {
+      "id": "reflection",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "No creative pursuit is ever wasted",
+        "text": ["At the time, I was diving deep into the world of 3D design, fascinated by the vast potential of this new medium. This project will always have a special place in my heart as it was a seamless marriage between what I was learning in school and what I was learning for fun. The hope is that I would always revisit this site to remind myself what demons are going to die today."],
+        "buttonText": "Experience site",
+        "url": "https://jc26.github.io/War_of_Art_AFrame/"
+      }
+    },
+    {
+      "id": "credits",
+      "type": "text",
+      "width": "contained", 
+      "content": {
+        "title": "Tools",
+        "text": [
+          "HTML, CSS, Javascript, AFrame, Cinema 4D, Adobe Fuse"
+        ]
       }
     }
   ]
-} 
+}

@@ -4,23 +4,57 @@ import { CldImage } from 'next-cloudinary';
 import BackgroundVideo from 'next-video/background-video';
 import { TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent } from '@/types/project'
 
-export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => (
-  <div className="max-w-2xl mx-auto mb-8 md:mb-16">
-    {title && <h2 className="text-base font-semibold mb-2">{title}</h2>}
-    {Array.isArray(text) ? (
-      text.map((paragraph, i) => (
-        <p key={i} className="text-base mb-2 last:mb-0">{paragraph}</p>
-      ))
-    ) : (
-      <p className="text-base">{text}</p>
-    )}
-    {buttonText && url && (
-      <div className="mt-4">
-        <ButtonBlock text={buttonText} url={url} />
-      </div>
-    )}
-  </div>
-)
+export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => {
+  // Function to parse text and convert URLs to links
+  const renderText = (text: string) => {
+    // Match markdown-style links: [text](url)
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+    const parts = text.split(linkRegex)
+    
+    return parts.map((part, i) => {
+      // Every third part is a URL (based on regex capture groups)
+      if (i % 3 === 0) {
+        return part
+      }
+      // Link text
+      if (i % 3 === 1) {
+        const url = parts[i + 1]
+        return (
+          <a 
+            key={i} 
+            href={url}
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            {part}
+          </a>
+        )
+      }
+      // Skip URLs as they're handled with their text
+      return null
+    })
+  }
+
+  return (
+    <div className="max-w-2xl mx-auto mb-8 md:mb-16">
+      {title && <h2 className="text-base font-semibold mb-2">{title}</h2>}
+      {Array.isArray(text) ? (
+        text.map((paragraph, i) => (
+          <p key={i} className="text-base mb-2 last:mb-0">
+            {renderText(paragraph)}
+          </p>
+        ))
+      ) : (
+        <p className="text-base">{renderText(text)}</p>
+      )}
+      {buttonText && url && (
+        <div className="mt-4">
+          <ButtonBlock text={buttonText} url={url} />
+        </div>
+      )}
+    </div>
+  )
+}
 
 export const ImageBlock = ({ 
   mediaUrl, 
