@@ -1,28 +1,142 @@
 {
-  "id": 8,
-  "title": "Civil Rights Data Collection",
-  "heading": "Modernizing Civil Rights Data Collection",
-  "client": "US Department of Education",
-  "year": "2022",
-  "description": "Redesigned the data collection interface for the Civil Rights Data Collection (CRDC) system.",
-  "content": [
-    {
-      "id": "hero",
-      "type": "image",
-      "width": "wide",
-      "content": {
-        "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "CRDC system interface"
-      }
+    "id": 8,
+    "title": "Sagent Lending",
+    "heading": "Designing a loan assumption workflow for a mortgage loan servicing platform.",
+    "client": "Sagent Lending", 
+    "year": "2023",
+    "description": "Created a streamlined loan assumption workflow for banks and lenders who serve millions of consumers.",
+    "action": {
+      "text": "Try prototype",
+      "url": "https://www.figma.com/proto/XReaIvGg07uhbaQpBFeuUe/Sagent-Lending"
     },
-    {
-      "id": "intro",
-      "type": "text",
-      "width": "contained",
-      "content": {
-        "title": "Simplifying complex data collection",
-        "text": ["The Civil Rights Data Collection system needed a modern interface to help education agencies submit and manage their civil rights data more efficiently."]
+    "content": [
+      {
+        "id": "hero",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "placeholder-hero.jpg",
+            "mediaAlt": "Interface screenshots of Sagent Lending platform"
+        }
+      },
+      {
+        "id": "intro",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "The Borrower's Story",
+          "text": ["About 6 months ago, Andy Schultz passed away. He is the only borrower on the mortgage. In his will, he stated that he would like to leave his property to his son, Norman Schultz, his Successor in Interest (SSI). At the time of his passing, Andy was about 3 years into the mortgage and has a fixed rate of 3%. Norman chooses to explore a Loan Assumption, which in turn would add her as a borrower to the mortgage loan."]
+        }
+      },
+      {
+        "id": "persona",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Meet Alex Campbell, Customer Service Representative",
+          "text": ["\"Hi, my name is Alex. I graduated from college last year. I've been working as a CSR for about 6 months. It's not my dream job, it's stressful, and I'm on the phone all day. The saving grace is I feel like I'm helping people.\""]
+        }
+      },
+      {
+        "id": "empathy-map",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "placeholder-empathy-map.jpg",
+            "mediaAlt": "Empathy mapping for CSR"
+        }
+      },
+      {
+        "id": "challenge",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "The Challenge",
+          "text": ["It currently takes a lot of time and human verification of physical documents across different systems and communications channels."]
+        }
+      },
+      {
+        "id": "solution",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Solution Hypothesis",
+          "text": ["Automation and a centralized digital interface allows the system to provide all the correct information for a servicing operator to quickly verify an already-streamlined process."]
+        }
+      },
+      {
+        "id": "story-map",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "placeholder-story-map.jpg",
+            "mediaAlt": "Story mapping and brainstorming"
+        }
+      },
+      {
+        "id": "hicks-law",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Hick's Law: The time it takes to make a decision increases with the number and complexity of choices.",
+          "text": [
+            "The CSR's user experience should prioritize efficiency: the smallest margin for error for the shortest amount of time. In any given moment, the UI is designed to be clear what the next action is. Visual contrast and accents are allocated only for that specific area so that nothing else detracts from quick decision-making.",
+            "Instead of putting every detail on the screen, we put only one important task in front of the CSR at any given time and, in an unobtrusive way, try to give them a context for the ecosystem in which this task exists. This will help the CSR feel confident in answering any customer questions."
+          ]
+        }
+      },
+      {
+        "id": "productivity",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Incentivizing Efficiency and Customer Satisfaction",
+          "text": ["We want to always give feedback to the CSR on their productivity. They are able to compare their current productivity with their aggregate productivity (and their coworker's) on the basis of two metrics: customer satisfaction and time taken to complete tasks. They can also compare themselves with other CSR's performance so that they can always strive to be better than the average."]
+        }
+      },
+      {
+        "id": "analytics",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "placeholder-analytics.jpg",
+            "mediaAlt": "Analytics dashboard for CSR productivity"
+        }
+      },
+      {
+        "id": "key-features",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Key Features",
+          "text": [
+            "1. Collaborating with other CSR's on tasks to make sure there is one centralized source of truth.",
+            "2. Always giving a CSR context for their current task so that they can understand a given case as a whole.",
+            "3. Highlighting only relevant information in a document for the CSR so that they are not overwhelmed.", 
+            "4. On a call, a CSR knows exactly what they need to say. Besides required points, the conversation can still flow organically."
+          ]
+        }
+      },
+      {
+        "id": "branding",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Visual Identity",
+          "text": ["I designed the logo and the look-and-feel for our typical bank, Paladin Financial. The design is minimal and attempts to bring some earthy tones and rounded edges into an otherwise stale and monotonous space."]
+        }
+      },
+      {
+        "id": "credits",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Credits",
+          "text": [
+            "In collaboration with: Dain Kennison (Chief Creative Officer), Gary Smith (Creative Director), Scott Fowles (Senior Product Designer)",
+            "Client: Sagent Lending"
+          ]
+        }
       }
-    }
-  ]
-} 
+    ]
+  }

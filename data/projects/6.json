@@ -15,7 +15,7 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423602/nfl-hero_xtgoph.jpg",
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531244/nfl-hero-min_mqpn57.jpg",
             "mediaAlt": "NFL+ brand identity"
         }
       },
@@ -143,6 +143,17 @@
         }
       },
       {
+        "id": "block-4",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "The Response to NFL+",
+          "text": ["The NFL was able to kick off the new season with a bang and confidently accommodate many new subscribers to NFL+."],
+          "buttonText": "Read more",
+          "url": "https://www.lavisual.com/work/nfl-plus"
+        }
+      },
+      {
         "id": "good-response-twitter",
         "type": "image",
         "width": "wide",
@@ -152,14 +163,15 @@
         }
       },
       {
-        "id": "block-4",
+        "id": "credits",
         "type": "text",
-        "width": "contained",
+        "width": "contained", 
         "content": {
-          "title": "The Response to NFL+",
-          "text": ["The NFL was able to kick off the new season with a bang and confidently accommodate many new subscribers to NFL+."],
-          "buttonText": "Read more",
-          "url": "https://www.lavisual.com/work/nfl-plus"
+          "title": "Credits",
+          "text": [
+            "In collaboration with: Braven Greenelsh (CEO), Dain Kennison (CCO), Matt Romo (Senior Brand Designer), Jamie Kwok (Graphic Designer), David Romo (Graphic and Motion Designer), Joshua Cranmer (Motion Designer), Cindy Peglow (Project Manager), Christine Dane (Digital Producer), Jonathan Brooks (Copywriter)",  
+            "Client: NFL"
+          ]
         }
       }
     ]

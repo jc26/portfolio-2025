@@ -1,18 +1,22 @@
 {
   "id": 10,
-  "title": "War of Art",
-  "heading": "War of Art: Conflict Through a Creative Lens",
-  "client": "Coursework",
-  "year": "2018",
-  "description": "An experimental digital exhibition exploring the intersection of conflict and creativity.",
+  "title": "Education Data Submission",
+  "heading": "Redesigning data submission for the US Department of Education",
+  "client": "AEM Corp & US Department of Education", 
+  "year": "2022",
+  "description": "Streamlined the education data submission process for state and local education agencies through automated quality checks and real-time progress tracking.",
+  "action": {
+    "text": "Try prototype",
+    "url": "https://www.figma.com/proto/eICAPgz3Kh2t86S25MPPPP/EDFacts-UI?page-id=755%3A5923&type=design&node-id=989-14986&viewport=-3405%2C-359%2C0.37&scaling=scale-down&starting-point-node-id=989%3A14986&show-proto-sidebar=1"
+  },
   "content": [
     {
       "id": "hero",
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "War of Art exhibition preview"
+        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531764/ed-facts-grid-2.0-min_zf9q1k.jpg",
+        "mediaAlt": "ED facts dashboard mockup"
       }
     },
     {
@@ -20,9 +24,158 @@
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Art in times of conflict",
-        "text": ["An exploration of how artists respond to and interpret conflict, examining the role of creativity in processing and documenting turbulent times."]
+        "title": "Background",
+        "text": [
+          "Since educational funding is given to states and territories by the government, they must all consistently report their data to the Department of Education (DoE). Every year, schools (SCH) across the US have to submit 77 different files spread out over 10 due dates. The files go first to the Local Education Agency (LEA) and then to the State Education Agency (SEA), and then lastly, to the federal government."
+        ]
+      }
+    },
+    {
+      "id": "old-process-1",
+      "type": "image",
+      "content": {
+        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531761/previous_flow-min_n6hkfk.jpg",
+        "mediaAlt": "ED facts dashboard mockup"
+      }
+    },
+    {
+      "id": "old-process-2",
+      "type": "image",
+      "content": {
+        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531763/old_UI-min_hzgbfi.jpg",
+        "mediaAlt": "ED facts dashboard mockup"
+      }
+    },
+    {
+      "id": "problem-1",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Creating an Unnecessary Feedback Loop",
+        "text": [
+          "As the DoE receives the files, the files must abide by a spreadsheet of 1000+ business rules, but they are usually full of errors or abnormalities that don't have an explanation."
+        ]
+      }
+    },
+    {
+      "id": "journey-map",
+      "type": "image",
+      "width": "wide", 
+      "content": {
+        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531761/User_Journey_Map_1-min_lwvgi1.jpg",
+        "mediaAlt": "Current user journey for data submission"
+      }
+    },
+    {
+        "id": "problem-2",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "text": [
+            "The files then need to be propagated back down to the state level and further if necessary in order to rectify all errors. The submitting-and-resubmitting process wastes a lot of time and energy for each entity in the chain."
+          ]
+        }
+      },
+    {
+      "id": "empathy-map",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732532328/User_Journey_Map_2-min_itucjy.jpg",
+        "mediaAlt": "User journey map with empathy mapping throughout each stage of the process"
+      }
+    },
+    {
+      "id": "solution",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "The Modernization of Existing Systems",
+        "text": [
+          "After conducting many user and stakeholder interviews, our goal was to develop a user interface and experience that prompts administrators to submit really robust data by the due date and eliminate the unnecessary feedback loop.",
+          "The whole premise of this project is the modernization of existing systems. We're creating a means for the states to be empowered, but also accountable for the quality of their data by the due date."
+        ]
+      }
+    },
+    {
+      "id": "story-map",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531762/Story_Map-min_jxzkip.jpg",
+        "mediaAlt": "Story map for ED facts project"
+      }
+    },
+    {
+      "id": "data-quality-checks",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Save the DoE time and energy by using fully automated data quality checks.",
+        "text": [
+          "Rather than the DoE wasting time going through every single piece of data, we focused on automating this process to limit the feedback loop and enable state administrators to tackle error resolution on their own."
+        ]
+      }
+    },
+    {
+      "id": "ed-facts-dashboard",
+      "type": "video",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "ed-facts-dashboard.mp4"
+      }
+    },
+    {
+      "id": "jump-between-apps",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Remove the need to jump in between applications",
+        "text": [
+          "We incorporated all business rules and tips on how to fix errors into the interface so that users can keep their workflow lean and don't have to match their errors within a massive spreadsheet."
+        ]
+      }
+    },
+    {
+      "id": "data-notes",
+      "type": "video",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "ed-facts-data-note.mp4"
+      }
+    },
+    {
+      "id": "progress",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Show real-time progress to the user so that there is an end in sight.",
+        "text": [
+          "It's hard to be motivated for a task when you can't predict how long it'll take and what incremental progress you can make. The UI we designed ensures that you are always able to see an aggregate progress and also smaller progress bars for subsets of errors."
+        ],
+        "buttonText": "Try prototype",
+        "url": "https://www.figma.com/proto/eICAPgz3Kh2t86S25MPPPP/EDFacts-UI?page-id=755%3A5923&type=design&node-id=989-14986&viewport=-3405%2C-359%2C0.37&scaling=scale-down&starting-point-node-id=989%3A14986&show-proto-sidebar=1"
+      }
+    },
+    {
+      "id": "submit-video", 
+      "type": "video",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "ed-facts-progress-submit.mp4"
+      }
+    },
+    {
+      "id": "credits",
+      "type": "text",
+      "width": "contained", 
+      "content": {
+        "title": "Credits",
+        "text": [
+          "In collaboration with: Dain Kennison (Chief Creative Officer), Scott Fowles (Senior Product Designer), Luz Mercado (Product Designer), Yang Hong (Product Designer), Cindy Peglow (Project Manager)",  
+          "Client: AEM Corp & the US Department of Education"
+        ]
       }
     }
   ]
-} 
+}

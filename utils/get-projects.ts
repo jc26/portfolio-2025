@@ -1,7 +1,7 @@
 import { Project } from '@/types/project'
 
 // List of active project IDs
-const PROJECT_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const PROJECT_IDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 export async function getProjects(): Promise<Project[]> {
   const projects = await Promise.all(

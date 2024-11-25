@@ -1,10 +1,10 @@
 {
   "id": 9,
-  "title": "Education Data Submission",
-  "heading": "Transforming Education Data Management",
+  "title": "Civil Rights Data Collection",
+  "heading": "Modernizing Civil Rights Data Collection",
   "client": "US Department of Education",
   "year": "2022",
-  "description": "Streamlined the education data submission process for state and local education agencies.",
+  "description": "Redesigned the data collection interface for the Civil Rights Data Collection (CRDC) system.",
   "content": [
     {
       "id": "hero",
@@ -12,7 +12,7 @@
       "width": "wide",
       "content": {
         "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "Education data submission interface"
+        "mediaAlt": "CRDC system interface"
       }
     },
     {
@@ -20,8 +20,8 @@
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Streamlining data collection at scale",
-        "text": ["State and local education agencies needed a more efficient way to submit and manage their education data, reducing errors and improving compliance."]
+        "title": "Simplifying complex data collection",
+        "text": ["The Civil Rights Data Collection system needed a modern interface to help education agencies submit and manage their civil rights data more efficiently."]
       }
     }
   ]

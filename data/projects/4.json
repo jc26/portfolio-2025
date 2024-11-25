@@ -20,8 +20,30 @@
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Showcasing creativity at scale",
-        "text": ["Working closely with Apple's keynote team to demonstrate Procreate's latest features and their impact on digital artists worldwide."]
+        "title": "Presenting at Apple's Spring Event",
+        "text": [
+          "Collaborated with Apple's keynote team to showcase Procreate's latest features and innovations, demonstrating how our tools are pushing the boundaries of digital creativity.",
+          "The presentation needed to balance technical capability with artistic inspiration, showing both the power of our tools and the magic they enable in the hands of artists."
+        ]
+      }
+    },
+    {
+      "id": "keynote-demo",
+      "type": "video",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "keynote-recording.mp4"
+      }
+    },
+    {
+      "id": "conclusion",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Impact",
+        "text": [
+          "The keynote presentation successfully demonstrated Procreate's commitment to innovation and our ongoing partnership with Apple in advancing digital art tools."
+        ]
       }
     }
   ]

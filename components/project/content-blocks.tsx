@@ -149,16 +149,18 @@ export const VideoBlock = ({
   return (
     <div 
       ref={containerRef}
-      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto mb-8 md:mb-16 rounded-lg overflow-hidden`}
+      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto mb-8 md:mb-16 rounded-lg overflow-hidden border border-gray-100`}
     >
-      <BackgroundVideo 
-        src={video}
-        autoPlay={false}
-        loop
-        muted
-        playsInline
-        className="w-full rounded-md"
-      />
+      <div className="[&_.next-video-container]:!aspect-auto [&_video]:!h-auto">
+        <BackgroundVideo 
+          src={video}
+          autoPlay={false}
+          loop
+          muted
+          playsInline
+          className="w-full rounded-md"
+        />
+      </div>
     </div>
   )
 }
