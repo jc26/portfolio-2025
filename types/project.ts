@@ -11,6 +11,7 @@ export type ImageBlockContent = {
     url: string
     alt: string
   }>
+  // TODO: Make the naming consistent
   mediaUrl?: string  // fallback for single image
   mediaAlt?: string  // fallback for single image
   aspectRatio?: string
@@ -18,6 +19,7 @@ export type ImageBlockContent = {
 
 export type VideoBlockContent = {
   mediaUrl: string
+  isPortrait?: boolean
 }
 
 export type ButtonBlockContent = {

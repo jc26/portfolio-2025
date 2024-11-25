@@ -2,10 +2,21 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-// TODO: remove projects.json and replace with projects/ folder
-import projects from '@/data/projects.json'
+import { useEffect, useState } from 'react'
+import type { Project } from '@/types/project'
 
 export default function Component() {
+  const [projects, setProjects] = useState<Project[]>([])
+
+  useEffect(() => {
+    const loadProjects = async () => {
+      const { getProjects } = await import('@/utils/get-projects')
+      const projectData = await getProjects()
+      setProjects(projectData)
+    }
+    loadProjects()
+  }, [])
+
   return (
     <div className="content-container">
       <motion.div
@@ -34,7 +45,7 @@ export default function Component() {
                   <div className="flex justify-between items-start">
                     <h3 className="text-base font-medium">{project.title}</h3>
                   </div>
-                  <p className="text-base text-muted-foreground">{project.year} • {project.client}</p>
+                  <p className="text-base text-muted-foreground">{project.client} • {project.year}</p>
                 </Link>
               </div>
             ))}

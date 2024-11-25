@@ -1,6 +1,7 @@
+import { useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { CldImage } from 'next-cloudinary';
-import Video from 'next-video';
+import BackgroundVideo from 'next-video/background-video';
 import { TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent } from '@/types/project'
 
 export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => (
@@ -32,13 +33,12 @@ export const ImageBlock = ({
   const imageHeight = aspectRatio !== 'auto' ? 
     imageWidth * (1 / Number(aspectRatio.split('/')[1]) * Number(aspectRatio.split('/')[0])) : 
     imageWidth * 0.5625 // default 16:9
-  console.log('images', images)
+    
   // If multiple images are provided
   if (images && images.length > 0) {
     const gridWidth = width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'
     const isOddCount = images.length % 2 !== 0
     const lastImageIndex = images.length - 1
-    console.log('more than 1 image', images)
 
     return (
       <div className={`${gridWidth} mx-auto w-full mb-8 md:mb-16`}>
@@ -86,19 +86,78 @@ export const ImageBlock = ({
   )
 }
 
-export const VideoBlock = ({ mediaUrl }: VideoBlockContent) => {
-  // Dynamically import video based on url path
+export const VideoBlock = ({ 
+  mediaUrl,
+  width = 'wide',
+  isPortrait = false
+}: VideoBlockContent & { width?: string }) => {
+  const containerRef = useRef<HTMLDivElement>(null)
   const video = require(`@/videos/${mediaUrl}`)
+  const maxWidth = width === 'wide' ? '280px' : '240px'
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const videoElement = entry.target.querySelector('video')
+          if (!videoElement) return
+
+          if (entry.isIntersecting) {
+            videoElement.play()
+          }
+        })
+      },
+      {
+        root: null,
+        threshold: 0.5
+      }
+    )
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+
+  if (isPortrait) {
+    return (
+      <div className="w-full bg-[#efefef] rounded-lg">
+        <div 
+          ref={containerRef}
+          className="max-w-[1000px] mx-auto mb-8 md:mb-16 rounded-lg overflow-hidden"
+        >
+          <div className="relative w-full flex justify-center py-8">
+            <div style={{ maxWidth }} className="[&_.next-video-container]:!aspect-auto">
+              <BackgroundVideo 
+                src={video}
+                autoPlay={false}
+                loop
+                muted
+                playsInline
+                className="w-full rounded-md"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
-    <div className="max-w-[1000px] mx-auto mb-8 md:mb-16 rounded-lg overflow-hidden">
-      <Video 
+    <div 
+      ref={containerRef}
+      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto mb-8 md:mb-16 rounded-lg overflow-hidden`}
+    >
+      <BackgroundVideo 
         src={video}
-        controls={false}
-        autoPlay
+        autoPlay={false}
         loop
-        playsInline
         muted
+        playsInline
+        className="w-full rounded-md"
       />
     </div>
   )

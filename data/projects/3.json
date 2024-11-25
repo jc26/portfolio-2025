@@ -1,0 +1,28 @@
+{
+  "id": 3,
+  "title": "\"AI is not our future\" Campaign",
+  "heading": "Championing Human Creativity in an AI World",
+  "client": "Procreate",
+  "year": "2024",
+  "description": "Spearheaded a global campaign highlighting the importance of human creativity in an AI-dominated landscape.",
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "placeholder-hero.jpg",
+        "mediaAlt": "AI is not our future campaign hero image"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Taking a stand for human creativity",
+        "text": ["In a world increasingly dominated by AI-generated content, Procreate needed to make a bold statement about the irreplaceable value of human creativity."]
+      }
+    }
+  ]
+} 

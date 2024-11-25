@@ -1,0 +1,28 @@
+{
+  "id": 10,
+  "title": "War of Art",
+  "heading": "War of Art: Conflict Through a Creative Lens",
+  "client": "Coursework",
+  "year": "2018",
+  "description": "An experimental digital exhibition exploring the intersection of conflict and creativity.",
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "placeholder-hero.jpg",
+        "mediaAlt": "War of Art exhibition preview"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Art in times of conflict",
+        "text": ["An exploration of how artists respond to and interpret conflict, examining the role of creativity in processing and documenting turbulent times."]
+      }
+    }
+  ]
+} 

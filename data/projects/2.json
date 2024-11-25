@@ -1,0 +1,28 @@
+{
+  "id": 2,
+  "title": "Redesigning Gumroad Discover",
+  "heading": "Reimagining Discovery on Gumroad's Marketplace",
+  "client": "Antiwork",
+  "year": "2024",
+  "description": "Reimagined the discovery experience for Gumroad's marketplace, improving creator visibility and buyer engagement.",
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "placeholder-hero.jpg",
+        "mediaAlt": "Gumroad Discover redesign hero image"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Improving discovery for creators and buyers",
+        "text": ["The Gumroad marketplace needed a fresh approach to help creators reach their audience and help buyers find the digital products they need."]
+      }
+    }
+  ]
+} 

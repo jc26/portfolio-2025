@@ -1,0 +1,28 @@
+{
+  "id": 9,
+  "title": "Education Data Submission",
+  "heading": "Transforming Education Data Management",
+  "client": "US Department of Education",
+  "year": "2022",
+  "description": "Streamlined the education data submission process for state and local education agencies.",
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "placeholder-hero.jpg",
+        "mediaAlt": "Education data submission interface"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Streamlining data collection at scale",
+        "text": ["State and local education agencies needed a more efficient way to submit and manage their education data, reducing errors and improving compliance."]
+      }
+    }
+  ]
+} 

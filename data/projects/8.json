@@ -1,0 +1,28 @@
+{
+  "id": 8,
+  "title": "Civil Rights Data Collection",
+  "heading": "Modernizing Civil Rights Data Collection",
+  "client": "US Department of Education",
+  "year": "2022",
+  "description": "Redesigned the data collection interface for the Civil Rights Data Collection (CRDC) system.",
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "placeholder-hero.jpg",
+        "mediaAlt": "CRDC system interface"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Simplifying complex data collection",
+        "text": ["The Civil Rights Data Collection system needed a modern interface to help education agencies submit and manage their civil rights data more efficiently."]
+      }
+    }
+  ]
+} 

@@ -1,13 +1,13 @@
 {
     "id": 7,
     "title": "Designing a Web3 Wallet",
-    "heading": "A crypto wallet app for an open-minded Web2 user.",
-    "client": "Independent",
+    "heading": "Designing a crypto wallet app for an open-minded Web2 user.",
+    "client": "Independent", 
     "year": "2023",
-    "description": "Our team at La Visual refreshed the NFL+ brand identity for a 2022 launch with a strong visual identity centered around a Live Game mobile experience.",
+    "description": "Created a user-friendly cryptocurrency wallet focused on simplifying the Web3 experience for traditional finance users.",
     "action": {
       "text": "Try prototype",
-      "url": "https://www.figma.com/proto/XReaIvGg07uhbaQpBFeuUe/Crypto-Wallet-App?page-id=33%3A70964&type=design&node-id=79-2315&viewport=522%2C-542%2C0.34&scaling=scale-down&starting-point-node-id=308%3A7132"
+      "url": "https://www.figma.com/proto/XReaIvGg07uhbaQpBFeuUe/Crypto-Wallet-App"
     },
     "content": [
       {
@@ -16,171 +16,208 @@
         "width": "wide",
         "content": {
             "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg",
-            "mediaAlt": "NFL+ brand identity"
+            "mediaAlt": "iPhone mockup for home screen of crypto app"
         }
       },
       {
-        "id": "hero-2",
+        "id": "intro-1",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "What would be most helpful and relevant to a novice in crypto investing?",
+          "text": ["My goal was to design an app with minimal barriers of entry and a low learning curve so that a novice wouldn't feel overwhelmed. I placed my user approximately here on this spectrum."]
+        }
+      },
+      {
+        "id": "novice-expert",
+        "type": "image",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505194/persona-spectrum_bbbnwn.png",
+            "mediaAlt": "iPhone mockup for home screen of crypto app"
+        }
+      },
+      {
+        "id": "intro-2",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "text": ["They've invested in stocks before but never in crypto, so they recognize the jargon but there will still be actions or words used that will be very new to them."]
+        }
+      },
+      {
+        "id": "competitor-research",
         "type": "image",
         "width": "wide",
         "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505206/market-research_zphdky.jpg",
+            "mediaAlt": "Competitor research of other crypto apps"
+        }
+      },
+      {
+        "id": "research-1",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Finding my own positioning among the competition.",
+          "text": ["I did tons of research primarily to evaluate two directions: what tried-and-true designs look like in current applications in the crypto space and what blue-sky designs other people have made that may look good but may not be experientially practical."]
+        }
+      },
+      {
+        "id": "design-graph",
+        "type": "image",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505173/expertise-graph-2.0-min_vmppar.png",
+            "mediaAlt": "Graph of design learning curve"
+        }
+      },
+      {
+        "id": "research-2",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "text": ["The above graph is referenced from Morgane Peng's Config 2022 talk. In my evaluation of every design I came across, each of them fell somewhere along this graph, finding the sweet spot for their own users depending on the expertise of their target audience, or some designs fell into the danger zones. I had to place my own user on this graph and walk the fine line between over-simplification and over-complication."]
+        }
+      },
+      {
+        "id": "visual-inspiration",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/dribbble-research_sswhan.jpg",
+            "mediaAlt": "Dribbble research and general visual inspiration"
+        }
+      },
+      {
+        "id": "ideation",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Getting all the bad ideas out first.",
+          "text": ["After my research, it was time to consolidate my ideas. I need to get as many ideas out as possible, good or bad. There are certain features I'm sure that my users will want, such as seeing the value of their portfolio first on the home screen. Other design decisions can be experimented with."]
+        }
+      },
+      {
+        "id": "sketches",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/lofi-sketches_wvo5vf.jpg",
+            "mediaAlt": "Lofi sketches of crypto wallet app"
+        }
+      },
+      {
+        "id": "cognitive-load",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Reduce cognitive load. Remember Hick's Law.",
+          "text": ["I'm not designing for a power user. I need to keep extraneous actions hidden and strip the UI down to the most essential actions and information. Visual contrast should be restrained and reserved for what's most important.",
+          "For example, on the home screen, it is clear that the first action to do is click the plus button. In addition, primary actions tend to be towards the bottom of the screen making it easier for the thumb to reach."]
+        }
+      },
+      {
+        "id": "home-demo",
+        "type": "video",
+        "width": "contained",
+        "content": {
+          "mediaUrl": "splash-and-home.mp4",
+          "isPortrait": true
+        }
+      },
+      {
+        "id": "swipe-reveal",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "The Swipe-to-Reveal Action",
+          "text": ["Instead of opening the buy/sell menu and then choosing the coin of interest, the swipe-to-reveal interaction is a very efficient way to input a specific parameter into a primary action with only a single swipe—in this case buying and selling crypto coins."]
+        }
+      },
+      {
+        "id": "swipe-reveal-interaction",
+        "type": "image",
+        "content": {
           "images": [
             {
-              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg",
-              "alt": "Image 1 description"
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505278/mail_app-min_pt60v3.jpg",
+              "alt": "Mail app swipe-to-reveal interaction"
             },
             {
-              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505120/crypto-grid-img_yjfbru.jpg",
-              "alt": "Image 2 description"
-            },
-            {
-              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/lofi-sketches_wvo5vf.jpg",
-              "alt": "Image 3 description"
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505278/spotify-min_czhtwq.jpg",
+              "alt": "Spotify swipe-to-reveal interaction"
             }
           ]
         }
       },
       {
-        "id": "intro",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "A new identity for NFL+",
-          "text": ["Faced with a tight timeline, our team had to design a new identity for NFL+, translate the new identity to a pre-built landing page, and design a blue-sky landing page for post-launch."]
-        }
-      },
-      {
-        "id": "poster",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423961/Free_Citylight_Mockup_4-min_xkwzso.jpg",
-            "mediaAlt": "NFL+ brand identity"
-        }
-      },
-      {
-        "id": "block-1",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Live Amplified.",
-          "text": ["NFL+ means to live an amplified life. Whether you’re on the bus or at your kid’s soccer game, there’s no reason to miss the game. You have quick access to NFL’s official, centralized hub for all things football right at your fingertips.", 
-          "It also redefines the meaning of a live game. With reliable access to replays and a lack of tolerance for spoilers, live football takes on a new meaning with NFL+.", 
-          "Below are some early landing page explorations."]
-        }
-      },
-      {
-        "id": "exploration-1",
-        "type": "image",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-1-min_lccb9y.jpg",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-2",
-        "type": "image",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429990/exploration-2-min_tqtdvj.jpg",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-3",
-        "type": "image",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429991/exploration-3-min_quhve2.jpg",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-4",
-        "type": "image",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-4-min_lezx4s.jpg",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "block-2",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "We All Football.",
-          "text": ["There is an indisputable brand equity to the “NFL”. No other brand comes to mind when you think of American football. Hence, there’s no need to oversell something that simply needs no further explanation. The identity, copy, audio design, image treatment, type, and user experience should holistically reflect a minimalistic confidence."]
-        }
-      },
-      {
-        "id": "tv",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429989/ctv-mockup-min_ww9xdb.png",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "logo-lockup",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429987/3drender-branding-min_q4xxyl.jpg",
-            "mediaAlt": "NFL+ logo lockup"
-        }
-      },
-      {
-        "id": "mobile-mockups",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430086/mobile-min_wssl1f.jpg",
-            "mediaAlt": "NFL+ mobile mockups"
-        }
-      },
-      {
-        "id": "demo",
+        "id": "buy-coin",
         "type": "video",
-        "width": "wide",
+        "width": "contained",
         "content": {
-          "mediaUrl": "landing-page-recording.mp4"
+          "mediaUrl": "buy-coin.mp4",
+          "isPortrait": true
         }
       },
       {
-        "id": "block-3",
+        "id": "resources-1",
         "type": "text",
         "width": "contained",
         "content": {
-          "title": "Our approach is inspired by the confidence of the Swiss aesthetic, a careful balance between visual order and chaos.",
-          "text": ["With the wealth of flashing lights and 3D type that over-saturates sports imagery, we felt the space was in dire need of restraint. We sought to honor simplicity as a virtue. The NFL need not aggressively claim the football space, much less a streaming platform for all things football. The NFL is football."]
+          "title": "Integrating Resources into Real-Time Charts",
+          "text": ["A novice would likely find insights from crypto experts or news outlets very helpful. Having spoken to experienced crypto and stock investors, they usually do a ton of research across many different channels before buying or selling an asset."]
         }
       },
       {
-        "id": "alternate-full-page-mockup",
+        "id": "resources-image",
         "type": "image",
-        "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732446728/Landing_Page_B_-_Dark-min_hocicr.jpg",
-            "mediaAlt": "Alternate full page mockup for NFL+"
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505279/soundcloud_fo91c7.jpg",
+            "mediaAlt": "Soundcloud music player"
         }
       },
       {
-        "id": "good-response-twitter",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430087/social_response-min_pk1wgc.png",
-            "mediaAlt": "Alternate full page mockup for NFL+"
-        }
-      },
-      {
-        "id": "block-4",
+        "id": "resources-2",
         "type": "text",
         "width": "contained",
         "content": {
-          "title": "The Response to NFL+",
-          "text": ["The NFL was able to kick off the new season with a bang and confidently accommodate many new subscribers to NFL+."],
-          "buttonText": "Read more",
-          "url": "https://www.lavisual.com/work/nfl-plus"
+          "text": ["Taking some inspiration from Soundcloud's music player, it made sense to incorporate resources and insights in context to better assist purchasing or selling decisions."]
+        }
+      },
+      {
+        "id": "token-detail",
+        "type": "video",
+        "width": "contained",
+        "content": {
+          "mediaUrl": "token-detail.mp4",
+          "isPortrait": true
+        }
+      },
+      {
+        "id": "function-over-form",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Function over form",
+          "text": ["Despite the visual disorder in the colors of the coins, it would benefit the user a lot to visually differentiate the coins they are not used to. In a new, unfamiliar space, monochromatic coins would be very confusing."]
+        }
+      },
+      {
+        "id": "profile-demo",
+        "type": "video",
+        "width": "contained",
+        "content": {
+          "mediaUrl": "profile.mp4",
+          "isPortrait": true
+        }
+      },
+      {
+        "id": "conclusion",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Less is more",
+          "text": ["As of 2023, crypto is all the rage. It's uncertain whether this will last, but either way this was a great chance to dip my feet into a saturated space and consolidate all the product design principles and processes that I've picked up throughout many projects.",
+          "Much of good design is low-hanging fruit. It doesn't take a complex ground-breaking algorithm but requires only restraint and discipline to put yourselves in the user's shoes and strip an experience down to only the most essential elements."]
         }
       }
     ]

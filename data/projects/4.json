@@ -1,0 +1,28 @@
+{
+  "id": 4,
+  "title": "Apple's May 2024 Keynote",
+  "heading": "Procreate × Apple: Spring 2024 Keynote",
+  "client": "Procreate",
+  "year": "2024",
+  "description": "Collaborated with Apple to showcase Procreate's latest innovations at their spring keynote event.",
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "placeholder-hero.jpg",
+        "mediaAlt": "Apple keynote presentation featuring Procreate"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Showcasing creativity at scale",
+        "text": ["Working closely with Apple's keynote team to demonstrate Procreate's latest features and their impact on digital artists worldwide."]
+      }
+    }
+  ]
+} 

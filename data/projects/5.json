@@ -1,0 +1,28 @@
+{
+  "id": 5,
+  "title": "Reveal and Launch of Procreate Dreams",
+  "heading": "Procreate Dreams: The Future of Digital Animation",
+  "client": "Procreate",
+  "year": "2023",
+  "description": "Led the product design for Procreate Dreams, revolutionizing animation tools for digital artists.",
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "mediaUrl": "placeholder-hero.jpg",
+        "mediaAlt": "Procreate Dreams interface showcase"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Reimagining animation for everyone",
+        "text": ["Procreate Dreams represents a new chapter in digital animation, making professional-grade tools accessible to artists of all skill levels."]
+      }
+    }
+  ]
+} 

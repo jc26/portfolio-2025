@@ -2,15 +2,24 @@
 
 import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { SiteHeader } from '@/components/site-header'
+import { useEffect, useState } from 'react'
 import { ContentRenderer } from '@/components/project/content-renderer'
 import { ButtonBlock } from '@/components/project/content-blocks'
 import type { Project } from '@/types/project'
 
 export default function ProjectPage() {
   const { id } = useParams()
-  const project = require(`@/data/projects/${id}.json`) as Project
-  
+  const [project, setProject] = useState<Project | null>(null)
+
+  useEffect(() => {
+    const loadProject = async () => {
+      const { getProject } = await import('@/utils/get-projects')
+      const projectData = await getProject(id as string)
+      setProject(projectData)
+    }
+    loadProject()
+  }, [id])
+
   if (!project) return null
 
   return (
