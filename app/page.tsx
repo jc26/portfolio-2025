@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+// TODO: remove projects.json and replace with projects/ folder
 import projects from '@/data/projects.json'
 
 export default function Component() {

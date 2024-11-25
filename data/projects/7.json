@@ -1,13 +1,13 @@
 {
-    "id": 6,
-    "title": "Launching NFL+, a new streaming service",
-    "heading": "Paving the way for NFL+, a new streaming platform for all things football.",
-    "client": "NFL+",
-    "year": "2022",
+    "id": 7,
+    "title": "Designing a Web3 Wallet",
+    "heading": "A crypto wallet app for an open-minded Web2 user.",
+    "client": "Independent",
+    "year": "2023",
     "description": "Our team at La Visual refreshed the NFL+ brand identity for a 2022 launch with a strong visual identity centered around a Live Game mobile experience.",
     "action": {
-      "text": "Visit site",
-      "url": "https://www.nfl.com/plus/learn-more"
+      "text": "Try prototype",
+      "url": "https://www.figma.com/proto/XReaIvGg07uhbaQpBFeuUe/Crypto-Wallet-App?page-id=33%3A70964&type=design&node-id=79-2315&viewport=522%2C-542%2C0.34&scaling=scale-down&starting-point-node-id=308%3A7132"
     },
     "content": [
       {
@@ -15,8 +15,29 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423602/nfl-hero_xtgoph.jpg",
+            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg",
             "mediaAlt": "NFL+ brand identity"
+        }
+      },
+      {
+        "id": "hero-2",
+        "type": "image",
+        "width": "wide",
+        "content": {
+          "images": [
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg",
+              "alt": "Image 1 description"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505120/crypto-grid-img_yjfbru.jpg",
+              "alt": "Image 2 description"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/lofi-sketches_wvo5vf.jpg",
+              "alt": "Image 3 description"
+            }
+          ]
         }
       },
       {

@@ -1,17 +1,36 @@
+// Block-specific types
+export type TextBlockContent = {
+  title?: string
+  text: string | string[]
+  buttonText?: string
+  url?: string
+}
+
+export type ImageBlockContent = {
+  images?: Array<{
+    url: string
+    alt: string
+  }>
+  mediaUrl?: string  // fallback for single image
+  mediaAlt?: string  // fallback for single image
+  aspectRatio?: string
+}
+
+export type VideoBlockContent = {
+  mediaUrl: string
+}
+
+export type ButtonBlockContent = {
+  text: string
+  url: string
+}
+
+// Main content block type
 export type ContentBlock = {
   id: string
   type: 'text' | 'image' | 'video' | 'button' | 'quote' | 'gallery'
   width: 'contained' | 'full' | 'wide'
-  content: {
-    title?: string
-    text?: string | string[]
-    url?: string
-    buttonText?: string
-    mediaUrl?: string
-    mediaAlt?: string
-    aspectRatio?: string
-    gallery?: string[]
-  }
+  content: TextBlockContent | ImageBlockContent | VideoBlockContent | ButtonBlockContent
 }
 
 export type Project = {
@@ -21,9 +40,6 @@ export type Project = {
   client: string
   year: string
   description: string
-  action?: {
-    text: string
-    url: string
-  }
+  action?: ButtonBlockContent
   content: ContentBlock[]
 } 

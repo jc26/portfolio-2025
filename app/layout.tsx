@@ -24,11 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={geistSans.variable}>
       <body className="antialiased bg-background text-foreground">
-        <AnimatePresence mode="wait">
-          <div key={pathname} className="min-h-screen px-6 pt-16 pb-28 md:px-24 md:pt-24 md:pb-32">
+        <AnimatePresence 
+          mode="wait" 
+          initial={false}
+        >
+          <div key={pathname} className="min-h-screen px-6 pt-16 pb-28 md:px-24 md:pt-32 md:pb-32">
             <SiteHeader />
             {children}
-            {pathname === '/' && <SiteFooter />}
+            <SiteFooter />
           </div>
         </AnimatePresence>
         <FloatingButtons />

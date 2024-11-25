@@ -1,5 +1,5 @@
 import { TextBlock, ImageBlock, VideoBlock, ButtonBlock } from './content-blocks'
-import type { ContentBlock } from '@/types/project'
+import type { ContentBlock, TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent } from '@/types/project'
 
 export function ContentRenderer({ block }: { block: ContentBlock }) {
   const widthClass = {
@@ -10,33 +10,38 @@ export function ContentRenderer({ block }: { block: ContentBlock }) {
 
   return (
     <div className={`${widthClass} mx-auto`}>
-      {block.type === 'text' && block.content.text && (
-        <TextBlock 
-          title={block.content.title} 
-          text={block.content.text}
-          buttonText={block.content.buttonText}
-          url={block.content.url}
-        />
+      {block.type === 'text' && isTextContent(block.content) && (
+        <TextBlock {...block.content} />
       )}
-      {block.type === 'image' && block.content.mediaUrl && (
+      {block.type === 'image' && isImageContent(block.content) && (
         <ImageBlock 
-          url={block.content.mediaUrl} 
-          alt={block.content.mediaAlt || ''} 
-          aspectRatio={block.content.aspectRatio}
+          {...block.content}
           width={block.width}
         />
       )}
-      {block.type === 'video' && block.content.mediaUrl && (
-        <VideoBlock 
-          url={block.content.mediaUrl} 
-        />
+      {block.type === 'video' && isVideoContent(block.content) && (
+        <VideoBlock {...block.content} />
       )}
-      {block.type === 'button' && block.content.buttonText && block.content.url && (
-        <ButtonBlock 
-          text={block.content.buttonText} 
-          url={block.content.url}
-        />
+      {block.type === 'button' && isButtonContent(block.content) && (
+        <ButtonBlock {...block.content} />
       )}
     </div>
   )
+}
+
+// Type guards to ensure content type safety
+function isTextContent(content: any): content is TextBlockContent {
+  return 'text' in content
+}
+
+function isImageContent(content: any): content is ImageBlockContent {
+  return 'mediaUrl' in content || 'images' in content
+}
+
+function isVideoContent(content: any): content is VideoBlockContent {
+  return 'mediaUrl' in content
+}
+
+function isButtonContent(content: any): content is ButtonBlockContent {
+  return 'text' in content && 'url' in content
 } 
