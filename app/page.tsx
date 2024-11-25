@@ -41,7 +41,7 @@ export default function Component() {
           <div className="space-y-6">
             {projects.map((project) => (
               <div key={project.id}>
-                <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-lg transition-colors">
+                <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-xl transition-colors">
                   <div className="flex justify-between items-start">
                     <h3 className="text-base font-medium">{project.title}</h3>
                   </div>

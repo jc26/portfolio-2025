@@ -57,17 +57,11 @@ export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) =>
 }
 
 export const ImageBlock = ({ 
-  mediaUrl, 
-  mediaAlt, 
-  aspectRatio = 'auto', 
+  url, 
+  alt, 
   width,
   images
 }: ImageBlockContent & { width: string }) => {
-  const imageWidth = width === 'wide' ? 1000 : 672
-  const imageHeight = aspectRatio !== 'auto' ? 
-    imageWidth * (1 / Number(aspectRatio.split('/')[1]) * Number(aspectRatio.split('/')[0])) : 
-    imageWidth * 0.5625 // default 16:9
-    
   // If multiple images are provided
   if (images && images.length > 0) {
     const gridWidth = width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'
@@ -87,9 +81,10 @@ export const ImageBlock = ({
               <CldImage 
                 src={image.url}
                 alt={image.alt}
-                width={isOddCount && index === lastImageIndex ? imageWidth : imageWidth / 2}
-                height={Math.round(imageHeight)}
-                className="w-full"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto"
               />
             </div>
           ))}
@@ -98,35 +93,30 @@ export const ImageBlock = ({
     )
   }
 
-  // Single image fallback
-  return width === 'wide' ? (
-    <div className="max-w-[1000px] mx-auto w-full mb-8 md:mb-16">
+  // Single image
+  const containerWidth = width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'
+  
+  return (
+    <div className={`${containerWidth} mx-auto w-full mb-8 md:mb-16`}>
       <CldImage 
-        src={mediaUrl!}
-        alt={mediaAlt!}
-        width={imageWidth}
-        height={Math.round(imageHeight)}
-      />
-    </div>
-  ) : (
-    <div className="max-w-2xl mx-auto w-full mb-8 md:mb-16">
-      <CldImage 
-        src={mediaUrl!}
-        alt={mediaAlt!}
-        width={imageWidth}
-        height={Math.round(imageHeight)}
+        src={url!}
+        alt={alt!}
+        width={0}
+        height={0}
+        sizes="100vw"
+        className="w-full h-auto"
       />
     </div>
   )
 }
 
 export const VideoBlock = ({ 
-  mediaUrl,
+  url,
   width = 'wide',
   isPortrait = false
 }: VideoBlockContent & { width?: string }) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const video = require(`@/videos/${mediaUrl}`)
+  const video = require(`@/videos/${url}`)
   const maxWidth = width === 'wide' ? '280px' : '240px'
 
   useEffect(() => {
@@ -158,10 +148,10 @@ export const VideoBlock = ({
 
   if (isPortrait) {
     return (
-      <div className="w-full bg-[#efefef] rounded-lg">
+      <div className="w-full bg-[#efefef] rounded-xl">
         <div 
           ref={containerRef}
-          className="max-w-[1000px] mx-auto mb-8 md:mb-16 rounded-lg overflow-hidden"
+          className="max-w-[1000px] mx-auto mb-8 md:mb-16 rounded-xl overflow-hidden"
         >
           <div className="relative w-full flex justify-center py-8">
             <div style={{ maxWidth }} className="[&_.next-video-container]:!aspect-auto">
@@ -183,7 +173,7 @@ export const VideoBlock = ({
   return (
     <div 
       ref={containerRef}
-      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto mb-8 md:mb-16 rounded-lg overflow-hidden border border-gray-100`}
+      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto mb-8 md:mb-16 rounded-xl overflow-hidden border border-gray-100`}
     >
       <div className="[&_.next-video-container]:!aspect-auto [&_video]:!h-auto">
         <BackgroundVideo 

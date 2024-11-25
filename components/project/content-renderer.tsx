@@ -35,11 +35,11 @@ function isTextContent(content: any): content is TextBlockContent {
 }
 
 function isImageContent(content: any): content is ImageBlockContent {
-  return 'mediaUrl' in content || 'images' in content
+  return 'url' in content || 'images' in content
 }
 
 function isVideoContent(content: any): content is VideoBlockContent {
-  return 'mediaUrl' in content
+  return 'url' in content
 }
 
 function isButtonContent(content: any): content is ButtonBlockContent {

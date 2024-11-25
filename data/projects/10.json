@@ -2,7 +2,7 @@
   "id": 10,
   "title": "Education Data Submission",
   "heading": "Redesigning data submission for the US Department of Education",
-  "client": "AEM Corp & US Department of Education", 
+  "client": "US Department of Education & AEM Corp", 
   "year": "2022",
   "description": "Streamlined the education data submission process for state and local education agencies through automated quality checks and real-time progress tracking.",
   "action": {
@@ -15,8 +15,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531764/ed-facts-grid-2.0-min_zf9q1k.jpg",
-        "mediaAlt": "ED facts dashboard mockup"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531764/ed-facts-grid-2.0-min_zf9q1k.jpg",
+        "alt": "ED facts dashboard mockup"
       }
     },
     {
@@ -34,16 +34,16 @@
       "id": "old-process-1",
       "type": "image",
       "content": {
-        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531761/previous_flow-min_n6hkfk.jpg",
-        "mediaAlt": "ED facts dashboard mockup"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531761/previous_flow-min_n6hkfk.jpg",
+        "alt": "ED facts dashboard mockup"
       }
     },
     {
       "id": "old-process-2",
       "type": "image",
       "content": {
-        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531763/old_UI-min_hzgbfi.jpg",
-        "mediaAlt": "ED facts dashboard mockup"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531763/old_UI-min_hzgbfi.jpg",
+        "alt": "ED facts dashboard mockup"
       }
     },
     {
@@ -62,8 +62,8 @@
       "type": "image",
       "width": "wide", 
       "content": {
-        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531761/User_Journey_Map_1-min_lwvgi1.jpg",
-        "mediaAlt": "Current user journey for data submission"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531761/User_Journey_Map_1-min_lwvgi1.jpg",
+        "alt": "Current user journey for data submission"
       }
     },
     {
@@ -81,8 +81,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732532328/User_Journey_Map_2-min_itucjy.jpg",
-        "mediaAlt": "User journey map with empathy mapping throughout each stage of the process"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732532328/User_Journey_Map_2-min_itucjy.jpg",
+        "alt": "User journey map with empathy mapping throughout each stage of the process"
       }
     },
     {
@@ -102,8 +102,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531762/Story_Map-min_jxzkip.jpg",
-        "mediaAlt": "Story map for ED facts project"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531762/Story_Map-min_jxzkip.jpg",
+        "alt": "Story map for ED facts project"
       }
     },
     {
@@ -122,7 +122,7 @@
       "type": "video",
       "width": "wide",
       "content": {
-        "mediaUrl": "ed-facts-dashboard.mp4"
+        "url": "ed-facts-dashboard.mp4"
       }
     },
     {
@@ -141,7 +141,7 @@
       "type": "video",
       "width": "wide",
       "content": {
-        "mediaUrl": "ed-facts-data-note.mp4"
+        "url": "ed-facts-data-note.mp4"
       }
     },
     {
@@ -162,7 +162,7 @@
       "type": "video",
       "width": "wide",
       "content": {
-        "mediaUrl": "ed-facts-progress-submit.mp4"
+        "url": "ed-facts-progress-submit.mp4"
       }
     },
     {

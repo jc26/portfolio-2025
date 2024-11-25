@@ -11,8 +11,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "Procreate Dreams interface showcase"
+        "url": "placeholder-hero.jpg",
+        "alt": "Procreate Dreams interface showcase"
       }
     },
     {

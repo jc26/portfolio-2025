@@ -11,8 +11,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "AI is not our future campaign hero image"
+        "url": "placeholder-hero.jpg",
+        "alt": "AI is not our future campaign hero image"
       }
     },
     {

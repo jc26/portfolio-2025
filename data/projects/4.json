@@ -11,8 +11,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "Apple keynote presentation featuring Procreate"
+        "url": "placeholder-hero.jpg",
+        "alt": "Apple keynote presentation featuring Procreate"
       }
     },
     {
@@ -32,7 +32,7 @@
       "type": "video",
       "width": "wide",
       "content": {
-        "mediaUrl": "keynote-recording.mp4"
+        "url": "keynote-recording.mp4"
       }
     },
     {

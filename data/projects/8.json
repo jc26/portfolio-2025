@@ -15,8 +15,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "placeholder-hero.jpg",
-            "mediaAlt": "Interface screenshots of Sagent Lending platform"
+            "url": "placeholder-hero.jpg",
+            "alt": "Interface screenshots of Sagent Lending platform"
         }
       },
       {
@@ -42,8 +42,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "placeholder-empathy-map.jpg",
-            "mediaAlt": "Empathy mapping for CSR"
+            "url": "placeholder-empathy-map.jpg",
+            "alt": "Empathy mapping for CSR"
         }
       },
       {
@@ -69,8 +69,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "placeholder-story-map.jpg",
-            "mediaAlt": "Story mapping and brainstorming"
+            "url": "placeholder-story-map.jpg",
+            "alt": "Story mapping and brainstorming"
         }
       },
       {
@@ -99,8 +99,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "placeholder-analytics.jpg",
-            "mediaAlt": "Analytics dashboard for CSR productivity"
+            "url": "placeholder-analytics.jpg",
+            "alt": "Analytics dashboard for CSR productivity"
         }
       },
       {

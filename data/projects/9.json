@@ -11,8 +11,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "CRDC system interface"
+        "url": "placeholder-hero.jpg",
+        "alt": "CRDC system interface"
       }
     },
     {

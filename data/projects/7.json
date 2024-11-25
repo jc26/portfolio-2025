@@ -15,8 +15,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg",
-            "mediaAlt": "iPhone mockup for home screen of crypto app"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg",
+            "alt": "iPhone mockup for home screen of crypto app"
         }
       },
       {
@@ -32,8 +32,8 @@
         "id": "novice-expert",
         "type": "image",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505194/persona-spectrum_bbbnwn.png",
-            "mediaAlt": "iPhone mockup for home screen of crypto app"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505194/persona-spectrum_bbbnwn.png",
+            "alt": "iPhone mockup for home screen of crypto app"
         }
       },
       {
@@ -49,8 +49,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505206/market-research_zphdky.jpg",
-            "mediaAlt": "Competitor research of other crypto apps"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505206/market-research_zphdky.jpg",
+            "alt": "Competitor research of other crypto apps"
         }
       },
       {
@@ -66,8 +66,8 @@
         "id": "design-graph",
         "type": "image",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505173/expertise-graph-2.0-min_vmppar.png",
-            "mediaAlt": "Graph of design learning curve"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505173/expertise-graph-2.0-min_vmppar.png",
+            "alt": "Graph of design learning curve"
         }
       },
       {
@@ -83,8 +83,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/dribbble-research_sswhan.jpg",
-            "mediaAlt": "Dribbble research and general visual inspiration"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/dribbble-research_sswhan.jpg",
+            "alt": "Dribbble research and general visual inspiration"
         }
       },
       {
@@ -101,8 +101,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/lofi-sketches_wvo5vf.jpg",
-            "mediaAlt": "Lofi sketches of crypto wallet app"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/lofi-sketches_wvo5vf.jpg",
+            "alt": "Lofi sketches of crypto wallet app"
         }
       },
       {
@@ -120,7 +120,7 @@
         "type": "video",
         "width": "contained",
         "content": {
-          "mediaUrl": "splash-and-home.mp4",
+          "url": "splash-and-home.mp4",
           "isPortrait": true
         }
       },
@@ -154,7 +154,7 @@
         "type": "video",
         "width": "contained",
         "content": {
-          "mediaUrl": "buy-coin.mp4",
+          "url": "buy-coin.mp4",
           "isPortrait": true
         }
       },
@@ -171,8 +171,8 @@
         "id": "resources-image",
         "type": "image",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505279/soundcloud_fo91c7.jpg",
-            "mediaAlt": "Soundcloud music player"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505279/soundcloud_fo91c7.jpg",
+            "alt": "Soundcloud music player"
         }
       },
       {
@@ -188,7 +188,7 @@
         "type": "video",
         "width": "contained",
         "content": {
-          "mediaUrl": "token-detail.mp4",
+          "url": "token-detail.mp4",
           "isPortrait": true
         }
       },
@@ -206,7 +206,7 @@
         "type": "video",
         "width": "contained",
         "content": {
-          "mediaUrl": "profile.mp4",
+          "url": "profile.mp4",
           "isPortrait": true
         }
       },

@@ -15,8 +15,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534131/war_of_art_hero-min_xctiud.jpg",
-        "mediaAlt": "Screenshot of War of Art VR interface"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534131/war_of_art_hero-min_xctiud.jpg",
+        "alt": "Screenshot of War of Art VR interface"
       }
     },
     {
@@ -33,8 +33,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534104/jc26.github.io_War_of_Art_AFrame__qm0j8i.png",
-        "mediaAlt": "Screenshot of War of Art VR interface"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732534104/jc26.github.io_War_of_Art_AFrame__qm0j8i.png",
+        "alt": "Screenshot of War of Art VR interface"
       }
     },
     {
@@ -85,7 +85,7 @@
       "type": "video",
       "width": "wide",
       "content": {
-        "mediaUrl": "war-art-intro-min.mp4"
+        "url": "war-art-intro-min.mp4"
       }
     },
     {
@@ -103,7 +103,7 @@
       "type": "video",
       "width": "wide",
       "content": {
-        "mediaUrl": "war-art-exploration.mp4"
+        "url": "war-art-exploration.mp4"
       }
     },
     {

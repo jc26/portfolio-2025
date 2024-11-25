@@ -11,14 +11,13 @@ export type ImageBlockContent = {
     url: string
     alt: string
   }>
-  // TODO: Make the naming consistent
-  mediaUrl?: string  // fallback for single image
-  mediaAlt?: string  // fallback for single image
+  url?: string  // fallback for single image
+  alt?: string  // fallback for single image
   aspectRatio?: string
 }
 
 export type VideoBlockContent = {
-  mediaUrl: string
+  url: string
   isPortrait?: boolean
 }
 

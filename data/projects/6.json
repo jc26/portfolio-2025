@@ -15,8 +15,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531244/nfl-hero-min_mqpn57.jpg",
-            "mediaAlt": "NFL+ brand identity"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531244/nfl-hero-min_mqpn57.jpg",
+            "alt": "NFL+ brand identity"
         }
       },
       {
@@ -33,8 +33,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423961/Free_Citylight_Mockup_4-min_xkwzso.jpg",
-            "mediaAlt": "NFL+ brand identity"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423961/Free_Citylight_Mockup_4-min_xkwzso.jpg",
+            "alt": "NFL+ brand identity"
         }
       },
       {
@@ -52,32 +52,32 @@
         "id": "exploration-1",
         "type": "image",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-1-min_lccb9y.jpg",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-1-min_lccb9y.jpg",
+            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
         }
       },
       {
         "id": "exploration-2",
         "type": "image",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429990/exploration-2-min_tqtdvj.jpg",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429990/exploration-2-min_tqtdvj.jpg",
+            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
         }
       },
       {
         "id": "exploration-3",
         "type": "image",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429991/exploration-3-min_quhve2.jpg",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429991/exploration-3-min_quhve2.jpg",
+            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
         }
       },
       {
         "id": "exploration-4",
         "type": "image",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-4-min_lezx4s.jpg",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-4-min_lezx4s.jpg",
+            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
         }
       },
       {
@@ -94,8 +94,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429989/ctv-mockup-min_ww9xdb.png",
-            "mediaAlt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429989/ctv-mockup-min_ww9xdb.png",
+            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
         }
       },
       {
@@ -103,8 +103,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429987/3drender-branding-min_q4xxyl.jpg",
-            "mediaAlt": "NFL+ logo lockup"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429987/3drender-branding-min_q4xxyl.jpg",
+            "alt": "NFL+ logo lockup"
         }
       },
       {
@@ -112,8 +112,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430086/mobile-min_wssl1f.jpg",
-            "mediaAlt": "NFL+ mobile mockups"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430086/mobile-min_wssl1f.jpg",
+            "alt": "NFL+ mobile mockups"
         }
       },
       {
@@ -121,7 +121,7 @@
         "type": "video",
         "width": "wide",
         "content": {
-          "mediaUrl": "landing-page-recording.mp4"
+          "url": "landing-page-recording.mp4"
         }
       },
       {
@@ -138,8 +138,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732446728/Landing_Page_B_-_Dark-min_hocicr.jpg",
-            "mediaAlt": "Alternate full page mockup for NFL+"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732446728/Landing_Page_B_-_Dark-min_hocicr.jpg",
+            "alt": "Alternate full page mockup for NFL+"
         }
       },
       {
@@ -158,8 +158,8 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "mediaUrl": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430087/social_response-min_pk1wgc.png",
-            "mediaAlt": "Alternate full page mockup for NFL+"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430087/social_response-min_pk1wgc.png",
+            "alt": "Alternate full page mockup for NFL+"
         }
       },
       {

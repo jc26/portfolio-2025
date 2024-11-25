@@ -11,8 +11,8 @@
       "type": "image",
       "width": "wide",
       "content": {
-        "mediaUrl": "placeholder-hero.jpg",
-        "mediaAlt": "Gumroad Discover redesign hero image"
+        "url": "placeholder-hero.jpg",
+        "alt": "Gumroad Discover redesign hero image"
       }
     },
     {
