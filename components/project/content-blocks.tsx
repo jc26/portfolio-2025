@@ -36,7 +36,7 @@ export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) =>
   }
 
   return (
-    <div className="max-w-2xl mx-auto mb-8 md:mb-16">
+    <div className="max-w-2xl mx-auto mb-8 md:mb-8">
       {title && <h2 className="text-base font-semibold mb-2">{title}</h2>}
       {Array.isArray(text) ? (
         text.map((paragraph, i) => (
@@ -69,7 +69,7 @@ export const ImageBlock = ({
     const lastImageIndex = images.length - 1
 
     return (
-      <div className={`${gridWidth} mx-auto w-full mb-8 md:mb-16`}>
+      <div className={`${gridWidth} mx-auto w-full my-8 md:my-16`}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {images.map((image, index) => (
             <div 
@@ -97,7 +97,7 @@ export const ImageBlock = ({
   const containerWidth = width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'
   
   return (
-    <div className={`${containerWidth} mx-auto w-full mb-8 md:mb-16`}>
+    <div className={`${containerWidth} mx-auto w-full my-8 md:my-16`}>
       <CldImage 
         src={url!}
         alt={alt!}
@@ -151,7 +151,7 @@ export const VideoBlock = ({
       <div className="w-full bg-[#efefef] rounded-xl">
         <div 
           ref={containerRef}
-          className="max-w-[1000px] mx-auto mb-8 md:mb-16 rounded-xl overflow-hidden"
+          className="max-w-[1000px] mx-auto my-8 md:my-16 rounded-xl overflow-hidden"
         >
           <div className="relative w-full flex justify-center py-8">
             <div style={{ maxWidth }} className="[&_.next-video-container]:!aspect-auto">
@@ -173,7 +173,7 @@ export const VideoBlock = ({
   return (
     <div 
       ref={containerRef}
-      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto mb-8 md:mb-16 rounded-xl overflow-hidden border border-gray-100`}
+      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto my-8 md:my-16 rounded-xl overflow-hidden border border-gray-100`}
     >
       <div className="[&_.next-video-container]:!aspect-auto [&_video]:!h-auto">
         <BackgroundVideo 

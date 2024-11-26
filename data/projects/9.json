@@ -1,10 +1,12 @@
 {
   "id": 9,
+  "slug": "crdc",
   "title": "Civil Rights Data Collection",
   "heading": "Modernizing Civil Rights Data Collection",
   "client": "US Department of Education",
   "year": "2022",
   "description": "Redesigned the data collection interface for the Civil Rights Data Collection (CRDC) system.",
+  "isVisible": false,
   "content": [
     {
       "id": "hero",

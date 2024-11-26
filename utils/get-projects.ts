@@ -10,8 +10,10 @@ export async function getProjects(): Promise<Project[]> {
       return project.default
     })
   )
-  // Sort by id ascending
-  return projects.sort((a, b) => a.id - b.id)
+  // Filter visible projects and sort by id ascending
+  return projects
+    .filter(project => project.isVisible !== false) // Show if isVisible is true or undefined
+    .sort((a, b) => a.id - b.id)
 }
 
 export async function getProject(id: string): Promise<Project> {

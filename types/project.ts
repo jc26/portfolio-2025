@@ -36,11 +36,13 @@ export type ContentBlock = {
 
 export type Project = {
   id: number
+  slug: string  // e.g., "gumroad-design-system"
   title: string
   heading: string
   client: string
   year: string
   description: string
+  isVisible?: boolean
   action?: ButtonBlockContent
   content: ContentBlock[]
 } 

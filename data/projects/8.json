@@ -1,5 +1,6 @@
 {
     "id": 8,
+    "slug": "sagent-lending",
     "title": "Sagent Lending",
     "heading": "Designing a loan assumption workflow for a mortgage loan servicing platform.",
     "client": "Sagent Lending", 
@@ -7,7 +8,7 @@
     "description": "Created a streamlined loan assumption workflow for banks and lenders who serve millions of consumers.",
     "action": {
       "text": "Try prototype",
-      "url": "https://www.figma.com/proto/XReaIvGg07uhbaQpBFeuUe/Sagent-Lending"
+      "url": "https://www.figma.com/proto/ueCaTM0rVGVu0N3G7hd0fY/UI-Refresh?page-id=1868%3A31674&node-id=1868-31675&viewport=-275%2C415%2C0.52&scaling=min-zoom&starting-point-node-id=1868%3A31675&show-proto-sidebar=1"
     },
     "content": [
       {
@@ -15,7 +16,7 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "placeholder-hero.jpg",
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732569514/sagent-grid-min_rwoh2z.jpg",
             "alt": "Interface screenshots of Sagent Lending platform"
         }
       },
@@ -42,7 +43,16 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "placeholder-empathy-map.jpg",
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732569290/empathy_mapping_1-min_u8noco.jpg",
+            "alt": "Empathy mapping for CSR"
+        }
+      },
+      {
+        "id": "business-goals",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732569286/business_goals_and_user_needs_1-min_jvt2up.jpg",
             "alt": "Empathy mapping for CSR"
         }
       },
@@ -69,8 +79,26 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "placeholder-story-map.jpg",
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732569292/whiteboarding_1-min_rr1fcx.jpg",
             "alt": "Story mapping and brainstorming"
+        }
+      },
+      {
+        "id": "brainstorming",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732569286/brainstorming_1-min_ue25rb.jpg",
+            "alt": "Story mapping and brainstorming"
+        }
+      },
+      {
+        "id": "branding",
+        "type": "text",
+        "width": "contained",
+        "content": {
+          "title": "Visual Identity",
+          "text": ["I designed the logo and the look-and-feel for our typical bank, Paladin Financial. The design is minimal and brings some earthy tones and rounded edges into an otherwise stale and monotonous space."]
         }
       },
       {
@@ -78,11 +106,19 @@
         "type": "text",
         "width": "contained",
         "content": {
-          "title": "Hick's Law: The time it takes to make a decision increases with the number and complexity of choices.",
-          "text": [
+          "title": "Hick's Law",
+          "text": ["[Hick's law](https://lawsofux.com/hicks-law/) states that the time it takes to make a decision increases with the number and complexity of choices.",
             "The CSR's user experience should prioritize efficiency: the smallest margin for error for the shortest amount of time. In any given moment, the UI is designed to be clear what the next action is. Visual contrast and accents are allocated only for that specific area so that nothing else detracts from quick decision-making.",
             "Instead of putting every detail on the screen, we put only one important task in front of the CSR at any given time and, in an unobtrusive way, try to give them a context for the ecosystem in which this task exists. This will help the CSR feel confident in answering any customer questions."
           ]
+        }
+      },
+      {
+        "id": "completing-task",
+        "type": "video",
+        "width": "wide",
+        "content": {
+            "url": "sagent-task.mp4"
         }
       },
       {
@@ -99,7 +135,7 @@
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "placeholder-analytics.jpg",
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732569286/analytics-popout-min_rw57ae.jpg",
             "alt": "Analytics dashboard for CSR productivity"
         }
       },
@@ -118,12 +154,11 @@
         }
       },
       {
-        "id": "branding",
-        "type": "text",
-        "width": "contained",
+        "id": "call-flow",
+        "type": "video",
+        "width": "wide",
         "content": {
-          "title": "Visual Identity",
-          "text": ["I designed the logo and the look-and-feel for our typical bank, Paladin Financial. The design is minimal and attempts to bring some earthy tones and rounded edges into an otherwise stale and monotonous space."]
+            "url": "sagent-call.mp4"
         }
       },
       {
@@ -135,7 +170,9 @@
           "text": [
             "In collaboration with: Dain Kennison (Chief Creative Officer), Gary Smith (Creative Director), Scott Fowles (Senior Product Designer)",
             "Client: Sagent Lending"
-          ]
+          ],
+          "buttonText": "Try prototype",
+          "url": "https://www.figma.com/proto/ueCaTM0rVGVu0N3G7hd0fY/UI-Refresh?page-id=1868%3A31674&node-id=1868-31675&viewport=-275%2C415%2C0.52&scaling=min-zoom&starting-point-node-id=1868%3A31675&show-proto-sidebar=1"
         }
       }
     ]
