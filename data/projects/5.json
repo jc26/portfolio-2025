@@ -2,28 +2,107 @@
   "id": 5,
   "slug": "procreate-dreams",
   "title": "Reveal and Launch of Procreate Dreams",
-  "heading": "Procreate Dreams: The Future of Digital Animation",
+  "heading": "Procreate Dreams: Crafting the Launch Experience",
   "client": "Procreate",
   "year": "2023",
-  "description": "Led the product design for Procreate Dreams, revolutionizing animation tools for digital artists.",
+  "description": "Designed the reveal and launch campaigns for Procreate Dreams, introducing an all-new animation tool from the makers of Procreate to a broader audience.",
+  "action": {
+    "text": "Visit site",
+    "url": "https://www.procreate.com/dreams"
+  },
   "content": [
     {
-      "id": "hero",
+      "id": "hero-1",
       "type": "image",
       "width": "wide",
       "content": {
-        "url": "placeholder-hero.jpg",
-        "alt": "Procreate Dreams interface showcase"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657399/hero-image-min_ih4c0r.jpg",
+        "alt": "Procreate Dreams hero image showing the app interface"
       }
     },
+    {
+        "id": "hero-2",
+        "type": "image",
+        "width": "wide",
+        "content": {
+          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657400/its-time-james-min_vtmnzn.jpg",
+          "alt": "Procreate Dreams hero image showing the app interface"
+        }
+      },
     {
       "id": "intro",
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Reimagining animation for everyone",
-        "text": ["Procreate Dreams represents a new chapter in digital animation, making professional-grade tools accessible to artists of all skill levels."]
+        "title": "The Challenge",
+        "text": [
+          "The animation software market for iPad was already saturated with established players when we began our launch planning. We needed to differentiate Dreams not just through its features, but through a compelling narrative that would resonate with both professional animators and newcomers to the medium.",
+          "Our team faced the complex task of breaking into this competitive space while maintaining Procreate's reputation for excellence. We needed to convince potential users to pre-order a product in a category where many had experienced disappointment with previous tools."
+        ]
+      }
+    },
+    {
+      "id": "prelaunch",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Pre-Launch Strategy",
+        "text": [
+          "The countdown campaign served as a masterclass in building anticipation. We crafted save-the-date announcements that sparked curiosity without revealing too much, supported by a dynamic countdown website that subtly showcased Dreams' animation capabilities."
+        ]
+      }
+    },
+    {
+      "id": "journey",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "images": [
+          {
+            "url": "countdown-mockup.jpg",
+            "alt": "Website mockup showing the countdown experience"
+          },
+          {
+            "url": "transition-mockup.jpg", 
+            "alt": "Website mockup showing the 'it's time' transition animation"
+          },
+          {
+            "url": "reveal-mockup.jpg",
+            "alt": "Website mockup showing the Dreams product reveal sequence"
+          }
+        ]
+      }
+    },
+    {
+      "id": "live-reveal",
+      "type": "text",
+      "width": "contained", 
+      "content": {
+        "title": "Live Reveal",
+        "text": [
+          "The September 8th event at Playground London marked the culmination of our launch strategy. We designed an immersive experience that demonstrated Dreams' capabilities through commissioned artwork and live demonstrations, showcasing how the tool could serve both professional animators and those just beginning their animation journey."
+        ]
+      }
+    },
+    {
+      "id": "results",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Results",
+        "text": [
+          "The launch exceeded our expectations with over 150k first-time downloads and more than 80k pre-orders. Our website saw close to 20k visits during the reveal and 63k visits on launch day. This success culminated in receiving the Apple Design Award for Innovation in 2024, recognizing our efforts to make professional animation tools more accessible."
+        ]
+      }
+    },
+    {
+      "id": "award",
+      "type": "image",
+      "width": "contained",
+      "content": {
+        "url": "ada-award.jpg",
+        "alt": "Apple Design Award trophy for Procreate Dreams"
       }
     }
   ]
-} 
+}
