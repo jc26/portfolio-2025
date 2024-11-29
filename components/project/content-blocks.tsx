@@ -171,7 +171,7 @@ export const VideoBlock = ({
   return (
     <div 
       ref={containerRef}
-      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto my-8 md:my-16 rounded-xl overflow-hidden border border-gray-100`}
+      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto my-8 md:my-16 rounded-xl overflow-hidden border border-border-secondary`}
     >
       <div className="[&_.next-video-container]:!aspect-auto [&_video]:!h-auto">
         <video 
