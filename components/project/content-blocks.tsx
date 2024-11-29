@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { CldImage } from 'next-cloudinary';
 import BackgroundVideo from 'next-video/background-video';
-import { TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent } from '@/types/project'
+import { TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent, VideoModule } from '@/types/project'
 
 export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => {
   // Function to parse text and convert URLs to links
@@ -117,7 +117,7 @@ export const VideoBlock = ({
 }: VideoBlockContent & { width?: string }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement | null>(null)
-  const [video, setVideo] = useState<any>(null)
+  const [video, setVideo] = useState<VideoModule['default'] | null>(null)
   const [error, setError] = useState(false)
   const maxWidth = width === 'wide' ? '280px' : '240px'
 
