@@ -6,6 +6,7 @@
   "client": "Antiwork",
   "year": "2024",
   "description": "Reimagined the discovery experience for Gumroad's marketplace, improving creator visibility and buyer engagement.",
+  "isVisible": false,
   "content": [
     {
       "id": "hero",

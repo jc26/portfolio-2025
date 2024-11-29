@@ -45,7 +45,7 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
         animate={{ y: 0 }}
       >
         <motion.div 
-          className="flex p-2 bg-background/80 backdrop-blur-sm rounded-full border shadow-lg overflow-hidden"
+          className="flex p-2 bg-background/70 backdrop-blur-md rounded-full border shadow-lg overflow-hidden"
           layout
         >
           <motion.div 

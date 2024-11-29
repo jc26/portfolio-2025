@@ -6,6 +6,7 @@
   "client": "Procreate",
   "year": "2024",
   "description": "Spearheaded a global campaign highlighting the importance of human creativity in an AI-dominated landscape.",
+  "isVisible": false,
   "content": [
     {
       "id": "hero",

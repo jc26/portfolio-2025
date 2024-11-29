@@ -53,27 +53,6 @@
       }
     },
     {
-      "id": "journey",
-      "type": "image",
-      "width": "wide",
-      "content": {
-        "images": [
-          {
-            "url": "countdown-mockup.jpg",
-            "alt": "Website mockup showing the countdown experience"
-          },
-          {
-            "url": "transition-mockup.jpg", 
-            "alt": "Website mockup showing the 'it's time' transition animation"
-          },
-          {
-            "url": "reveal-mockup.jpg",
-            "alt": "Website mockup showing the Dreams product reveal sequence"
-          }
-        ]
-      }
-    },
-    {
       "id": "live-reveal",
       "type": "text",
       "width": "contained", 
@@ -93,15 +72,6 @@
         "text": [
           "The launch exceeded our expectations with over 150k first-time downloads and more than 80k pre-orders. Our website saw close to 20k visits during the reveal and 63k visits on launch day. This success culminated in receiving the Apple Design Award for Innovation in 2024, recognizing our efforts to make professional animation tools more accessible."
         ]
-      }
-    },
-    {
-      "id": "award",
-      "type": "image",
-      "width": "contained",
-      "content": {
-        "url": "ada-award.jpg",
-        "alt": "Apple Design Award trophy for Procreate Dreams"
       }
     }
   ]

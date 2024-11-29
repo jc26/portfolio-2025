@@ -6,6 +6,7 @@
   "client": "Procreate",
   "year": "2024",
   "description": "Collaborated with Apple to showcase Procreate's latest innovations at their spring keynote event.",
+  "isVisible": false,
   "content": [
     {
       "id": "hero",
@@ -26,14 +27,6 @@
           "Collaborated with Apple's keynote team to showcase Procreate's latest features and innovations, demonstrating how our tools are pushing the boundaries of digital creativity.",
           "The presentation needed to balance technical capability with artistic inspiration, showing both the power of our tools and the magic they enable in the hands of artists."
         ]
-      }
-    },
-    {
-      "id": "keynote-demo",
-      "type": "video",
-      "width": "wide",
-      "content": {
-        "url": "keynote-recording.mp4"
       }
     },
     {

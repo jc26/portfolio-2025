@@ -118,14 +118,6 @@
         }
       },
       {
-        "id": "demo",
-        "type": "video",
-        "width": "wide",
-        "content": {
-          "url": "landing-page-recording.mp4"
-        }
-      },
-      {
         "id": "block-3",
         "type": "text",
         "width": "contained",
