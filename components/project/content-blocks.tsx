@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { CldImage } from 'next-cloudinary';
 import BackgroundVideo from 'next-video/background-video';
@@ -116,8 +116,16 @@ export const VideoBlock = ({
   isPortrait = false
 }: VideoBlockContent & { width?: string }) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const video = require(`@/videos/${url}`)
+  const [video, setVideo] = useState<any>(null)
   const maxWidth = width === 'wide' ? '280px' : '240px'
+
+  useEffect(() => {
+    const loadVideo = async () => {
+      const videoModule = await import(`@/videos/${url}`)
+      setVideo(videoModule)
+    }
+    loadVideo()
+  }, [url])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -145,6 +153,8 @@ export const VideoBlock = ({
       observer.disconnect()
     }
   }, [])
+
+  if (!video) return null
 
   if (isPortrait) {
     return (

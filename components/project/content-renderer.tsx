@@ -30,18 +30,18 @@ export function ContentRenderer({ block }: { block: ContentBlock }) {
 }
 
 // Type guards to ensure content type safety
-function isTextContent(content: any): content is TextBlockContent {
-  return 'text' in content
+function isTextContent(content: unknown): content is TextBlockContent {
+  return typeof content === 'object' && content !== null && 'text' in content
 }
 
-function isImageContent(content: any): content is ImageBlockContent {
-  return 'url' in content || 'images' in content
+function isImageContent(content: unknown): content is ImageBlockContent {
+  return typeof content === 'object' && content !== null && ('url' in content || 'images' in content)
 }
 
-function isVideoContent(content: any): content is VideoBlockContent {
-  return 'url' in content
+function isVideoContent(content: unknown): content is VideoBlockContent {
+  return typeof content === 'object' && content !== null && 'url' in content
 }
 
-function isButtonContent(content: any): content is ButtonBlockContent {
-  return 'text' in content && 'url' in content
+function isButtonContent(content: unknown): content is ButtonBlockContent {
+  return typeof content === 'object' && content !== null && 'text' in content && 'url' in content
 } 

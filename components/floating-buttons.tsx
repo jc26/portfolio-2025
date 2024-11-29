@@ -39,7 +39,11 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
 
   return (
     <>
-      <div className="fixed bottom-10 left-0 right-0 flex justify-center z-50">
+      <motion.div 
+        className="fixed bottom-10 left-0 right-0 flex justify-center z-50"
+        initial={{ y: 0 }}
+        animate={{ y: 0 }}
+      >
         <motion.div 
           className="flex p-2 bg-background/80 backdrop-blur-sm rounded-full border shadow-lg overflow-hidden"
           layout
@@ -170,7 +174,7 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
             </motion.div>
           </motion.div>
         </motion.div>
-      </div>
+      </motion.div>
       <ContactDrawer open={contactOpen} onOpenChange={setContactOpen} />
     </>
   )
