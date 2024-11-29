@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { CldImage } from 'next-cloudinary';
-import BackgroundVideo from 'next-video/background-video';
-import { TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent, VideoModule } from '@/types/project'
+import { TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent } from '@/types/project'
 
 export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => {
   // Function to parse text and convert URLs to links

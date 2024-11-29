@@ -46,14 +46,3 @@ export type Project = {
   action?: ButtonBlockContent
   content: ContentBlock[]
 }
-
-// Add after your existing types
-export type VideoModule = {
-  default: {
-    src: string
-    height: number
-    width: number
-    blurDataURL?: string
-    preload?: string
-  }
-} 
