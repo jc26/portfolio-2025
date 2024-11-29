@@ -152,12 +152,23 @@ export const VideoBlock = ({
           if (!videoRef.current) return
 
           if (entry.isIntersecting && entry.intersectionRatio > 0.7) {
-            videoRef.current.play().catch(error => {
-              console.error('Video play failed:', error)
-            })
+            // Add a small delay before playing to avoid race conditions
+            setTimeout(() => {
+              if (videoRef.current) {
+                videoRef.current.play().catch(error => {
+                  // Only log actual errors, not abort errors
+                  if (error.name !== 'AbortError') {
+                    console.error('Video play failed:', error)
+                  }
+                })
+              }
+            }, 100)
           } else {
-            videoRef.current.pause()
-            videoRef.current.currentTime = 0
+            // Only pause if the video is actually playing
+            if (videoRef.current.played.length > 0) {
+              videoRef.current.pause()
+              videoRef.current.currentTime = 0
+            }
           }
         })
       },
