@@ -191,7 +191,7 @@ export const VideoBlock = ({
           <div className="relative w-full flex justify-center py-8">
             <div style={{ maxWidth }} className="[&_.next-video-container]:!aspect-auto">
               <BackgroundVideo 
-                src={video}
+                src={video.src}
                 loop
                 muted
                 playsInline
@@ -212,7 +212,7 @@ export const VideoBlock = ({
     >
       <div className="[&_.next-video-container]:!aspect-auto [&_video]:!h-auto">
         <BackgroundVideo 
-          src={video}
+          src={video.src}
           loop
           muted
           playsInline
