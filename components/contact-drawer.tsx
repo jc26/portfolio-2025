@@ -27,14 +27,6 @@ export function ContactDrawer({ open, onOpenChange }: ContactDrawerProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const { toast } = useToast()
   
-  const testToast = () => {
-    toast({
-      title: "Test Toast",
-      description: "This is a test toast message!",
-      variant: "default",
-    })
-  }
-
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -62,7 +54,7 @@ export function ContactDrawer({ open, onOpenChange }: ContactDrawerProps) {
 
       toast({
         title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        description: "Thanks for reaching out. I&apos;ll get back to you soon.",
         variant: "default",
       })
 
@@ -92,7 +84,7 @@ export function ContactDrawer({ open, onOpenChange }: ContactDrawerProps) {
         <div className="mx-auto w-full max-w-sm">
           <DrawerHeader>
             <DrawerTitle>Contact me</DrawerTitle>
-            <DrawerDescription>Send me a message and I'll get back to you soon.</DrawerDescription>
+            <DrawerDescription>Send me a message and I&apos;ll get back to you soon.</DrawerDescription>
           </DrawerHeader>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 p-4">
