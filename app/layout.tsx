@@ -9,6 +9,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { LayoutRouterContext } from "next/dist/shared/lib/app-router-context.shared-runtime"
 import { useContext, useRef } from "react"
 import "./globals.css"
+import { Toaster } from "@/components/ui/toaster"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -81,6 +82,7 @@ export default function RootLayout({
         </div>
         
         <FloatingButtons pathname={pathname} />
+        <Toaster />
       </body>
     </html>
   )

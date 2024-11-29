@@ -1,24 +1,22 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { BeakerIcon, MoonIcon as Moon, SunIcon as Sun, EnvelopeIcon as Envelope, RocketLaunchIcon as Rocket, ChevronRightIcon } from '@heroicons/react/24/solid'
 import { SocialIcon } from 'react-social-icons'
 import { Button } from "@/components/ui/button"
 import { ContactDrawer } from '@/components/contact-drawer'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export function FloatingButtons({ pathname }: { pathname: string }) {
   const [isDark, setIsDark] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
-  const mainButtonsRef = useRef<HTMLDivElement>(null)
-  const socialButtonsRef = useRef<HTMLDivElement>(null)
 
   const springTransition = {
     type: "spring",
-    stiffness: 200,
-    damping: 30,
+    stiffness: 85,
+    damping: 14,
     duration: 0.7,
     ease: [0.77, 0, 0.175, 1],
   }
@@ -41,122 +39,138 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
 
   return (
     <>
-      <motion.div 
-        className="fixed bottom-10 left-1/2 -translate-x-1/2 flex p-2 bg-background/80 backdrop-blur-sm rounded-full border shadow-lg z-50"
-        layout
-        transition={springTransition}
-      >
+      <div className="fixed bottom-10 left-0 right-0 flex justify-center z-50">
         <motion.div 
-          className="flex items-center gap-1"
+          className="flex p-2 bg-background/80 backdrop-blur-sm rounded-full border shadow-lg overflow-hidden"
           layout
         >
-          <Link href="/" className={isWorkActive() ? "contents" : undefined}>
-            <Button 
-              variant={isWorkActive() ? "default" : "ghost"} 
-              size="lg" 
-              className="flex gap-2 rounded-full"
+          <motion.div 
+            className={`flex items-center gap-1 ${isExpanded ? 'pl-0 pr-1' : 'pl-1 pr-0'}`}
+            animate={{
+              justifyContent: isExpanded ? 'flex-end' : 'flex-start',
+            }}
+            transition={springTransition}
+          >
+            {/* Main Buttons */}
+            <motion.div
+              animate={{
+                opacity: isExpanded ? 0 : 1,
+                width: isExpanded ? 0 : 'auto',
+              }}
+              transition={springTransition}
+              className="flex items-center gap-2"
             >
-              <Rocket className="h-8 w-8" />
-              <AnimatePresence mode="wait">
-                {isWorkActive() && (
+              <Button 
+                variant={isWorkActive() ? "default" : "ghost"} 
+                size="lg"
+                className={isWorkActive() ? "flex items-center" : "flex items-center w-11 gap-0"}
+                asChild
+              >
+                <Link href="/">
+                  <Rocket className="h-8 w-8" />
                   <motion.span
-                    initial={{ width: 0, opacity: 0 }}
-                    animate={{ width: 'auto', opacity: 1 }}
-                    exit={{ width: 0, opacity: 0 }}
-                    className="overflow-hidden"
+                    initial={false}
+                    animate={{
+                      width: isWorkActive() ? 'auto' : 0,
+                      opacity: isWorkActive() ? 1 : 0,
+                    }}
+                    transition={springTransition}
+                    className="overflow-hidden whitespace-nowrap"
                   >
                     Work
                   </motion.span>
-                )}
-              </AnimatePresence>
-            </Button>
-          </Link>
+                </Link>
+              </Button>
 
-          <Link href="/experiments">
-            <Button 
-              variant={pathname === '/experiments' ? "default" : "ghost"} 
-              size="lg" 
-              className="flex gap-2 rounded-full"
-            >
-              <BeakerIcon className="h-8 w-8" />
-              <AnimatePresence mode="wait">
-                {pathname === '/experiments' && (
+              <Button 
+                variant={pathname === '/experiments' ? "default" : "ghost"} 
+                size="lg"
+                className={pathname === '/experiments' ? "flex items-center" : "flex items-center w-11 gap-0"}
+                asChild
+              >
+                <Link href="/experiments">
+                  <BeakerIcon className="h-8 w-8" />
                   <motion.span
-                    initial={{ width: 0, opacity: 0 }}
-                    animate={{ width: 'auto', opacity: 1 }}
-                    exit={{ width: 0, opacity: 0 }}
-                    className="overflow-hidden"
+                    initial={false}
+                    animate={{
+                      width: pathname === '/experiments' ? 'auto' : 0,
+                      opacity: pathname === '/experiments' ? 1 : 0,
+                    }}
+                    transition={springTransition}
+                    className="overflow-hidden whitespace-nowrap"
                   >
                     Experiments
                   </motion.span>
-                )}
-              </AnimatePresence>
-            </Button>
-          </Link>
+                </Link>
+              </Button>
 
-          <Button 
-            variant="ghost" 
-            size="lg" 
-            onClick={() => setContactOpen(true)} 
-            className="flex gap-2 rounded-full"
-          >
-            <Envelope className="h-8 w-8" />
-          </Button>
-
-          <Button 
-            variant="ghost" 
-            size="lg" 
-            onClick={toggleDark} 
-            className="flex gap-2 rounded-full"
-          >
-            {isDark ? <Sun className="h-8 w-8" /> : <Moon className="h-8 w-8" />}
-          </Button>
-
-          <Button
-            variant="ghost"
-            size="lg"
-            onClick={() => setIsExpanded(!isExpanded)}
-            className={`flex gap-2 rounded-full transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
-          >
-            <ChevronRightIcon className="h-8 w-8" />
-          </Button>
-
-          <AnimatePresence>
-            {isExpanded && (
-              <motion.div
-                initial={{ width: 0, opacity: 0 }}
-                animate={{ width: 'auto', opacity: 1 }}
-                exit={{ width: 0, opacity: 0 }}
-                className="flex gap-1 overflow-hidden"
+              <Button 
+                variant="ghost" 
+                size="icon"
+                onClick={() => setContactOpen(true)} 
               >
-                <div className="flex gap-1">
-                  <SocialIcon 
-                    url="https://github.com"
-                    className="!h-[40px] !w-[40px]"
-                    target="_blank"
-                    bgColor="transparent"
-                    fgColor="currentColor"
-                  />
-                  <SocialIcon 
-                    url="https://twitter.com"
-                    className="!h-[40px] !w-[40px]"
-                    target="_blank"
-                    bgColor="transparent"
-                    fgColor="currentColor"
-                  />
-                  <SocialIcon 
-                    url="https://linkedin.com"
-                    className="!h-[40px] !w-[40px]"
-                    target="_blank"
-                    bgColor="transparent"
-                    fgColor="currentColor"
-                  />
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                <Envelope className="h-8 w-8" />
+              </Button>
+
+              <Button 
+                variant="ghost" 
+                size="icon"
+                onClick={toggleDark} 
+              >
+                {isDark ? <Sun className="h-8 w-8" /> : <Moon className="h-8 w-8" />}
+              </Button>
+            </motion.div>
+
+            {/* Chevron */}
+            <Button
+              variant="secondary"
+              size="icon"
+              onClick={() => setIsExpanded(!isExpanded)}
+              className={`transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+            >
+              <ChevronRightIcon className="h-8 w-8" />
+            </Button>
+
+            {/* Social Buttons */}
+            <motion.div
+              animate={{
+                opacity: isExpanded ? 1 : 0,
+                width: isExpanded ? 'auto' : 0,
+              }}
+              transition={springTransition}
+              className="flex items-center gap-1"
+            >
+              <Button variant="ghost" size="icon" asChild>
+                <SocialIcon 
+                  url="https://github.com/jc26"
+                  target="_blank"
+                  className="!h-[44px] !w-[44px]"
+                  bgColor="transparent"
+                  fgColor="currentColor"
+                />
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <SocialIcon
+                  url="https://x.com/jchang_26"
+                  target="_blank"
+                  className="!h-[44px] !w-[44px]"
+                  bgColor="transparent"
+                  fgColor="currentColor"
+                />
+              </Button>
+              <Button variant="ghost" size="icon" asChild>
+                <SocialIcon
+                  url="https://www.linkedin.com/in/jason-c-a35a52126/"
+                  target="_blank"
+                  className="!h-[44px] !w-[44px]"
+                  bgColor="transparent"
+                  fgColor="currentColor"
+                />
+              </Button>
+            </motion.div>
+          </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
       <ContactDrawer open={contactOpen} onOpenChange={setContactOpen} />
     </>
   )

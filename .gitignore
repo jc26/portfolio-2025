@@ -45,3 +45,9 @@ videos/*
 !videos/*.js
 !videos/*.ts
 public/_next-video
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

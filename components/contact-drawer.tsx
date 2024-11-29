@@ -9,10 +9,12 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import emailjs from '@emailjs/browser'
+import { useToast } from "@/hooks/use-toast"
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
-  email: z.string().email("Invalid email address"),
+  email: z.string().email("Invalid email address"), 
   message: z.string().min(10, "Message must be at least 10 characters"),
 })
 
@@ -22,6 +24,17 @@ type ContactDrawerProps = {
 }
 
 export function ContactDrawer({ open, onOpenChange }: ContactDrawerProps) {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast()
+  
+  const testToast = () => {
+    toast({
+      title: "Test Toast",
+      description: "This is a test toast message!",
+      variant: "default",
+    })
+  }
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -31,11 +44,46 @@ export function ContactDrawer({ open, onOpenChange }: ContactDrawerProps) {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Handle form submission here
-    console.log(values)
-    onOpenChange(false)
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true)
+    
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: values.name,
+          from_email: values.email,
+          message: values.message,
+          to_email: 'jasonchang101@gmail.com',
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I'll get back to you soon.",
+        variant: "default",
+      })
+
+      onOpenChange(false)
+      form.reset()
+    } catch (error) {
+      console.error('Email error:', error)
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleCancel = (e: React.MouseEvent) => {
+    e.preventDefault()
     form.reset()
+    onOpenChange(false)
   }
 
   return (
@@ -88,8 +136,16 @@ export function ContactDrawer({ open, onOpenChange }: ContactDrawerProps) {
                 )}
               />
               <DrawerFooter>
-                <Button type="submit">Send message</Button>
-                <Button variant="outline" onClick={() => onOpenChange(false)}>Cancel</Button>
+                <Button type="submit" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send message"}
+                </Button>
+                <Button 
+                  type="button"
+                  variant="outline" 
+                  onClick={handleCancel}
+                >
+                  Cancel
+                </Button>
               </DrawerFooter>
             </form>
           </Form>
