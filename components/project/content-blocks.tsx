@@ -116,81 +116,34 @@ export const VideoBlock = ({
   isPortrait = false
 }: VideoBlockContent & { width?: string }) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement | null>(null)
-  const [video, setVideo] = useState<VideoModule['default'] | null>(null)
-  const [error, setError] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
   const maxWidth = width === 'wide' ? '280px' : '240px'
 
   useEffect(() => {
-    const loadVideo = async () => {
-      if (!url) {
-        setError(true)
-        return
-      }
-      
-      try {
-        const videoModule = await import(`../../videos/${url}`)
-        setVideo(videoModule.default)
-      } catch (error) {
-        console.error('Failed to load video:', error)
-        setError(true)
-      }
-    }
-    loadVideo()
-  }, [url])
-
-  useEffect(() => {
-    if (!containerRef.current) return
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!videoRef.current) {
-            videoRef.current = entry.target.querySelector('video')
-          }
-
           if (!videoRef.current) return
 
-          if (entry.isIntersecting && entry.intersectionRatio > 0.7) {
-            // Add a small delay before playing to avoid race conditions
-            setTimeout(() => {
-              if (videoRef.current) {
-                videoRef.current.play().catch(error => {
-                  // Only log actual errors, not abort errors
-                  if (error.name !== 'AbortError') {
-                    console.error('Video play failed:', error)
-                  }
-                })
-              }
-            }, 100)
+          if (entry.isIntersecting) {
+            videoRef.current.play()
           } else {
-            // Only pause if the video is actually playing
-            if (videoRef.current.played.length > 0) {
-              videoRef.current.pause()
-              videoRef.current.currentTime = 0
-            }
+            videoRef.current.pause()
           }
         })
       },
       {
         root: null,
-        threshold: [0.7, 0.8, 0.9],
-        rootMargin: '-10% 0px'
+        threshold: 0.5
       }
     )
 
-    observer.observe(containerRef.current)
-
-    return () => {
-      observer.disconnect()
-      if (videoRef.current) {
-        videoRef.current.pause()
-        videoRef.current.currentTime = 0
-      }
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
     }
-  }, [video])
 
-  if (error || !video) return null
+    return () => observer.disconnect()
+  }, [])
 
   if (isPortrait) {
     return (
@@ -201,12 +154,12 @@ export const VideoBlock = ({
         >
           <div className="relative w-full flex justify-center py-8">
             <div style={{ maxWidth }} className="[&_.next-video-container]:!aspect-auto">
-              <BackgroundVideo 
-                src={video.src}
+              <video 
+                ref={videoRef}
+                src={`/videos/${url}`}
                 loop
                 muted
                 playsInline
-                controls={false}
                 className="w-full rounded-md"
               />
             </div>
@@ -222,12 +175,12 @@ export const VideoBlock = ({
       className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto my-8 md:my-16 rounded-xl overflow-hidden border border-gray-100`}
     >
       <div className="[&_.next-video-container]:!aspect-auto [&_video]:!h-auto">
-        <BackgroundVideo 
-          src={video.src}
+        <video 
+          ref={videoRef}
+          src={`/videos/${url}`}
           loop
           muted
           playsInline
-          controls={false}
           className="w-full rounded-md"
         />
       </div>
