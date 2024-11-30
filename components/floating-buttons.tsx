@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { BeakerIcon, MoonIcon as Moon, SunIcon as Sun, EnvelopeIcon as Envelope, RocketLaunchIcon as Rocket, ChevronRightIcon } from '@heroicons/react/24/solid'
 import { SocialIcon } from 'react-social-icons'
 import { Button } from "@/components/ui/button"
@@ -12,6 +12,10 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
   const [isDark, setIsDark] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
+  const [workWidth, setWorkWidth] = useState(0)
+  const [experimentsWidth, setExperimentsWidth] = useState(0)
+  const workTextRef = useRef<HTMLSpanElement>(null)
+  const experimentsTextRef = useRef<HTMLSpanElement>(null)
 
   const springTransition = {
     type: "spring",
@@ -28,6 +32,15 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
     document.documentElement.classList.toggle('dark', savedTheme === 'dark' || (!savedTheme && systemPrefersDark))
   }, [])
 
+  useEffect(() => {
+    if (workTextRef.current) {
+      setWorkWidth(workTextRef.current.offsetWidth)
+    }
+    if (experimentsTextRef.current) {
+      setExperimentsWidth(experimentsTextRef.current.offsetWidth)
+    }
+  }, [])
+
   const toggleDark = () => {
     const newDarkMode = !isDark
     setIsDark(newDarkMode)
@@ -39,22 +52,14 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
 
   return (
     <>
-      <motion.div 
-        className="fixed bottom-10 left-0 right-0 flex justify-center z-50"
-        initial={{ y: 0 }}
-        animate={{ y: 0 }}
-      >
-        <motion.div 
-          className="flex p-2 bg-background/70 backdrop-blur-md rounded-full border shadow-lg overflow-hidden"
-          layout
-        >
-          <motion.div 
-            className={`flex items-center gap-1 ${isExpanded ? 'pl-0 pr-1' : 'pl-1 pr-0'}`}
-            animate={{
-              justifyContent: isExpanded ? 'flex-end' : 'flex-start',
-            }}
-            transition={springTransition}
-          >
+      <div className="absolute opacity-0 pointer-events-none">
+        <span ref={workTextRef}>Work</span>
+        <span ref={experimentsTextRef}>Experiments</span>
+      </div>
+
+      <motion.div className="fixed bottom-10 left-0 right-0 flex justify-center z-50">
+        <motion.div className="flex px-1 py-2 bg-background/70 backdrop-blur-md rounded-full border shadow-lg overflow-hidden">
+          <motion.div className={`flex items-center gap-1 ${isExpanded ? 'pl-0 pr-1' : 'pl-1 pr-0'}`}>
             {/* Main Buttons */}
             <motion.div
               animate={{
@@ -64,49 +69,63 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
               transition={springTransition}
               className="flex items-center gap-2"
             >
-              <Button 
-                variant={isWorkActive() ? "default" : "ghost"} 
-                size="lg"
-                className={isWorkActive() ? "flex items-center" : "flex items-center w-11 gap-0"}
-                asChild
+              <motion.div
+                animate={{
+                  width: isWorkActive() ? workWidth + 64 : 44
+                }}
+                transition={springTransition}
               >
-                <Link href="/">
-                  <Rocket className="h-8 w-8" />
-                  <motion.span
-                    initial={false}
-                    animate={{
-                      width: isWorkActive() ? 'auto' : 0,
-                      opacity: isWorkActive() ? 1 : 0,
-                    }}
-                    transition={springTransition}
-                    className="overflow-hidden whitespace-nowrap"
-                  >
-                    Work
-                  </motion.span>
-                </Link>
-              </Button>
+                <Button 
+                  variant={isWorkActive() ? "default" : "ghost"} 
+                  size="lg"
+                  className={`flex items-center w-full ${isWorkActive() ? 'gap-2' : 'gap-0'}`}
+                  asChild
+                >
+                  <Link href="/">
+                    <Rocket className="h-8 w-8" />
+                    <motion.span
+                      initial={false}
+                      animate={{
+                        width: isWorkActive() ? workWidth + 16 : 0,
+                        opacity: isWorkActive() ? 1 : 0,
+                      }}
+                      transition={springTransition}
+                      className="overflow-hidden whitespace-nowrap"
+                    >
+                      Work
+                    </motion.span>
+                  </Link>
+                </Button>
+              </motion.div>
 
-              <Button 
-                variant={pathname === '/experiments' ? "default" : "ghost"} 
-                size="lg"
-                className={pathname === '/experiments' ? "flex items-center" : "flex items-center w-11 gap-0"}
-                asChild
+              <motion.div
+                animate={{
+                  width: pathname === '/experiments' ? experimentsWidth + 64 : 44
+                }}
+                transition={springTransition}
               >
-                <Link href="/experiments">
-                  <BeakerIcon className="h-8 w-8" />
-                  <motion.span
-                    initial={false}
-                    animate={{
-                      width: pathname === '/experiments' ? 'auto' : 0,
-                      opacity: pathname === '/experiments' ? 1 : 0,
-                    }}
-                    transition={springTransition}
-                    className="overflow-hidden whitespace-nowrap"
-                  >
-                    Experiments
-                  </motion.span>
-                </Link>
-              </Button>
+                <Button 
+                  variant={pathname === '/experiments' ? "default" : "ghost"} 
+                  size="lg"
+                  className={`flex items-center w-full ${pathname === '/experiments' ? 'gap-2' : 'gap-0'}`}
+                  asChild
+                >
+                  <Link href="/experiments">
+                    <BeakerIcon className="h-8 w-8" />
+                    <motion.span
+                      initial={false}
+                      animate={{
+                        width: pathname === '/experiments' ? experimentsWidth + 16 : 0,
+                        opacity: pathname === '/experiments' ? 1 : 0
+                      }}
+                      transition={springTransition}
+                      className="overflow-hidden whitespace-nowrap"
+                    >
+                      Experiments
+                    </motion.span>
+                  </Link>
+                </Button>
+              </motion.div>
 
               <Button 
                 variant="ghost" 

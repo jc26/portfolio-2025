@@ -7,6 +7,7 @@ import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { FloatingButtons } from '@/components/floating-buttons'
 import { Toaster } from "@/components/ui/toaster"
+import { FrozenRouter } from '@/components/frozen-router'
 
 export function MotionLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -18,42 +19,26 @@ export function MotionLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <AnimatePresence mode="popLayout" initial={isFirstMount}>
-        <motion.main
+      <AnimatePresence mode="wait" initial={isFirstMount}>
+        <motion.div
           key={pathname}
-          initial={{ opacity: 0, filter: 'blur(10px)', y: 80 }}
-          animate={{ opacity: 1, filter: 'blur(0px)', y: 0 }}
-          exit={{ opacity: 0, filter: 'blur(10px)', y: -80 }}
+          initial={{ opacity: 0, y: 80, filter: 'blur(10px)' }}
+          animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+          exit={{ opacity: 0, y: -80, filter: 'blur(10px)' }}
           transition={{
             duration: 0.8,
             ease: [0.32, 0, 0.15, 1],
             delay: isFirstMount ? 0.2 : 0
           }}
         >
-          <motion.div
-            initial={{ y: 120 }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.32, 0, 0.15, 1],
-            }}
-          >
-            <SiteHeader />
-          </motion.div>
-          <motion.div
-            initial={{ y: 60 }}
-            animate={{ y: 0 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.32, 0, 0.15, 1],
-            }}
-            className="mb-8 md:mb-16"
-          >
-            {children}
-          </motion.div>
+          <SiteHeader />
+          <div className="mb-8 md:mb-16">
+            <FrozenRouter>{children}</FrozenRouter>
+          </div>
           <SiteFooter />
-        </motion.main>
+        </motion.div>
       </AnimatePresence>
+      
       <FloatingButtons pathname={pathname} />
       <Toaster />
     </>
