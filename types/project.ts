@@ -17,7 +17,11 @@ export type ImageBlockContent = {
 }
 
 export type VideoBlockContent = {
-  url: string
+  videos?: Array<{
+    url: string
+    isPortrait?: boolean
+  }>
+  url?: string
   isPortrait?: boolean
   caption?: string
 }

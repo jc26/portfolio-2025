@@ -40,11 +40,11 @@ export const ImageBlock = ({
       <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
         <div className="grid grid-cols-2 gap-4">
           {images.map((image, index) => (
-            <div key={index}>
+            <div key={index} className={images.length % 2 !== 0 && index === images.length - 1 ? 'col-span-2' : ''}>
               <img
                 src={image.url}
                 alt={image.alt}
-                className="w-full rounded-lg"
+                className="w-full rounded-xl"
               />
             </div>
           ))}
@@ -63,7 +63,7 @@ export const ImageBlock = ({
       <img
         src={url}
         alt={alt}
-        className="w-full rounded-lg"
+        className="w-full rounded-xl"
       />
       {caption && (
         <p className="mt-1 text-sm text-muted-foreground text-center md:mt-2">
@@ -76,27 +76,35 @@ export const ImageBlock = ({
 
 export const VideoBlock = ({ 
   url,
+  videos,
   width = 'wide',
   isPortrait = false,
   caption
 }: VideoBlockContent & { width?: string }) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
+
+  // Add some debugging
+  useEffect(() => {
+    console.log('Videos prop:', videos)
+    console.log('Single URL prop:', url)
+  }, [videos, url])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!videoRef.current) return
-
-          if (entry.isIntersecting) {
-            videoRef.current.play().catch(() => {
-              // Autoplay might be blocked by browser
-              console.log('Autoplay blocked')
-            })
-          } else {
-            videoRef.current.pause()
-          }
+          const videos = entry.target.querySelectorAll('video')
+          
+          videos.forEach(video => {
+            if (entry.isIntersecting) {
+              video.play().catch(() => {
+                console.log('Autoplay blocked')
+              })
+            } else {
+              video.pause()
+            }
+          })
         })
       },
       {
@@ -114,6 +122,64 @@ export const VideoBlock = ({
     }
   }, [])
 
+  // Handle multiple videos
+  if (Array.isArray(videos) && videos.length > 0) {
+    return (
+      <div 
+        ref={containerRef}
+        className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}
+      >
+        <div className="grid grid-cols-2 gap-4">
+          {videos.map((video, index) => {
+            if (!video?.url) return null // Skip invalid videos
+            
+            return (
+              <div 
+                key={index} 
+                className={videos.length % 2 !== 0 && index === videos.length - 1 ? 'col-span-2' : ''}
+              >
+                {video.isPortrait ? (
+                  <div className="w-full bg-[#efefef] rounded-xl">
+                    <div className="relative w-full flex justify-center py-8">
+                      <div className="max-w-[280px]">
+                        <video 
+                          ref={(el) => { videoRefs.current[index] = el }}
+                          src={`/videos/${video.url}`}
+                          loop
+                          muted
+                          playsInline
+                          className="w-full"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <video 
+                    ref={(el) => { videoRefs.current[index] = el }}
+                    src={`/videos/${video.url}`}
+                    loop
+                    muted
+                    playsInline
+                    className="w-full rounded-xl"
+                  />
+                )}
+              </div>
+            )
+          })}
+        </div>
+        {caption && (
+          <p className="mt-2 text-sm text-muted-foreground text-center">
+            {parseMarkdownLinks(caption)}
+          </p>
+        )}
+      </div>
+    )
+  }
+
+  // Single video fallback
+  if (!url) return null // Return null if no valid video source
+
+  // Single video
   if (isPortrait) {
     return (
       <div className="w-full bg-[#efefef] rounded-xl">
@@ -124,12 +190,12 @@ export const VideoBlock = ({
           <div className="relative w-full flex justify-center py-8">
             <div className="max-w-[280px]">
               <video 
-                ref={videoRef}
+                ref={(el) => { videoRefs.current[0] = el }}
                 src={`/videos/${url}`}
                 loop
                 muted
                 playsInline
-                className="w-full rounded-md"
+                className="w-full"
               />
             </div>
           </div>
@@ -146,15 +212,15 @@ export const VideoBlock = ({
   return (
     <div 
       ref={containerRef}
-      className={`${width === 'contained' ? 'content-container' : 'max-w-[1000px]'} mx-auto mb-8 md:mb-16 rounded-xl overflow-hidden`}
+      className={`${width === 'contained' ? 'content-container' : 'max-w-[1000px]'} mx-auto mb-8 md:mb-16 overflow-hidden`}
     >
       <video 
-        ref={videoRef}
+        ref={(el) => { videoRefs.current[0] = el }}
         src={`/videos/${url}`}
         loop
         muted
         playsInline
-        className="w-full rounded-md"
+        className="w-full rounded-xl"
       />
       {caption && (
         <p className="mt-2 text-sm text-muted-foreground text-center">

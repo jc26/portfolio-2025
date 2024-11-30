@@ -36,12 +36,12 @@
   ],
   "content": [
     {
-      "id": "hero-1",
+      "id": "james-talk",
       "type": "image",
       "width": "wide",
       "content": {
-        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657399/hero-image-min_ih4c0r.jpg",
-        "alt": "Procreate Dreams hero image showing the app interface"
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732963229/james-talk-1_he34rt.jpg",
+        "alt": "James talking about Procreate Dreams"
       }
     },
     {
@@ -57,91 +57,22 @@
       }
     },
     {
-      "id": "image-53",
-      "type": "image",
-      "width": "wide",
+      "id": "dreams-its-time",
+      "type": "video",
       "content": {
-        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657397/image_53-min_zidndt.jpg",
-        "alt": "Procreate Dreams hero image showing the app interface",
-        "caption": "Procreate Dreams hero image showing the app interface"
+        "url": "dreams-its-time.mp4",
+        "caption": "Credit: hero section designed by me, motion graphic created by our design team"
       }
     },
     {
-      "id": "hero-grid",
-      "type": "image",
-      "width": "wide", 
-      "content": {
-        "images": [
-          {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657811/made-for-ipad_xc0f5o.jpg",
-            "alt": "Procreate Dreams image made for iPad"
-          },
-          {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657810/reveal-hero_abnv93.jpg",
-            "alt": "Procreate Dreams reveal hero image"
-          },
-          {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657807/launch-hero_ajjlaf.jpg",
-            "alt": "Procreate Dreams launch hero image"
-          },
-          {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657805/reveal-hero-2_blu369.jpg",
-            "alt": "Procreate Dreams reveal hero image 2"
-          }
-        ]
-      }
-    },
-    {
-      "id": "reveal-hero-3",
-      "type": "image",
-      "width": "wide",
-      "content": {
-        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657398/reveal-hero-min_r8sjr3.png",
-        "alt": "Procreate Dreams hero image showing the app interface"
-      }
-    },
-    {
-      "id": "launch-hero-2",
-      "type": "image",
-      "width": "wide",
-      "content": {
-        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657406/launch-hero-min_aisnrd.png",
-        "alt": "Procreate Dreams launch hero image 2"
-      }
-    },
-    {
-      "id": "ada",
-      "type": "image",
-      "width": "wide",
-      "content": {
-        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657394/ada_wqz2va.jpg",
-        "alt": "apple design award image"
-      }
-    },
-    {
-      "id": "pre-livestream",
-      "type": "image",
-      "content": {
-        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657392/Pre-Livestream_EDM-min_wvqwfg.jpg",
-        "alt": "Procreate Dreams pre-livestream image"
-      }
-    },
-    {
-      "id": "image-49",
-      "type": "image",
-      "content": {
-        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657392/image_49-min_sm8wen.jpg",
-        "alt": "people using procreate dreams"
-      }
-    },
-    {
-      "id": "prelaunch",
-      "type": "text",
+      "id": "anticipation",
+      "type": "text", 
       "width": "contained",
       "content": {
-        "title": "Pre-Launch Strategy",
+        "title": "Anticipation",
         "text": [
-          "The countdown campaign served as a masterclass in building anticipation. We crafted save-the-date announcements that sparked curiosity without revealing too much, supported by a dynamic countdown website that subtly showcased Dreams' animation capabilities."
+          "In a market filled with established animation apps, we faced a unique challenge: how to build massive anticipation while keeping our product completely under wraps. We needed to leverage Procreate's reputation for excellence while maintaining absolute secrecy about what we were building.",
+          "Our strategy was to create an air of mystery that would capitalize on our brand's existing goodwill. We carefully crafted a reveal campaign that would generate excitement through strategic silence, letting our community's imagination and trust in the Procreate name drive the conversation."
         ]
       }
     },
@@ -150,7 +81,40 @@
       "type": "video",
       "content": {
         "url": "dreams-countdown.mp4",
-        "caption": "Procreate Dreams countdown video"
+        "caption": "A custom countdown animation to build anticipation and excitement"
+      }
+    },
+    {
+      "id": "prereveal",
+      "type": "text", 
+      "width": "contained",
+      "content": {
+        "title": "Pre-Reveal Campaign",
+        "text": [
+          "We built anticipation through a mysterious countdown campaign that hinted at something big coming. The landing page featured subtle animations that teased Dreams' capabilities without giving away what it was. This created buzz in the creative community, with many speculating about what Procreate had in store.",
+          "The campaign culminated in a save-the-date announcement for our reveal event, driving thousands of signups and social media engagement before we even showed the product."
+        ]
+      }
+    },
+    {
+      "id": "reveal-grid",
+      "type": "image",
+      "width": "wide", 
+      "content": {
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657810/reveal-hero_abnv93.jpg",
+            "alt": "Procreate Dreams reveal hero image"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657805/reveal-hero-2_blu369.jpg",
+            "alt": "Procreate Dreams reveal hero image 2"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657398/reveal-hero-min_r8sjr3.png",
+            "alt": "Procreate Dreams reveal hero image 3"
+          }
+        ]
       }
     },
     {
@@ -165,6 +129,97 @@
       }
     },
     {
+      "id": "dreams-users",
+      "type": "image",
+      "width": "wide", 
+      "content": {
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732963226/dreams-user-2_dx2por.jpg",
+            "alt": "Procreate Dreams image made for iPad"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732963226/dreams-user-3_jdecpb.jpg",
+            "alt": "Procreate Dreams reveal hero image"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732963226/users-dreams_bhjvay.jpg",
+            "alt": "Procreate Dreams hero image showing the app interface"
+          }
+        ]
+      }
+    },
+    {
+      "id": "no-subscriptions",
+      "type": "text", 
+      "width": "contained",
+      "content": {
+        "title": "No Subscriptions",
+        "text": [
+          "One of the biggest moments during the reveal was announcing Dreams' one-time purchase price of $19.99. The crowd erupted in applause when we revealed there would be no subscriptions - staying true to Procreate's philosophy of making professional creative tools accessible through fair, transparent pricing. This decision resonated strongly with our community and reinforced our commitment to putting users first."
+        ]
+      }
+    },
+    {
+      "id": "price-tag",
+      "type": "image",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732963225/price_tag_ypw9gh.jpg",
+        "alt": "Procreate Dreams price tag",
+        "caption": "A moment of surprise when my render was shown in front of my millions."
+      }
+    },
+    {
+      "id": "prelaunch",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Pre-Launch Strategy",
+        "text": [
+          "The countdown campaign served as a masterclass in building anticipation. We crafted save-the-date announcements that sparked curiosity without revealing too much, supported by a dynamic countdown website that subtly showcased Dreams' animation capabilities."
+        ]
+      }
+    },
+    {
+      "id": "launch-grid",
+      "type": "image",
+      "width": "wide", 
+      "content": {
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657811/made-for-ipad_xc0f5o.jpg",
+            "alt": "Procreate Dreams image made for iPad"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657807/launch-hero_ajjlaf.jpg",
+            "alt": "Procreate Dreams launch hero image"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657406/launch-hero-min_aisnrd.png",
+            "alt": "Procreate Dreams launch hero image 2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hi-res",
+      "type": "video",
+      "width": "contained",
+      "content": {
+        "url": "hi-res-video.mp4",
+        "caption": "An all-new feature introduced to the Procreate ecosystem"
+      }
+    },
+    {
+      "id": "instant-playback",
+      "type": "video",
+      "width": "contained",
+      "content": {
+        "url": "instant-playback.mp4",
+        "caption": "A crucial selling point for traditional Adobe users"
+      }
+    },
+    {
       "id": "results",
       "type": "text",
       "width": "contained",
@@ -173,6 +228,15 @@
         "text": [
           "The launch exceeded our expectations with over 150k first-time downloads and more than 80k pre-orders. Our website saw close to 20k visits during the reveal and 63k visits on launch day. This success culminated in receiving the Apple Design Award for Innovation in 2024, recognizing our efforts to make professional animation tools more accessible."
         ]
+      }
+    },
+    {
+      "id": "ada",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657394/ada_wqz2va.jpg",
+        "alt": "apple design award image"
       }
     }
   ]
