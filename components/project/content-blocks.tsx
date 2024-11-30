@@ -90,10 +90,21 @@ export const VideoBlock = ({
           if (!videoRef.current) return
 
           if (entry.isIntersecting) {
-            videoRef.current.play().catch(() => {
-              // Autoplay might be blocked by browser
-              console.log('Autoplay blocked')
-            })
+            const playPromise = videoRef.current.play()
+            if (playPromise !== undefined) {
+              playPromise
+                .then(() => {
+                  // Playback started successfully
+                })
+                .catch(error => {
+                  if (videoRef.current) {
+                    videoRef.current.muted = true
+                    videoRef.current.play().catch(() => {
+                      console.log('Playback prevented even with muted attribute')
+                    })
+                  }
+                })
+            }
           } else {
             videoRef.current.pause()
           }
@@ -101,7 +112,8 @@ export const VideoBlock = ({
       },
       {
         root: null,
-        threshold: 0.5
+        threshold: 0.5,
+        rootMargin: '50px'
       }
     )
 
