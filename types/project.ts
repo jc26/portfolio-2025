@@ -10,9 +10,11 @@ export type ImageBlockContent = {
   images?: Array<{
     url: string
     alt: string
+    aspectRatio?: string
   }>
   url?: string
   alt?: string
+  aspectRatio?: string
   caption?: string
 }
 

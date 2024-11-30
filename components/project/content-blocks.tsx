@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useRef, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
 import { parseMarkdownLinks } from '@/utils/markdown'
+import Image from 'next/image'
+import type { TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
 
 export const TextBlock = ({ title, text, buttonText, url, width = 'contained' }: TextBlockContent & { width?: string }) => {
   const paragraphs = Array.isArray(text) ? text : [text]
@@ -29,22 +30,22 @@ export const TextBlock = ({ title, text, buttonText, url, width = 'contained' }:
   )
 }
 
-export const ImageBlock = ({ 
-  url, 
-  alt, 
-  images,
-  caption, 
-  width = 'contained' }: ImageBlockContent & { width?: string }) => {
+export const ImageBlock = ({ url, alt, images, aspectRatio, caption, width = 'contained' }: ImageBlockContent & { width?: string }) => {
   if (images?.length) {
     return (
       <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
         <div className="grid grid-cols-2 gap-4">
           {images.map((image, index) => (
-            <div key={index} className={images.length % 2 !== 0 && index === images.length - 1 ? 'col-span-2' : ''}>
-              <img
+            <div 
+              key={index}
+              className={images.length % 2 !== 0 && index === images.length - 1 ? 'col-span-2' : ''}
+            >
+              <Image
                 src={image.url}
                 alt={image.alt}
-                className="w-full rounded-xl"
+                width={1000}
+                height={1000}
+                className="w-full rounded-lg"
               />
             </div>
           ))}
@@ -58,15 +59,20 @@ export const ImageBlock = ({
     )
   }
 
+  if (!url) return null
+
   return (
     <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
-      <img
+      <Image
         src={url}
-        alt={alt}
-        className="w-full rounded-xl"
+        alt={alt || ''}
+        width={1000}
+        height={1000}
+        className="w-full rounded-lg"
+        style={aspectRatio ? { aspectRatio } : undefined}
       />
       {caption && (
-        <p className="mt-1 text-sm text-muted-foreground text-center md:mt-2">
+        <p className="mt-2 text-sm text-muted-foreground text-center">
           {parseMarkdownLinks(caption)}
         </p>
       )}
@@ -90,21 +96,9 @@ export const VideoBlock = ({
           if (!videoRef.current) return
 
           if (entry.isIntersecting) {
-            const playPromise = videoRef.current.play()
-            if (playPromise !== undefined) {
-              playPromise
-                .then(() => {
-                  // Playback started successfully
-                })
-                .catch(error => {
-                  if (videoRef.current) {
-                    videoRef.current.muted = true
-                    videoRef.current.play().catch(() => {
-                      console.log('Playback prevented even with muted attribute')
-                    })
-                  }
-                })
-            }
+            videoRef.current.play().catch(() => {
+              console.log('Autoplay blocked')
+            })
           } else {
             videoRef.current.pause()
           }
@@ -112,8 +106,7 @@ export const VideoBlock = ({
       },
       {
         root: null,
-        threshold: 0.5,
-        rootMargin: '50px'
+        threshold: 0.5
       }
     )
 
@@ -126,6 +119,10 @@ export const VideoBlock = ({
     }
   }, [])
 
+  if (!url) return null
+
+  const videoUrl = url.startsWith('/') ? url : `/videos/${url}`
+
   if (isPortrait) {
     return (
       <div className="w-full bg-[#efefef] rounded-xl">
@@ -137,11 +134,11 @@ export const VideoBlock = ({
             <div className="max-w-[280px]">
               <video 
                 ref={videoRef}
-                src={`/videos/${url}`}
+                src={videoUrl}
                 loop
                 muted
                 playsInline
-                className="w-full"
+                className="w-full rounded-md"
               />
             </div>
           </div>
@@ -162,7 +159,7 @@ export const VideoBlock = ({
     >
       <video 
         ref={videoRef}
-        src={`/videos/${url}`}
+        src={videoUrl}
         loop
         muted
         playsInline

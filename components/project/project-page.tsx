@@ -19,7 +19,7 @@ export function ProjectPage({ project }: { project: Project }) {
         <div className="mb-3">
           <h1 className="text-base font-semibold">{project.heading}</h1>
         </div>
-        <div className="mb-5">
+        <div className="mb-6">
           {descriptions.map((paragraph, index) => (
             <p key={index} className="text-base mb-3">
               {parseMarkdownLinks(paragraph)}
@@ -27,7 +27,7 @@ export function ProjectPage({ project }: { project: Project }) {
           ))}
           {project.award && (
             <div className="flex items-center gap-1 text-sm mb-1">
-              <span className="font-semibold">🏆 Awards</span>
+              <span className="font-medium">🏆 Awards</span>
               <a 
                 href={project.award.url}
                 target="_blank"
@@ -40,7 +40,7 @@ export function ProjectPage({ project }: { project: Project }) {
           )}
           {project.mentions && (
             <div className="flex items-center gap-1 text-sm">
-              <span className="font-semibold">📰 Mentions</span>
+              <span className="font-medium">📰 Mentions</span>
               {Array.isArray(project.mentions) ? (
                 project.mentions?.map((mention, index, array) => (
                   <span key={index}>
@@ -70,7 +70,7 @@ export function ProjectPage({ project }: { project: Project }) {
           )}
         </div>
         {project.action && (
-          <Button variant="outline" asChild>
+          <Button variant="default" asChild>
             <a 
               href={project.action.url} 
               target="_blank" 
