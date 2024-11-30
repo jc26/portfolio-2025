@@ -5,8 +5,8 @@ export function SiteHeader() {
     <header className="max-w-2xl mx-auto mb-6">
       <Link href="/" className="block">
         <svg 
-          width="26" 
-          height="44" 
+          width="22" 
+          height="42" 
           viewBox="0 0 26 44" 
           className="fill-foreground mb-4"
         >
