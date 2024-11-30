@@ -224,7 +224,7 @@
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Results",
+        "title": "Results sdfsdf",
         "text": [
           "The launch exceeded our expectations with over 150k first-time downloads and more than 80k pre-orders. Our website saw close to 20k visits during the reveal and 63k visits on launch day. This success culminated in receiving the Apple Design Award for Innovation in 2024, recognizing our efforts to make professional animation tools more accessible."
         ]
@@ -233,7 +233,6 @@
     {
       "id": "ada",
       "type": "image",
-      "width": "wide",
       "content": {
         "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657394/ada_wqz2va.jpg",
         "alt": "apple design award image"

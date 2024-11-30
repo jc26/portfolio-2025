@@ -1,4 +1,3 @@
-import { useRef, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { parseMarkdownLinks } from '@/utils/markdown'
 import Image from 'next/image'
@@ -86,38 +85,38 @@ export const VideoBlock = ({
   isPortrait = false,
   caption
 }: VideoBlockContent & { width?: string }) => {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  // const containerRef = useRef<HTMLDivElement>(null)
+  // const videoRef = useRef<HTMLVideoElement>(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!videoRef.current) return
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (!videoRef.current) return
 
-          if (entry.isIntersecting) {
-            videoRef.current.play().catch(() => {
-              console.log('Autoplay blocked')
-            })
-          } else {
-            videoRef.current.pause()
-          }
-        })
-      },
-      {
-        root: null,
-        threshold: 0.5
-      }
-    )
+  //         if (entry.isIntersecting) {
+  //           videoRef.current.play().catch(() => {
+  //             console.log('Autoplay blocked')
+  //           })
+  //         } else {
+  //           videoRef.current.pause()
+  //         }
+  //       })
+  //     },
+  //     {
+  //       root: null,
+  //       threshold: 0.5
+  //     }
+  //   )
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current)
-    }
+  //   if (containerRef.current) {
+  //     observer.observe(containerRef.current)
+  //   }
 
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
+  //   return () => {
+  //     observer.disconnect()
+  //   }
+  // }, [])
 
   if (!url) return null
 
@@ -126,18 +125,15 @@ export const VideoBlock = ({
   if (isPortrait) {
     return (
       <div className="w-full bg-[#efefef] rounded-xl">
-        <div 
-          ref={containerRef}
-          className="max-w-[1000px] mx-auto my-8 md:my-16 rounded-xl overflow-hidden"
-        >
+        <div className="max-w-[1000px] mx-auto my-8 md:my-16 rounded-xl overflow-hidden">
           <div className="relative w-full flex justify-center py-8">
             <div className="max-w-[280px]">
               <video 
-                ref={videoRef}
                 src={videoUrl}
                 loop
                 muted
                 playsInline
+                autoPlay
                 className="w-full rounded-md"
               />
             </div>
@@ -153,16 +149,13 @@ export const VideoBlock = ({
   }
 
   return (
-    <div 
-      ref={containerRef}
-      className={`${width === 'contained' ? 'content-container' : 'max-w-[1000px]'} mx-auto mb-8 md:mb-16 overflow-hidden`}
-    >
+    <div className={`${width === 'contained' ? 'content-container' : 'max-w-[1000px]'} mx-auto mb-8 md:mb-16 overflow-hidden`}>
       <video 
-        ref={videoRef}
         src={videoUrl}
         loop
         muted
         playsInline
+        autoPlay
         className="w-full rounded-xl"
       />
       {caption && (
