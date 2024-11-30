@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
-import { CldImage } from 'next-cloudinary';
 import { TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
 import { parseMarkdownLinks } from '@/utils/markdown'
 
