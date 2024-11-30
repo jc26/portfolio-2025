@@ -51,3 +51,10 @@ public/_next-video
 .env.development.local
 .env.test.local
 .env.production.local
+
+# next-video
+public/videos/*
+!public/videos/*.json
+!public/videos/*.js
+!public/videos/*.ts
+public/_next-video

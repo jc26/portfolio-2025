@@ -1,5 +1,5 @@
-import { TextBlock, ImageBlock, VideoBlock, ButtonBlock } from './content-blocks'
-import type { ContentBlock, TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent } from '@/types/project'
+import { TextBlock, ImageBlock, VideoBlock } from './content-blocks'
+import type { ContentBlock, TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
 
 export function ContentRenderer({ block }: { block: ContentBlock }) {
   const widthClass = {
@@ -22,9 +22,6 @@ export function ContentRenderer({ block }: { block: ContentBlock }) {
       {block.type === 'video' && isVideoContent(block.content) && (
         <VideoBlock {...block.content} />
       )}
-      {block.type === 'button' && isButtonContent(block.content) && (
-        <ButtonBlock {...block.content} />
-      )}
     </div>
   )
 }
@@ -41,7 +38,3 @@ function isImageContent(content: unknown): content is ImageBlockContent {
 function isVideoContent(content: unknown): content is VideoBlockContent {
   return typeof content === 'object' && content !== null && 'url' in content
 }
-
-function isButtonContent(content: unknown): content is ButtonBlockContent {
-  return typeof content === 'object' && content !== null && 'text' in content && 'url' in content
-} 

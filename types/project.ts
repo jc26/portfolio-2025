@@ -11,17 +11,23 @@ export type ImageBlockContent = {
     url: string
     alt: string
   }>
-  url?: string  // fallback for single image
-  alt?: string  // fallback for single image
-  aspectRatio?: string
+  url?: string
+  alt?: string
+  caption?: string
 }
 
 export type VideoBlockContent = {
   url: string
   isPortrait?: boolean
+  caption?: string
 }
 
 export type ButtonBlockContent = {
+  text: string
+  url: string
+}
+
+export type AwardContent = {
   text: string
   url: string
 }
@@ -41,8 +47,10 @@ export type Project = {
   heading: string
   client: string
   year: string
-  description: string
+  description: string | string[]
   isVisible?: boolean
   action?: ButtonBlockContent
+  award?: AwardContent
+  mentions?: AwardContent | AwardContent[]
   content: ContentBlock[]
 }

@@ -5,11 +5,35 @@
   "heading": "Procreate Dreams: Crafting the Launch Experience",
   "client": "Procreate",
   "year": "2023",
-  "description": "Designed the reveal and launch campaigns for Procreate Dreams, introducing an all-new animation tool from the makers of Procreate to a broader audience.",
+  "description": [
+    "Designed the reveal and launch campaigns for Procreate Dreams, introducing an all-new animation tool from the makers of Procreate to a broader audience."
+  ],
   "action": {
     "text": "Visit site",
     "url": "https://www.procreate.com/dreams"
   },
+  "award": {
+    "text": "Winner of the 2024 Apple Design Award for Innovation",
+    "url": "https://www.apple.com/au/newsroom/2024/06/apple-announces-winners-of-the-2024-apple-design-awards/"
+  },
+  "mentions": [
+    {
+      "text": "Procreate",
+      "url": "https://procreate.com/insight/2024/apple-design-award-for-innovation"
+    },
+    {
+      "text": "Newshub",
+      "url": "https://newshub.medianet.com.au/2024/06/media-alert-tasmanian-software-developer-makes-history-by-winning-a-prestigious-apple-design-award-for-a-third-time/52306/"
+    },
+    {
+      "text": "Creative Bloq",
+      "url": "https://www.creativebloq.com/art/digital-art-software/apple-design-awards-2024-another-win-for-procreate"
+    },
+    {
+      "text": "Yahoo",
+      "url": "https://www.yahoo.com/tech/apple-design-awards-2024-another-202247735.html"
+    }
+  ],
   "content": [
     {
       "id": "hero-1",
@@ -21,24 +45,93 @@
       }
     },
     {
-      "id": "hero-2",
-      "type": "image",
-      "width": "wide",
-      "content": {
-        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657400/its-time-james-min_vtmnzn.jpg",
-        "alt": "Procreate Dreams hero image showing the app interface"
-      }
-    },
-    {
       "id": "intro",
       "type": "text",
       "width": "contained",
       "content": {
         "title": "The Challenge",
         "text": [
-          "The animation software market for iPad was already saturated with established players when we began our launch planning. We needed to differentiate Dreams not just through its features, but through a compelling narrative that would resonate with both professional animators and newcomers to the medium.",
-          "Our team faced the complex task of breaking into this competitive space while maintaining Procreate's reputation for excellence. We needed to convince potential users to pre-order a product in a category where many had experienced disappointment with previous tools."
+          "The animation software market for iPad was already saturated with established players. We needed to differentiate Dreams not just through its features, but through a compelling narrative that would resonate with both professional animators and newcomers to the medium.",
+          "Our vision was to enter this space with a 'Bang!'. We built hype for a pre-order campaign and affirmed to users that the Procreate experience they know and love has entered the world of animation."
         ]
+      }
+    },
+    {
+      "id": "image-53",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657397/image_53-min_zidndt.jpg",
+        "alt": "Procreate Dreams hero image showing the app interface",
+        "caption": "Procreate Dreams hero image showing the app interface"
+      }
+    },
+    {
+      "id": "hero-grid",
+      "type": "image",
+      "width": "wide", 
+      "content": {
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657811/made-for-ipad_xc0f5o.jpg",
+            "alt": "Procreate Dreams image made for iPad"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657810/reveal-hero_abnv93.jpg",
+            "alt": "Procreate Dreams reveal hero image"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657807/launch-hero_ajjlaf.jpg",
+            "alt": "Procreate Dreams launch hero image"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657805/reveal-hero-2_blu369.jpg",
+            "alt": "Procreate Dreams reveal hero image 2"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reveal-hero-3",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657398/reveal-hero-min_r8sjr3.png",
+        "alt": "Procreate Dreams hero image showing the app interface"
+      }
+    },
+    {
+      "id": "launch-hero-2",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657406/launch-hero-min_aisnrd.png",
+        "alt": "Procreate Dreams launch hero image 2"
+      }
+    },
+    {
+      "id": "ada",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657394/ada_wqz2va.jpg",
+        "alt": "apple design award image"
+      }
+    },
+    {
+      "id": "pre-livestream",
+      "type": "image",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657392/Pre-Livestream_EDM-min_wvqwfg.jpg",
+        "alt": "Procreate Dreams pre-livestream image"
+      }
+    },
+    {
+      "id": "image-49",
+      "type": "image",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657392/image_49-min_sm8wen.jpg",
+        "alt": "people using procreate dreams"
       }
     },
     {
@@ -50,6 +143,14 @@
         "text": [
           "The countdown campaign served as a masterclass in building anticipation. We crafted save-the-date announcements that sparked curiosity without revealing too much, supported by a dynamic countdown website that subtly showcased Dreams' animation capabilities."
         ]
+      }
+    },
+    {
+      "id": "countdown",
+      "type": "video",
+      "content": {
+        "url": "dreams-countdown.mp4",
+        "caption": "Procreate Dreams countdown video"
       }
     },
     {

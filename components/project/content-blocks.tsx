@@ -1,54 +1,29 @@
 import { useEffect, useRef } from 'react'
 import { Button } from '@/components/ui/button'
 import { CldImage } from 'next-cloudinary';
-import { TextBlockContent, ImageBlockContent, VideoBlockContent, ButtonBlockContent } from '@/types/project'
+import { TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
+import { parseMarkdownLinks } from '@/utils/markdown'
 
-export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => {
-  // Function to parse text and convert URLs to links
-  const renderText = (text: string) => {
-    // Match markdown-style links: [text](url)
-    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
-    const parts = text.split(linkRegex)
-    
-    return parts.map((part, i) => {
-      // Every third part is a URL (based on regex capture groups)
-      if (i % 3 === 0) {
-        return part
-      }
-      // Link text
-      if (i % 3 === 1) {
-        const url = parts[i + 1]
-        return (
-          <a 
-            key={i} 
-            href={url}
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            {part}
-          </a>
-        )
-      }
-      // Skip URLs as they're handled with their text
-      return null
-    })
-  }
+export const TextBlock = ({ title, text, buttonText, url, width = 'contained' }: TextBlockContent & { width?: string }) => {
+  const paragraphs = Array.isArray(text) ? text : [text]
 
   return (
-    <div className="max-w-2xl mx-auto mb-8 md:mb-8">
-      {title && <h2 className="text-base font-semibold mb-2">{title}</h2>}
-      {Array.isArray(text) ? (
-        text.map((paragraph, i) => (
-          <p key={i} className="text-base mb-2 last:mb-0">
-            {renderText(paragraph)}
+    <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
+      {title && <h2 className="text-base font-semibold mb-3">{title}</h2>}
+      <div className="space-y-3">
+        {paragraphs.map((paragraph, index) => (
+          <p key={index} className="text-base">
+            {parseMarkdownLinks(paragraph)}
           </p>
-        ))
-      ) : (
-        <p className="text-base">{renderText(text)}</p>
-      )}
+        ))}
+      </div>
       {buttonText && url && (
-        <div className="mt-4">
-          <ButtonBlock text={buttonText} url={url} />
+        <div className="mt-6">
+          <Button variant="outline" asChild>
+            <a href={url} target="_blank" rel="noopener noreferrer">
+              {buttonText}
+            </a>
+          </Button>
         </div>
       )}
     </div>
@@ -58,53 +33,44 @@ export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) =>
 export const ImageBlock = ({ 
   url, 
   alt, 
-  width,
-  images
-}: ImageBlockContent & { width: string }) => {
-  // If multiple images are provided
-  if (images && images.length > 0) {
-    const gridWidth = width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'
-    const isOddCount = images.length % 2 !== 0
-    const lastImageIndex = images.length - 1
-
+  images,
+  caption, 
+  width = 'contained' }: ImageBlockContent & { width?: string }) => {
+  if (images?.length) {
     return (
-      <div className={`${gridWidth} mx-auto w-full my-8 md:my-16`}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
+        <div className="grid grid-cols-2 gap-4">
           {images.map((image, index) => (
-            <div 
-              key={image.url}
-              className={`
-                ${isOddCount && index === lastImageIndex ? 'md:col-span-2' : ''}
-              `}
-            >
-              <CldImage 
+            <div key={index}>
+              <img
                 src={image.url}
                 alt={image.alt}
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="w-full h-auto"
+                className="w-full rounded-lg"
               />
             </div>
           ))}
         </div>
+        {caption && (
+          <p className="mt-2 text-sm text-muted-foreground text-center">
+            {parseMarkdownLinks(caption)}
+          </p>
+        )}
       </div>
     )
   }
 
-  // Single image
-  const containerWidth = width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'
-  
   return (
-    <div className={`${containerWidth} mx-auto w-full my-8 md:my-16`}>
-      <CldImage 
-        src={url!}
-        alt={alt!}
-        width={0}
-        height={0}
-        sizes="100vw"
-        className="w-full h-auto"
+    <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
+      <img
+        src={url}
+        alt={alt}
+        className="w-full rounded-lg"
       />
+      {caption && (
+        <p className="mt-1 text-sm text-muted-foreground text-center md:mt-2">
+          {parseMarkdownLinks(caption)}
+        </p>
+      )}
     </div>
   )
 }
@@ -112,11 +78,11 @@ export const ImageBlock = ({
 export const VideoBlock = ({ 
   url,
   width = 'wide',
-  isPortrait = false
+  isPortrait = false,
+  caption
 }: VideoBlockContent & { width?: string }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
-  const maxWidth = width === 'wide' ? '280px' : '240px'
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -125,7 +91,10 @@ export const VideoBlock = ({
           if (!videoRef.current) return
 
           if (entry.isIntersecting) {
-            videoRef.current.play()
+            videoRef.current.play().catch(() => {
+              // Autoplay might be blocked by browser
+              console.log('Autoplay blocked')
+            })
           } else {
             videoRef.current.pause()
           }
@@ -141,7 +110,9 @@ export const VideoBlock = ({
       observer.observe(containerRef.current)
     }
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+    }
   }, [])
 
   if (isPortrait) {
@@ -152,7 +123,7 @@ export const VideoBlock = ({
           className="max-w-[1000px] mx-auto my-8 md:my-16 rounded-xl overflow-hidden"
         >
           <div className="relative w-full flex justify-center py-8">
-            <div style={{ maxWidth }} className="[&_.next-video-container]:!aspect-auto">
+            <div className="max-w-[280px]">
               <video 
                 ref={videoRef}
                 src={`/videos/${url}`}
@@ -163,6 +134,11 @@ export const VideoBlock = ({
               />
             </div>
           </div>
+          {caption && (
+            <p className="mt-2 text-sm text-muted-foreground text-center">
+              {parseMarkdownLinks(caption)}
+            </p>
+          )}
         </div>
       </div>
     )
@@ -171,26 +147,21 @@ export const VideoBlock = ({
   return (
     <div 
       ref={containerRef}
-      className={`${width === 'wide' ? 'max-w-[1000px]' : 'max-w-2xl'} mx-auto my-8 md:my-16 rounded-xl overflow-hidden border border-border-secondary`}
+      className={`${width === 'contained' ? 'content-container' : 'max-w-[1000px]'} mx-auto mb-8 md:mb-16 rounded-xl overflow-hidden`}
     >
-      <div className="[&_.next-video-container]:!aspect-auto [&_video]:!h-auto">
-        <video 
-          ref={videoRef}
-          src={`/videos/${url}`}
-          loop
-          muted
-          playsInline
-          className="w-full rounded-md"
-        />
-      </div>
+      <video 
+        ref={videoRef}
+        src={`/videos/${url}`}
+        loop
+        muted
+        playsInline
+        className="w-full rounded-md"
+      />
+      {caption && (
+        <p className="mt-2 text-sm text-muted-foreground text-center">
+          {parseMarkdownLinks(caption)}
+        </p>
+      )}
     </div>
   )
-}
-
-export const ButtonBlock = ({ text, url }: ButtonBlockContent) => (
-  <div>
-    <Button variant="outline" asChild>
-      <a href={url} target="_blank" rel="noopener noreferrer">{text}</a>
-    </Button>
-  </div>
-) 
+} 
