@@ -17,7 +17,7 @@ export function SiteFooter() {
 
   return (
     <footer className="content-container space-y-6">
-      <h2 className="text-base font-semibold mb-6">Let's chat</h2>
+      <h2 className="text-base font-semibold mb-6">Let&apos;s chat</h2>
       
       <div className="flex flex-col">
         <p className="text-base">
