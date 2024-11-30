@@ -58,7 +58,7 @@ export function FloatingButtons({ pathname }: { pathname: string }) {
       </div>
 
       <motion.div className="fixed bottom-10 left-0 right-0 flex justify-center z-50">
-        <motion.div className="flex px-1 py-2 bg-background/70 backdrop-blur-md rounded-full border shadow-lg overflow-hidden">
+        <motion.div className="flex px-1 py-2 bg-background rounded-full border shadow-lg overflow-hidden">
           <motion.div className={`flex items-center gap-1 ${isExpanded ? 'pl-0 pr-1' : 'pl-1 pr-0'}`}>
             {/* Main Buttons */}
             <motion.div
