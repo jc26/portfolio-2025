@@ -21,14 +21,14 @@
       }
     },
     {
-        "id": "hero-2",
-        "type": "image",
-        "width": "wide",
-        "content": {
-          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657400/its-time-james-min_vtmnzn.jpg",
-          "alt": "Procreate Dreams hero image showing the app interface"
-        }
-      },
+      "id": "hero-2",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657400/its-time-james-min_vtmnzn.jpg",
+        "alt": "Procreate Dreams hero image showing the app interface"
+      }
+    },
     {
       "id": "intro",
       "type": "text",

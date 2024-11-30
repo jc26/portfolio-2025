@@ -2,169 +2,210 @@
     "id": 6,
     "slug": "nfl-plus",
     "title": "Launching NFL+, a new streaming service",
-    "heading": "Paving the way for NFL+, a new streaming platform for all things football.",
+    "heading": "Experimenting with different mediums for effective communication",
     "client": "NFL+",
     "year": "2022",
-    "description": "Our team at La Visual refreshed the NFL+ brand identity for a 2022 launch with a strong visual identity centered around a Live Game mobile experience.",
-    "action": {
-      "text": "Visit site",
-      "url": "https://www.nfl.com/plus/learn-more"
-    },
+    "description": "Outside of work, I like to draw traditionally, paint digitally, and explore 3D tools such as Blender and Cinema4D. The same principles apply here. Without intentional design, an image won't work. Less is more and contrast is king.",
     "content": [
       {
-        "id": "hero",
+        "id": "trailer_desert-min_mtgi71",
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732531244/nfl-hero-min_mqpn57.jpg",
-            "alt": "NFL+ brand identity"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746205/trailer_desert-min_mtgi71.jpg",
+            "alt": "trailer desert"
         }
       },
       {
-        "id": "intro",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "A new identity for NFL+",
-          "text": ["Faced with a tight timeline, our team had to design a new identity for NFL+, translate the new identity to a pre-built landing page, and design a blue-sky landing page for post-launch."]
-        }
-      },
-      {
-        "id": "poster",
+        "id": "blade_runner_study-min_roaila",
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732423961/Free_Citylight_Mockup_4-min_xkwzso.jpg",
-            "alt": "NFL+ brand identity"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746196/blade_runner_study-min_roaila.jpg",
+            "alt": "blade runner study"
         }
       },
       {
-        "id": "block-1",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Live Amplified.",
-          "text": ["NFL+ means to live an amplified life. Whether you’re on the bus or at your kid’s soccer game, there’s no reason to miss the game. You have quick access to NFL’s official, centralized hub for all things football right at your fingertips.", 
-          "It also redefines the meaning of a live game. With reliable access to replays and a lack of tolerance for spoilers, live football takes on a new meaning with NFL+.", 
-          "Below are some early landing page explorations."]
-        }
-      },
-      {
-        "id": "exploration-1",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-1-min_lccb9y.jpg",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-2",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429990/exploration-2-min_tqtdvj.jpg",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-3",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429991/exploration-3-min_quhve2.jpg",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-4",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-4-min_lezx4s.jpg",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "block-2",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "We All Football.",
-          "text": ["There is an indisputable brand equity to the “NFL”. No other brand comes to mind when you think of American football. Hence, there’s no need to oversell something that simply needs no further explanation. The identity, copy, audio design, image treatment, type, and user experience should holistically reflect a minimalistic confidence."]
-        }
-      },
-      {
-        "id": "tv",
+        "id": "rocks-min_ws0abz",
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429989/ctv-mockup-min_ww9xdb.png",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746205/rocks-min_ws0abz.jpg",
+            "alt": "rocks plein air"
         }
       },
       {
-        "id": "logo-lockup",
+        "id": "the-revenant-min_rdibvh",
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429987/3drender-branding-min_q4xxyl.jpg",
-            "alt": "NFL+ logo lockup"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746205/the-revenant-min_rdibvh.jpg",
+            "alt": "the revenant"
         }
       },
       {
-        "id": "mobile-mockups",
+        "id": "catwoman-min_w9prm2",
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430086/mobile-min_wssl1f.jpg",
-            "alt": "NFL+ mobile mockups"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746198/catwoman-min_w9prm2.jpg",
+            "alt": "catwoman"
         }
       },
       {
-        "id": "block-3",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Our approach is inspired by the confidence of the Swiss aesthetic, a careful balance between visual order and chaos.",
-          "text": ["With the wealth of flashing lights and 3D type that over-saturates sports imagery, we felt the space was in dire need of restraint. We sought to honor simplicity as a virtue. The NFL need not aggressively claim the football space, much less a streaming platform for all things football. The NFL is football."]
-        }
-      },
-      {
-        "id": "alternate-full-page-mockup",
+        "id": "wave-min_rywj4t",
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732446728/Landing_Page_B_-_Dark-min_hocicr.jpg",
-            "alt": "Alternate full page mockup for NFL+"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746203/wave-min_rywj4t.jpg",
+            "alt": "wave"
         }
       },
       {
-        "id": "block-4",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "The Response to NFL+",
-          "text": ["The NFL was able to kick off the new season with a bang and confidently accommodate many new subscribers to NFL+."],
-          "buttonText": "Read more",
-          "url": "https://www.lavisual.com/work/nfl-plus"
-        }
-      },
-      {
-        "id": "good-response-twitter",
+        "id": "forest-min_zbkj68",
         "type": "image",
         "width": "wide",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732430087/social_response-min_pk1wgc.png",
-            "alt": "Alternate full page mockup for NFL+"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746200/forest-min_zbkj68.jpg",
+            "alt": "forest"
         }
       },
       {
-        "id": "credits",
-        "type": "text",
-        "width": "contained", 
+        "id": "mountain_1-min_vrsekv",
+        "type": "image",
         "content": {
-          "title": "Credits",
-          "text": [
-            "In collaboration with: Braven Greenelsh (CEO), Dain Kennison (CCO), Matt Romo (Senior Brand Designer), Jamie Kwok (Graphic Designer), David Romo (Graphic and Motion Designer), Joshua Cranmer (Motion Designer), Cindy Peglow (Project Manager), Christine Dane (Digital Producer), Jonathan Brooks (Copywriter)",  
-            "Client: NFL"
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746200/mountain_1-min_vrsekv.jpg",
+            "alt": "mountain"
+        }
+      },
+      {
+        "id": "two_girls-min_imtpoc",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746204/two_girls-min_imtpoc.jpg",
+            "alt": "two girls portrait"
+        }
+      },
+      {
+        "id": "real_faces_1-min_eunmwj",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746201/real_faces_1-min_eunmwj.jpg",
+            "alt": "10 real faces"
+        }
+      },
+      {
+        "id": "figure-faces-grid",
+        "type": "image", 
+        "width": "wide",
+        "content": {
+          "images": [
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746197/figure_1-min_b6wzoj.jpg",
+              "alt": "figure 1"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746199/figure_2-min_rxtfcw.jpg",
+              "alt": "figure 2"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746200/out-of-time-min_jknl2z.jpg",
+              "alt": "out of time"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746196/faces_soft_vs_hard-min_uejbqi.jpg",
+              "alt": "faces soft vs hard"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732950959/face_and_hands-min-1_tkjli0.jpg",
+              "alt": "face and hands"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746196/exposure-min_g5pl3l.jpg",
+              "alt": "exposure"
+            }
           ]
+        }
+      },
+      {
+        "id": "bird-studies-2_1-min_gcsdtm",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746197/bird-studies-2_1-min_gcsdtm.jpg",
+            "alt": "bird studies"
+        }
+      },
+      {
+        "id": "amphibians_1-min_jvoomf",
+        "type": "image",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746196/amphibians_1-min_jvoomf.jpg",
+            "alt": "amphibians"
+        }
+      },
+      {
+        "id": "character-grid",
+        "type": "image",
+        "width": "wide",
+        "content": {
+          "images": [
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746196/character1-min_fkf1zg.jpg",
+              "alt": "character 1"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746199/character2-min_cw8bsz.jpg", 
+              "alt": "character"
+            }
+          ]
+        }
+      },
+      {
+        "id": "lab-ex-machina_uwrdma",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732948638/lab-ex-machina_uwrdma.jpg",
+            "alt": "lab ex machina"
+        }
+      },
+      {
+        "id": "apocalypse-hideaway_mlif1j",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732948637/apocalypse-hideaway_mlif1j.jpg",
+            "alt": "apocalypse hideaway"
+        }
+      },
+      {
+        "id": "material-floor-render_ndxau0",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732948637/material-floor-render_ndxau0.jpg",
+            "alt": "material floor render"
+        }
+      },
+      {
+        "id": "test-chamber_zgbiot",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732948636/test-chamber_zgbiot.jpg",
+            "alt": "test chamber"
+        }
+      },
+      {
+        "id": "blade-runner-2048_dttj0r",
+        "type": "image",
+        "width": "wide",
+        "content": {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732948636/blade-runner-2048_dttj0r.jpg",
+            "alt": "blade runner 2048"
         }
       }
     ]
