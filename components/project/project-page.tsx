@@ -65,7 +65,7 @@ export function ProjectPage({ project }: { project: Project }) {
           )}
           {project.mentions && (
             <div className="flex flex-wrap items-center gap-x-1 text-sm">
-              <span className="font-medium">📰 Mentions</span>
+              <span className="font-medium">🗞️ Mentions</span>
               {Array.isArray(project.mentions) ? (
                 project.mentions?.map((mention, index, array) => (
                   <span key={index}>

@@ -270,6 +270,17 @@
         "alt": "apple design award image",
         "caption": "The 2024 Apple Design Award for Innovation"
       }
+    },
+    {
+      "id": "credits",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Credits",
+        "text": [
+          "In collaboration with the Procreate team, including James Cuda (CEO), Nate Clegg (CMO), Lauren-Yates Jones (Head of Comms), Owen Andrews (Head of Digital), Michael Brydon (Project Manager), Sarah Schmidt (Developer), Nick Cuff (Developer), and many more."
+        ]
+      }
     }
   ]
 }

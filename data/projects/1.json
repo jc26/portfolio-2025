@@ -1,53 +1,30 @@
 {
   "id": 1,
   "title": "Publishing Gumroad's Design System",
-  "heading": "Gumroad Design System: Unifying Platform Experience",
+  "heading": "Paving the way for open source",
   "client": "Antiwork",
   "year": "2024",
   "description": "Led the design and development of Gumroad's first public design system...",
   "action": {
     "text": "View Design System",
-    "url": "https://design.gumroad.com"
+    "url": "https://www.figma.com/community/file/1405573618937136138"
   },
-  "isVisible": false,
   "content": [
-    {
-      "id": "intro",
-      "type": "text",
-      "width": "contained",
-      "content": {
-        "title": "Challenge",
-        "text": ["Paragraph 1...", "Paragraph 2..."]
-      }
-    },
-    {
-      "id": "hero",
-      "type": "image",
-      "width": "wide",
-      "content": {
-        "images": [
-          {
-            "url": "path/to/image1.jpg",
-            "alt": "Image 1 description"
-          },
-          {
-            "url": "path/to/image2.jpg",
-            "alt": "Image 2 description"
-          },
-          {
-            "url": "path/to/image3.jpg",
-            "alt": "Image 3 description"
-          }
-        ],
-        "aspectRatio": "16/9"
-      }
-    },
     {
       "id": "demo",
       "type": "video",
       "width": "wide",
       "content": {
         "mediaUrl": ""
+      }
+    },
+    {
+      "id": "figma",
+      "type": "figma",
+      "width": "wide",
+      "content": {
+        "url": "https://embed.figma.com/design/yVgtqBKbfJxrchyOhw4s5n/Gumroad-Design-System-(Community-Beta)-(Community)",
+        "nodeId": "16631-33088"
       }
     }
   ]

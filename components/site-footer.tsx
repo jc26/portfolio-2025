@@ -24,7 +24,7 @@ export function SiteFooter() {
           ✉️ <a href="mailto:jason@jchang.cc">jason@jchang.cc</a>
         </p>
         <p className="text-base">
-          ☎️ <a href="tel:+19496208830">+1 949 620 8830</a>
+          ☎️ <a href="tel:+19496208830">+1 (949) 620-8830</a>
         </p>
       </div>
 
