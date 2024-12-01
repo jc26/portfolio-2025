@@ -2,12 +2,13 @@ import { Button } from '@/components/ui/button'
 import { parseMarkdownLinks } from '@/utils/markdown'
 import Image from 'next/image'
 import type { TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
+import { useRef, useEffect } from 'react'
 
-export const TextBlock = ({ title, text, buttonText, url, width = 'contained' }: TextBlockContent & { width?: string }) => {
+export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => {
   const paragraphs = Array.isArray(text) ? text : [text]
 
   return (
-    <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
+    <>
       {title && <h2 className="text-base font-semibold mb-3">{title}</h2>}
       <div className="space-y-3">
         {paragraphs.map((paragraph, index) => (
@@ -25,14 +26,14 @@ export const TextBlock = ({ title, text, buttonText, url, width = 'contained' }:
           </Button>
         </div>
       )}
-    </div>
+    </>
   )
 }
 
-export const ImageBlock = ({ url, alt, images, aspectRatio, caption, width = 'contained' }: ImageBlockContent & { width?: string }) => {
+export const ImageBlock = ({ url, alt, images, aspectRatio, caption }: ImageBlockContent) => {
   if (images?.length) {
     return (
-      <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
+      <>
         <div className="grid grid-cols-2 gap-4">
           {images.map((image, index) => (
             <div 
@@ -54,14 +55,14 @@ export const ImageBlock = ({ url, alt, images, aspectRatio, caption, width = 'co
             {parseMarkdownLinks(caption)}
           </p>
         )}
-      </div>
+      </>
     )
   }
 
   if (!url) return null
 
   return (
-    <div className={`${width === 'contained' ? 'content-container' : ''} mb-8 md:mb-16`}>
+    <>
       <Image
         src={url}
         alt={alt || ''}
@@ -75,48 +76,46 @@ export const ImageBlock = ({ url, alt, images, aspectRatio, caption, width = 'co
           {parseMarkdownLinks(caption)}
         </p>
       )}
-    </div>
+    </>
   )
 }
 
-export const VideoBlock = ({ 
-  url,
-  width = 'wide',
-  isPortrait = false,
-  caption
-}: VideoBlockContent & { width?: string }) => {
-  // const containerRef = useRef<HTMLDivElement>(null)
-  // const videoRef = useRef<HTMLVideoElement>(null)
+export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockContent) => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (!videoRef.current) return
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!videoRef.current) return
 
-  //         if (entry.isIntersecting) {
-  //           videoRef.current.play().catch(() => {
-  //             console.log('Autoplay blocked')
-  //           })
-  //         } else {
-  //           videoRef.current.pause()
-  //         }
-  //       })
-  //     },
-  //     {
-  //       root: null,
-  //       threshold: 0.5
-  //     }
-  //   )
+          if (entry.isIntersecting) {
+            videoRef.current.play().catch(() => {
+              if (videoRef.current) {
+                videoRef.current.muted = true
+                videoRef.current.play()
+              }
+            })
+          } else {
+            videoRef.current.pause()
+          }
+        })
+      },
+      {
+        root: null,
+        threshold: 0.5
+      }
+    )
 
-  //   if (containerRef.current) {
-  //     observer.observe(containerRef.current)
-  //   }
+    if (containerRef.current) {
+      observer.observe(containerRef.current)
+    }
 
-  //   return () => {
-  //     observer.disconnect()
-  //   }
-  // }, [])
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
 
   if (!url) return null
 
@@ -125,44 +124,47 @@ export const VideoBlock = ({
   if (isPortrait) {
     return (
       <div className="w-full bg-[#efefef] rounded-xl">
-        <div className="max-w-[1000px] mx-auto my-8 md:my-16 rounded-xl overflow-hidden">
-          <div className="relative w-full flex justify-center py-8">
-            <div className="max-w-[280px]">
-              <video 
-                src={videoUrl}
-                loop
-                muted
-                playsInline
-                autoPlay
-                className="w-full rounded-md"
-              />
-            </div>
+        <div 
+          ref={containerRef}
+          className="relative w-full flex justify-center py-8"
+        >
+          <div className="max-w-[280px]">
+            <video 
+              ref={videoRef}
+              src={videoUrl}
+              loop
+              muted
+              playsInline
+              className="w-full rounded-md"
+            />
           </div>
-          {caption && (
-            <p className="mt-2 text-sm text-muted-foreground text-center">
-              {parseMarkdownLinks(caption)}
-            </p>
-          )}
         </div>
+        {caption && (
+          <p className="mt-2 text-sm text-muted-foreground text-center">
+            {parseMarkdownLinks(caption)}
+          </p>
+        )}
       </div>
     )
   }
 
   return (
-    <div className={`${width === 'contained' ? 'content-container' : 'max-w-[1000px]'} mx-auto mb-8 md:mb-16 overflow-hidden`}>
-      <video 
-        src={videoUrl}
-        loop
-        muted
-        playsInline
-        autoPlay
-        className="w-full rounded-xl"
-      />
+    <>
+      <div ref={containerRef}>
+        <video 
+          ref={videoRef}
+          src={videoUrl}
+          loop
+          muted
+          playsInline
+          className="w-full rounded-xl"
+        />
+      </div>
       {caption && (
         <p className="mt-2 text-sm text-muted-foreground text-center">
           {parseMarkdownLinks(caption)}
         </p>
       )}
-    </div>
+    </>
   )
 } 

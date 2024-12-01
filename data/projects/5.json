@@ -2,11 +2,11 @@
   "id": 5,
   "slug": "procreate-dreams",
   "title": "Reveal and Launch of Procreate Dreams",
-  "heading": "Procreate Dreams: Crafting the Launch Experience",
+  "heading": "Procreate Dreams: Crafting our Reveal and Launch Campaign",
   "client": "Procreate",
   "year": "2023",
   "description": [
-    "Designed the reveal and launch campaigns for Procreate Dreams, introducing an all-new animation tool from the makers of Procreate to a broader audience."
+    "I designed the reveal and launch campaigns for Procreate Dreams, introducing an all-new animation tool from the makers of Procreate to a broader audience."
   ],
   "action": {
     "text": "Visit site",
@@ -51,14 +51,15 @@
       "content": {
         "title": "The Challenge",
         "text": [
-          "The animation software market for iPad was already saturated with established players. We needed to differentiate Dreams not just through its features, but through a compelling narrative that would resonate with both professional animators and newcomers to the medium.",
-          "Our vision was to enter this space with a \"Bang!\". We built hype for a pre-order campaign and affirmed to users that the Procreate experience they know and love has entered the world of animation."
+          "The animation software market for iPad was already saturated with established players. In September 2023, we sought to enter this space with something truly revolutionary, unveiling a product 5 years in the making at [Playgrounds in Motion](https://weareplaygrounds.nl/in-motion-festival/) in London. We needed to differentiate Dreams not just through its features, but through a compelling narrative that would resonate with both professional animators and newcomers to the medium, marking a historic milestone for accessible animation in the Apple ecosystem.",
+          "We wanted to come out with a \"Bang!\". Well, a teaser first, to build expectation and anticipation for something game-changing."
         ]
       }
     },
     {
       "id": "dreams-its-time",
       "type": "video",
+      "width": "wide",
       "content": {
         "url": "dreams-its-time.mp4",
         "caption": "Credit: hero section designed by me, motion graphic created by our design team"
@@ -79,6 +80,7 @@
     {
       "id": "countdown",
       "type": "video",
+      "width": "wide",
       "content": {
         "url": "dreams-countdown.mp4",
         "caption": "A custom countdown animation to build anticipation and excitement"
@@ -154,9 +156,9 @@
       "type": "text", 
       "width": "contained",
       "content": {
-        "title": "No Subscriptions",
+        "title": "No subscriptions",
         "text": [
-          "One of the biggest moments during the reveal was announcing Dreams' one-time purchase price of $19.99. The crowd erupted in applause when we revealed there would be no subscriptions - staying true to Procreate's philosophy of making professional creative tools accessible through fair, transparent pricing. This decision resonated strongly with our community and reinforced our commitment to putting users first."
+          "One of the biggest moments during the reveal was announcing Dreams' one-time purchase price of $19.99. The crowd responded in applause when we revealed there would be no subscriptions - staying true to Procreate's philosophy of allowing professionals to own their creative tools without paying a recurring fee. This stance resonated strongly with our community and reinforced our commitment to putting artists first."
         ]
       }
     },
@@ -174,9 +176,39 @@
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Pre-Launch Strategy",
+        "title": "After the reveal",
         "text": [
-          "The countdown campaign served as a masterclass in building anticipation. We crafted save-the-date announcements that sparked curiosity without revealing too much, supported by a dynamic countdown website that subtly showcased Dreams' animation capabilities."
+          "Along with designing a new comprehensive [Help Center](https://help.procreate.com), our marketing site was updated to highlight Dreams' groundbreaking features: real-time rendering for instant animation feedback, a subscription-free model with one-time purchase, and the introduction of video and audio capabilities to the Procreate ecosystem.",
+          "We built a pre-order campaign and invited users to celebrate with us that the Procreate experience they know and love has entered the world of animation."
+        ]
+      }
+    },
+    {
+      "id": "hi-res",
+      "type": "video",
+      "width": "contained",
+      "content": {
+        "url": "hi-res-video.mp4",
+        "caption": "Video and audio introduced to the Procreate ecosystem"
+      }
+    },
+    {
+      "id": "instant-playback",
+      "type": "video",
+      "width": "contained",
+      "content": {
+        "url": "instant-playback.mp4",
+        "caption": "A crucial selling point for traditional Adobe users"
+      }
+    },
+    {
+      "id": "strategy",
+      "type": "text", 
+      "width": "contained",
+      "content": {
+        "text": [
+          "I designed our marketing place with a vision of simplicity. I focused on capturing specific moments in the app where simplicity shined. We curated artwork that not only demonstrated Procreate Dreams' capabilities, but also complemented each other, showcasing how the app could adapt to any style or industry.",
+          "Our goal was to resonate with both animation newcomers and seasoned professionals, with a bias towards the prosumer. After all is said and done, our belief is that animation should be accessible to everyone."
         ]
       }
     },
@@ -202,29 +234,11 @@
       }
     },
     {
-      "id": "hi-res",
-      "type": "video",
-      "width": "contained",
-      "content": {
-        "url": "hi-res-video.mp4",
-        "caption": "An all-new feature introduced to the Procreate ecosystem"
-      }
-    },
-    {
-      "id": "instant-playback",
-      "type": "video",
-      "width": "contained",
-      "content": {
-        "url": "instant-playback.mp4",
-        "caption": "A crucial selling point for traditional Adobe users"
-      }
-    },
-    {
       "id": "results",
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Results sdfsdf",
+        "title": "Results",
         "text": [
           "The launch exceeded our expectations with over 150k first-time downloads and more than 80k pre-orders. Our website saw close to 20k visits during the reveal and 63k visits on launch day. This success culminated in receiving the Apple Design Award for Innovation in 2024, recognizing our efforts to make professional animation tools more accessible."
         ]

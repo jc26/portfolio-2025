@@ -2,22 +2,21 @@ import { TextBlock, ImageBlock, VideoBlock } from './content-blocks'
 import type { ContentBlock, TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
 
 export function ContentRenderer({ block }: { block: ContentBlock }) {
-  const widthClass = {
-    contained: 'max-w-2xl',
-    wide: 'max-w-[1000px]',
-    full: 'w-full'
-  }[block.width]
+  const width = block.width || 'contained'
+  
+  const widthClass = width === 'contained' 
+    ? 'content-container' 
+    : width === 'wide' 
+      ? 'max-w-[1000px] mx-auto' 
+      : 'w-full'
 
   return (
-    <div className={`${widthClass} mx-auto`}>
+    <div className={`${widthClass} mb-8 md:mb-16`}>
       {block.type === 'text' && isTextContent(block.content) && (
         <TextBlock {...block.content} />
       )}
       {block.type === 'image' && isImageContent(block.content) && (
-        <ImageBlock 
-          {...block.content}
-          width={block.width}
-        />
+        <ImageBlock {...block.content} />
       )}
       {block.type === 'video' && isVideoContent(block.content) && (
         <VideoBlock {...block.content} />
