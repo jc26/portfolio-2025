@@ -102,3 +102,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+mux-player {
+  --controls: none;
+}

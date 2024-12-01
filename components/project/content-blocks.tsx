@@ -2,7 +2,9 @@ import { Button } from '@/components/ui/button'
 import { parseMarkdownLinks } from '@/utils/markdown'
 import Image from 'next/image'
 import type { TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
+import MuxPlayer from '@mux/mux-player-react'
+import type { MuxPlayerRefAttributes } from '@mux/mux-player-react'
 
 export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => {
   const paragraphs = Array.isArray(text) ? text : [text]
@@ -82,44 +84,52 @@ export const ImageBlock = ({ url, alt, images, aspectRatio, caption }: ImageBloc
 
 export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockContent) => {
   const containerRef = useRef<HTMLDivElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const playerRef = useRef<MuxPlayerRefAttributes>(null)
+  const [playbackId, setPlaybackId] = useState<string>('')
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!videoRef.current) return
-
-          if (entry.isIntersecting) {
-            videoRef.current.play().catch(() => {
-              if (videoRef.current) {
-                videoRef.current.muted = true
-                videoRef.current.play()
-              }
-            })
-          } else {
-            videoRef.current.pause()
-          }
-        })
-      },
-      {
-        root: null,
-        threshold: 0.5
+    const loadVideoData = async () => {
+      try {
+        const videoJson = await import(`@/public/videos/${url}.json`)
+        const muxPlaybackId = videoJson?.default?.providerMetadata?.mux?.playbackId
+        
+        if (muxPlaybackId) {
+          setPlaybackId(muxPlaybackId)
+        }
+      } catch (error) {
+        console.error('Error loading video:', error)
       }
-    )
+    }
+    
+    loadVideoData()
+  }, [url])
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current)
+  // Manual loop handling
+  useEffect(() => {
+    const player = playerRef.current
+    if (!player) return
+
+    const handleEnded = () => {
+      if (player) {
+        player.currentTime = 0
+        player.play()
+      }
     }
 
+    player.addEventListener('ended', handleEnded)
     return () => {
-      observer.disconnect()
+      player.removeEventListener('ended', handleEnded)
     }
-  }, [])
+  }, [playbackId])
 
   if (!url) return null
 
-  const videoUrl = url.startsWith('/') ? url : `/videos/${url}`
+  const playerStyle = {
+    '--controls': 'none',
+    '--media-object-fit': 'cover',
+    '--media-object-position': 'center',
+    '--media-background-color': 'transparent',
+  } as React.CSSProperties
 
   if (isPortrait) {
     return (
@@ -129,18 +139,23 @@ export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockConte
           className="relative w-full flex justify-center py-8"
         >
           <div className="max-w-[280px]">
-            <video 
-              ref={videoRef}
-              src={videoUrl}
-              loop
-              muted
-              playsInline
-              className="w-full rounded-md"
-            />
+            {playbackId && (
+              <MuxPlayer
+                ref={playerRef}
+                streamType="on-demand"
+                playbackId={playbackId}
+                autoPlay="muted"
+                muted={true}
+                minResolution="720p"
+                renditionOrder="desc"
+                style={playerStyle}
+                className="w-full rounded-md"
+              />
+            )}
           </div>
         </div>
         {caption && (
-          <p className="mt-2 text-sm text-muted-foreground text-center">
+          <p className="mt-1 text-sm text-muted-foreground text-center">
             {parseMarkdownLinks(caption)}
           </p>
         )}
@@ -151,17 +166,22 @@ export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockConte
   return (
     <>
       <div ref={containerRef}>
-        <video 
-          ref={videoRef}
-          src={videoUrl}
-          loop
-          muted
-          playsInline
-          className="w-full rounded-xl"
-        />
+        {playbackId && (
+          <MuxPlayer
+            ref={playerRef}
+            streamType="on-demand"
+            playbackId={playbackId}
+            autoPlay="muted"
+            muted={true}
+            minResolution="720p"
+            renditionOrder="desc"
+            style={playerStyle}
+            className="w-full rounded-lg overflow-hidden"
+          />
+        )}
       </div>
       {caption && (
-        <p className="mt-2 text-sm text-muted-foreground text-center">
+        <p className="mt-1 text-sm text-muted-foreground text-center">
           {parseMarkdownLinks(caption)}
         </p>
       )}
