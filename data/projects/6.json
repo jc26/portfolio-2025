@@ -10,6 +10,48 @@
       "text": "Visit site",
       "url": "https://www.nfl.com/plus/learn-more"
     },
+    "award": {
+      "text": "2023 Gold Medal for Brand Identity at the Davey Awards",
+      "url": "https://daveyawards.com/winners-area/gallery/?event=1066&award=99&search=nfl&id=461387"
+    },
+    "mentions": [
+      {
+        "text": "NFL",
+        "url": "https://www.nfl.com/news/nfl-launches-exclusive-streaming-subscription-service-nfl-plus"
+      },
+      {
+        "text": "La Visual",
+        "url": "https://www.lavisual.com/work/nfl-plus"
+      },
+      {
+        "text": "Compadre",
+        "url": "https://hicompadre.com/work/nfl-plus-app-launch-and-marketing-campaign/"
+      },
+      {
+        "text": "Forbes",
+        "url": "https://www.forbes.com/sites/jabariyoung/2022/07/25/nfl-streaming-google-apple-connected-devices/"
+      },
+      {
+        "text": "Deadline",
+        "url": "https://deadline.com/2022/07/nfl-expands-media-footprint-streaming-service-nfl-plus-1235076585/"
+      },
+      {
+        "text": "The Washington Post",
+        "url": "https://www.washingtonpost.com/sports/2022/07/25/nfl-plus-streaming-service-live-games/"
+      },
+      {
+        "text": "TechCrunch",
+        "url": "https://techcrunch.com/2022/07/25/nfl-streaming-service-launches-in-the-u-s-replacing-nfl-game-pass/"
+      },
+      {
+        "text": "CNBC",
+        "url": "https://www.cnbc.com/2022/07/25/national-football-leagues-new-streaming-service-nfl-launches-at-4point99-per-month.html"
+      },
+      {
+        "text": "Hollywood Reporter",
+        "url": "https://www.hollywoodreporter.com/business/digital/nfl-plus-streaming-service-cost-summer-1235153956/"
+      }
+    ],
     "content": [
       {
         "id": "hero",

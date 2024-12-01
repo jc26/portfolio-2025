@@ -57,6 +57,7 @@ export type Project = {
   isVisible?: boolean
   action?: ButtonBlockContent
   award?: AwardContent
+  nominations?: AwardContent | AwardContent[]
   mentions?: AwardContent | AwardContent[]
   content: ContentBlock[]
 }
