@@ -11,6 +11,7 @@ export type ImageBlockContent = {
     url: string
     alt: string
     aspectRatio?: string
+    fullWidth?: boolean
   }>
   url?: string
   alt?: string
@@ -38,17 +39,23 @@ export type AwardContent = {
   url: string
 }
 
+// Add new type for Twitter embed
+export type TwitterBlockContent = {
+  tweetId: string
+  caption?: string
+}
+
 // Main content block type
 export type ContentBlock = {
   id: string
-  type: 'text' | 'image' | 'video' | 'button' | 'quote' | 'gallery'
-  width: 'contained' | 'full' | 'wide'
-  content: TextBlockContent | ImageBlockContent | VideoBlockContent | ButtonBlockContent
+  type: 'text' | 'image' | 'video' | 'twitter'
+  width: 'contained' | 'wide'
+  content: TextBlockContent | ImageBlockContent | VideoBlockContent | TwitterBlockContent
 }
 
 export type Project = {
   id: number
-  slug: string  // e.g., "gumroad-design-system"
+  slug: string
   title: string
   heading: string
   client: string

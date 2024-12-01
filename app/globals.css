@@ -80,14 +80,14 @@ p {
   text-wrap: pretty;
 }
 
-a[href^="http"], a[href^="mailto"], a[href^="tel"] {
+a[href^="http"]:not([class^="tweet"]), a[href^="mailto"], a[href^="tel"] {
   text-decoration-line: underline;
   text-decoration-color: hsl(var(--border));
   text-underline-offset: 4px;
   transition: text-decoration-color 0.2s ease;
 }
 
-a[href^="http"]:hover, a[href^="mailto"]:hover, a[href^="tel"]:hover {
+a[href^="http"]:not([class^="tweet"]):hover, a[href^="mailto"]:hover, a[href^="tel"]:hover {
   text-decoration-color: hsl(var(--foreground));
 }
 

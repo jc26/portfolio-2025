@@ -127,7 +127,8 @@
           },
           {
             "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657398/reveal-hero-min_r8sjr3.png",
-            "alt": "Procreate Dreams reveal hero image 3"
+            "alt": "Procreate Dreams reveal hero image 3",
+            "fullWidth": true
           }
         ]
       }
@@ -160,7 +161,8 @@
           },
           {
             "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732963226/users-dreams_bhjvay.jpg",
-            "alt": "Procreate Dreams hero image showing the app interface"
+            "alt": "Procreate Dreams hero image showing the app interface",
+            "fullWidth": true
           }
         ]
       }
@@ -242,7 +244,8 @@
           },
           {
             "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732657406/launch-hero-min_aisnrd.png",
-            "alt": "Procreate Dreams launch hero image 2"
+            "alt": "Procreate Dreams launch hero image 2",
+            "fullWidth": true
           }
         ],
         "caption": "A selection of artworks commissioned and curated to showcase the diverse capabilities of Procreate Dreams"

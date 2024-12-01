@@ -1,5 +1,5 @@
-import { TextBlock, ImageBlock, VideoBlock } from './content-blocks'
-import type { ContentBlock, TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
+import { TextBlock, ImageBlock, VideoBlock, TwitterBlock } from './content-blocks'
+import type { ContentBlock, TextBlockContent, ImageBlockContent, VideoBlockContent, TwitterBlockContent } from '@/types/project'
 
 export function ContentRenderer({ block }: { block: ContentBlock }) {
   const width = block.width || 'contained'
@@ -21,6 +21,9 @@ export function ContentRenderer({ block }: { block: ContentBlock }) {
       {block.type === 'video' && isVideoContent(block.content) && (
         <VideoBlock {...block.content} />
       )}
+      {block.type === 'twitter' && isTwitterContent(block.content) && (
+        <TwitterBlock {...block.content} />
+      )}
     </div>
   )
 }
@@ -36,4 +39,8 @@ function isImageContent(content: unknown): content is ImageBlockContent {
 
 function isVideoContent(content: unknown): content is VideoBlockContent {
   return typeof content === 'object' && content !== null && 'url' in content
+}
+
+function isTwitterContent(content: unknown): content is TwitterBlockContent {
+  return typeof content === 'object' && content !== null && 'tweetId' in content
 }

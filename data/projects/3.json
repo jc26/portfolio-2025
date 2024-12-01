@@ -1,20 +1,82 @@
 {
   "id": 3,
   "slug": "ai-is-not-our-future",
-  "title": "\"AI is not our future\" Campaign",
+  "title": "AI is not our future",
   "heading": "Championing Human Creativity in an AI World",
   "client": "Procreate",
   "year": "2024",
   "description": "Spearheaded a global campaign highlighting the importance of human creativity in an AI-dominated landscape.",
-  "isVisible": false,
+  "action": {
+    "text": "Visit page",
+    "url": "https://procreate.com/ai"
+  },
+  "mentions": [
+    {
+      "text": "Creative Bloq",
+      "url": "https://www.apple.com/newsroom/2024/06/apple-design-awards-2024-winners-announced/"
+    },
+    {
+      "text": "Wired",
+      "url": "https://www.wired.com/story/procreate-app-no-generative-ai/"
+    },
+    {
+      "text": "Yahoo",
+      "url": "https://www.yahoo.com/tech/procreate-comes-swinging-against-ai-132758593.html"
+    },
+    {
+      "text": "9to5mac",
+      "url": "https://9to5mac.com/2024/08/19/ipad-app-procreate-rejects-ai-path-of-competitors-says-your-work-belongs-to-you/"
+    },
+    {
+      "text": "Techradar",
+      "url": "https://www.techradar.com/computing/artificial-intelligence/hate-ai-art-youre-gonna-love-what-procreate-just-promised-to-do-or-not-do"
+    },
+    {
+      "text": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/i-really-fing-hate-it-procreate-ceo-slams-use-of-generative-ai-says-ai-not-our-future/articleshow/112652584.cms"
+    }
+  ],
   "content": [
     {
       "id": "hero",
       "type": "image",
       "width": "wide",
+      "content": {  
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733051302/default_en_h0oczm.jpg",
+            "alt": "AI is not our future campaign hero image",
+            "fullWidth": true
+          },  
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733051300/default_cn_tuqshf.jpg",
+            "alt": "AI is not our future campaign hero image chinese"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733051299/default_jp_r7m3cq.jpg",
+            "alt": "AI is not our future campaign hero image japanese"
+          }
+        ]
+      }
+    },
+    {
+      "id": "context",
+      "type": "text",
+      "width": "contained",
       "content": {
-        "url": "placeholder-hero.jpg",
-        "alt": "AI is not our future campaign hero image"
+        "title": "Going against the grain",
+        "text": [
+          "As AI features became the must-have addition for creative apps in 2024, with our biggest competitors rushing to integrate generative AI capabilities, we knew we had to take a clear stance.",
+          "As a major player in the creative app space, we chose to go against the grain and make a bold statement about our commitment to human creativity. In a market saturated with AI promises, we wanted to reassure our community that Procreate will always be a tool for human expression."
+        ]
+      }
+    },
+    {
+      "id": "tweet",
+      "type": "twitter",
+      "width": "contained",
+      "content": {
+        "tweetId": "1825311104584802470"
       }
     },
     {
@@ -23,7 +85,51 @@
       "width": "contained",
       "content": {
         "title": "Taking a stand for human creativity",
-        "text": ["In a world increasingly dominated by AI-generated content, Procreate needed to make a bold statement about the irreplaceable value of human creativity."]
+        "text": [
+          "In a world increasingly dominated by AI-generative tools, Procreate needed to make a bold statement. Generative AI has no place in the journey of creative self-mastery. The goal of learning to paint and draw is to truly see the world around us, to understand the complexities of the human form, and to develop our own artistic voice.",
+          "When we let AI generate our art, we rob ourselves of the essential skills that can only come through observation, practice, and dedication. The value of creative pursuit lies in the journey itself - the countless hours spent understanding light and shadow, form and perspective, the process of wrestling and growing that no LLM can replace."
+        ]
+      }
+    },
+    {
+      "id": "ipad-mockup",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733053553/ipad-mockup-2_ewdoqv.jpg",
+        "alt": "AI is not our future campaign ipad mockup"
+      }
+    },
+    {
+      "id": "design-intent",
+      "type": "text",
+      "width": "contained", 
+      "content": {
+        "title": "Design intent",
+        "text": [
+          "The webpage had to be punchy, impactful, bold, and confident. This was a big move and it was hard to overstate it.",
+          "The choice of photography emphasizes both the human aspect of creativity and the hopeful optimism we've adopted in the age of generative AI as we continue to ship creative tools to those who love the creative process."
+        ]
+      }
+    },
+    {
+      "id": "phone-mockup",
+      "type": "image",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733053546/iphone-mockup-2_qua7by.jpg",
+        "alt": "AI is not our future campaign phone mockup"
+      }
+    },
+    {
+      "id": "outro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Impact on the creative community",
+        "text": [
+          "Procreate's bold stance resonated with artists and creatives worldwide, reinforcing the importance of human creativity in a digital age dominated by AI.",
+          "The campaign's highly screenshottable design led to massive organic sharing across social media platforms. Major tech and creative publications including Wired, Yahoo News, and CreativeBloq covered the story, amplifying Procreate's message and sparking important discussions about the role of AI in creative industries."
+        ]
       }
     }
   ]

@@ -1,10 +1,11 @@
 import { Button } from '@/components/ui/button'
 import { parseMarkdownLinks } from '@/utils/markdown'
 import Image from 'next/image'
-import type { TextBlockContent, ImageBlockContent, VideoBlockContent } from '@/types/project'
+import type { TextBlockContent, ImageBlockContent, VideoBlockContent, TwitterBlockContent } from '@/types/project'
 import { useRef, useEffect, useState } from 'react'
 import MuxPlayer from '@mux/mux-player-react'
 import type { MuxPlayerRefAttributes } from '@mux/mux-player-react'
+import { Tweet } from 'react-tweet'
 
 export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) => {
   const paragraphs = Array.isArray(text) ? text : [text]
@@ -36,11 +37,11 @@ export const ImageBlock = ({ url, alt, images, aspectRatio, caption }: ImageBloc
   if (images?.length) {
     return (
       <>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {images.map((image, index) => (
             <div 
               key={index}
-              className={images.length % 2 !== 0 && index === images.length - 1 ? 'col-span-2' : ''}
+              className={image.fullWidth ? 'md:col-span-2' : ''}
             >
               <Image
                 src={image.url}
@@ -182,6 +183,21 @@ export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockConte
       </div>
       {caption && (
         <p className="mt-1 text-sm text-muted-foreground text-center">
+          {parseMarkdownLinks(caption)}
+        </p>
+      )}
+    </>
+  )
+}
+
+export const TwitterBlock = ({ tweetId, caption }: TwitterBlockContent) => {
+  return (
+    <>
+      <div className="flex justify-center [&_.react-tweet]:bg-white [&_.react-tweet]:text-black [&_.react-tweet_p]:text-black dark:[&_.react-tweet]:bg-card dark:[&_.react-tweet]:text-foreground dark:[&_.react-tweet_p]:text-foreground">
+        <Tweet id={tweetId} />
+      </div>
+      {caption && (
+        <p className="mt-2 text-sm text-muted-foreground text-center">
           {parseMarkdownLinks(caption)}
         </p>
       )}
