@@ -38,11 +38,11 @@ export default function Home() {
       <WorkExperienceBlock experiences={experiences} />
       
       <section className="mb-16">
-        <h2 className="text-base font-semibold mb-6">Work</h2>
-        <div className="space-y-6">
+        <h2 className="text-base font-semibold mb-4">Projects</h2>
+        <div>
           {projects.map((project) => (
-            <div key={project.id}>
-              <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-xl transition-colors">
+            <div key={project.id} className="border-y border-border py-4 -mt-[1px]">
+              <Link href={`/projects/${project.id}`} className="cursor-pointer rounded-xl transition-colors block">
                 <div className="flex justify-between items-start">
                   <h3 className="text-base font-medium">{project.title}</h3>
                 </div>
