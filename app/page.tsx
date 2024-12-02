@@ -3,17 +3,24 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import type { Project } from '@/types/project'
+import type { WorkExperience } from '@/types/work'
+import { WorkExperience as WorkExperienceBlock } from '@/components/work-experience'
 
-export default function Component() {
+export default function Home() {
   const [projects, setProjects] = useState<Project[]>([])
+  const [experiences, setExperiences] = useState<WorkExperience[]>([])
 
   useEffect(() => {
-    const loadProjects = async () => {
-      const { getProjects } = await import('@/utils/get-projects')
-      const projectData = await getProjects()
-      setProjects(projectData)
+    const loadData = async () => {
+      const [projectsModule, workModule] = await Promise.all([
+        import('@/utils/get-projects'),
+        import('@/data/work.json')
+      ])
+      
+      setProjects(await projectsModule.getProjects())
+      setExperiences(workModule.default)
     }
-    loadProjects()
+    loadData()
   }, [])
 
   return (
@@ -27,6 +34,8 @@ export default function Component() {
           I craft human interfaces that conform necessary function into intuitive form.
         </p>
       </section>
+      
+      <WorkExperienceBlock experiences={experiences} />
       
       <section className="mb-16">
         <h2 className="text-base font-semibold mb-6">Work</h2>
