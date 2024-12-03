@@ -14,9 +14,9 @@ export function NavIsland({ pathname }: { pathname: string }) {
   const [isExpanded, setIsExpanded] = useState(false)
   const [isClient, setIsClient] = useState(false)
   const [workWidth, setWorkWidth] = useState(0)
-  const [experimentsWidth, setExperimentsWidth] = useState(0)
+  const [playWidth, setPlayWidth] = useState(0)
   const workTextRef = useRef<HTMLSpanElement>(null)
-  const experimentsTextRef = useRef<HTMLSpanElement>(null)
+  const playTextRef = useRef<HTMLSpanElement>(null)
 
   const springTransition = {
     type: "spring",
@@ -44,8 +44,8 @@ export function NavIsland({ pathname }: { pathname: string }) {
     if (workTextRef.current) {
       setWorkWidth(workTextRef.current.offsetWidth)
     }
-    if (experimentsTextRef.current) {
-      setExperimentsWidth(experimentsTextRef.current.offsetWidth)
+    if (playTextRef.current) {
+      setPlayWidth(playTextRef.current.offsetWidth)
     }
   }, [])
 
@@ -62,7 +62,7 @@ export function NavIsland({ pathname }: { pathname: string }) {
 
   const getActiveSection = (path: string) => {
     if (path === '/' || path.startsWith('/projects/')) return 'work'
-    if (path === '/experiments') return 'experiments'
+    if (path === '/play') return 'play'
     return 'none'
   }
 
@@ -70,7 +70,7 @@ export function NavIsland({ pathname }: { pathname: string }) {
     <>
       <div className="absolute opacity-0 pointer-events-none">
         <span ref={workTextRef}>Work</span>
-        <span ref={experimentsTextRef}>Experiments</span>
+        <span ref={playTextRef}>Play</span>
       </div>
 
       {isClient && (
@@ -80,7 +80,7 @@ export function NavIsland({ pathname }: { pathname: string }) {
           animate={{ y: 0, opacity: 1 }}
           transition={entranceSpring}
         >
-          <motion.div className="flex px-1 py-2 bg-background rounded-full border shadow-lg overflow-hidden">
+          <motion.div className="flex px-1 py-2 bg-background rounded-full border border-secondary shadow-lg overflow-hidden">
             <motion.div className={`flex items-center gap-1 ${isExpanded ? 'pl-0 pr-1' : 'pl-1 pr-0'}`}>
               {/* Main Buttons */}
               <motion.div
@@ -122,28 +122,28 @@ export function NavIsland({ pathname }: { pathname: string }) {
 
                 <motion.div
                   animate={{
-                    width: getActiveSection(pathname) === 'experiments' ? experimentsWidth + 64 : 44
+                    width: getActiveSection(pathname) === 'play' ? playWidth + 64 : 44
                   }}
                   transition={springTransition}
                 >
                   <Button 
-                    variant={getActiveSection(pathname) === 'experiments' ? "default" : "ghost"} 
+                    variant={getActiveSection(pathname) === 'play' ? "default" : "ghost"} 
                     size="lg"
-                    className={`flex items-center w-full ${getActiveSection(pathname) === 'experiments' ? 'gap-2' : 'gap-0'}`}
+                    className={`flex items-center w-full ${getActiveSection(pathname) === 'play' ? 'gap-2' : 'gap-0'}`}
                     asChild
                   >
-                    <Link href="/experiments">
+                    <Link href="/play">
                       <BeakerIcon className="h-8 w-8" />
                       <motion.span
                         initial={false}
                         animate={{
-                          width: getActiveSection(pathname) === 'experiments' ? experimentsWidth + 16 : 0,
-                          opacity: getActiveSection(pathname) === 'experiments' ? 1 : 0
+                          width: getActiveSection(pathname) === 'play' ? playWidth + 16 : 0,
+                          opacity: getActiveSection(pathname) === 'play' ? 1 : 0
                         }}
                         transition={springTransition}
                         className="overflow-hidden whitespace-nowrap"
                       >
-                        Experiments
+                        Play
                       </motion.span>
                     </Link>
                   </Button>
