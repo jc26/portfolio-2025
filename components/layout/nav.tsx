@@ -8,7 +8,7 @@ import { ContactDrawer } from '@/components/contact-drawer'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
-export function FloatingButtons({ pathname }: { pathname: string }) {
+export function NavIsland({ pathname }: { pathname: string }) {
   const [isDark, setIsDark] = useState(false)
   const [contactOpen, setContactOpen] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)

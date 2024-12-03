@@ -1,7 +1,11 @@
 import type { WorkExperience } from '@/types/work'
 import Link from 'next/link'
 
-export function WorkExperience({ experiences }: { experiences: WorkExperience[] }) {
+interface WorkExperienceProps {
+  experiences: WorkExperience[]
+}
+
+export function WorkExperience({ experiences }: WorkExperienceProps) {
   return (
     <section className="mb-16">
       <h2 className="text-base font-semibold mb-4">Experience</h2>
