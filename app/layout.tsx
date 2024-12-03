@@ -27,11 +27,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={geistSans.variable}>
-      <body className="antialiased bg-background text-foreground">
-        <div className="relative min-h-screen px-6 pt-16 pb-28 md:px-24 md:pt-32 md:pb-32">
-          <MotionLayout>
-            {children}
-          </MotionLayout>
+      <body className="antialiased bg-background text-foreground overflow-y-scroll">
+        <div className="fixed inset-0 overflow-hidden">
+          <div className="h-full overflow-y-auto">
+            <div className="relative min-h-screen px-6 pt-16 pb-28 md:px-24 md:pt-32 md:pb-32">
+              <MotionLayout>
+                {children}
+              </MotionLayout>
+            </div>
+          </div>
         </div>
       </body>
     </html>
