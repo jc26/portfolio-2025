@@ -21,7 +21,7 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 82%;
-    --border-secondary: 0 0% 90.1%;
+    --border-secondary: 0 0% 88%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --chart-1: 12 76% 61%;
@@ -51,7 +51,7 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 30%;
-    --border-secondary: 0 0% 14.9%;
+    --border-secondary: 0 0% 18%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
@@ -82,7 +82,7 @@ p {
 
 a[href^="http"]:not([class^="tweet"]), a[href^="mailto"], a[href^="tel"] {
   text-decoration-line: underline;
-  text-decoration-color: hsl(var(--border));
+  text-decoration-color: hsl(var(--border-secondary));
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s ease;
 }

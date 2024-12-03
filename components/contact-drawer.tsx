@@ -54,7 +54,7 @@ export function ContactDrawer({ open, onOpenChange }: ContactDrawerProps) {
 
       toast({
         title: "Message sent!",
-        description: "Thanks for reaching out. I&apos;ll get back to you soon.",
+        description: "Thanks for reaching out. I'll get back to you soon.",
         variant: "default",
       })
 
