@@ -50,12 +50,18 @@ export type FigmaBlockContent = {
   url: string
 }
 
+// Add new type for YouTube embed
+export type YouTubeBlockContent = {
+  videoId: string
+  caption?: string
+}
+
 // Main content block type
 export type ContentBlock = {
   id: string
-  type: 'text' | 'image' | 'video' | 'twitter' | 'figma'
+  type: 'text' | 'image' | 'video' | 'twitter' | 'figma' | 'youtube'
   width: 'contained' | 'wide'
-  content: TextBlockContent | ImageBlockContent | VideoBlockContent | TwitterBlockContent | FigmaBlockContent
+  content: TextBlockContent | ImageBlockContent | VideoBlockContent | TwitterBlockContent | FigmaBlockContent | YouTubeBlockContent
 }
 
 export type Project = {

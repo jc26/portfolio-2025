@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { parseMarkdownLinks } from '@/utils/markdown'
 import Image from 'next/image'
-import type { TextBlockContent, ImageBlockContent, VideoBlockContent, TwitterBlockContent, FigmaBlockContent } from '@/types/project'
+import type { TextBlockContent, ImageBlockContent, VideoBlockContent, TwitterBlockContent, FigmaBlockContent, YouTubeBlockContent } from '@/types/project'
 import { useRef, useEffect, useState } from 'react'
 import MuxPlayer from '@mux/mux-player-react'
 import type { MuxPlayerRefAttributes } from '@mux/mux-player-react'
@@ -138,7 +138,7 @@ export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockConte
 
   if (isPortrait) {
     return (
-      <div className="w-full bg-secondary">
+      <div className="w-full bg-secondary rounded-lg">
         <div 
           ref={containerRef}
           className="relative w-full flex justify-center py-8"
@@ -218,5 +218,25 @@ export const FigmaBlock = ({ url }: FigmaBlockContent) => {
         allowFullScreen
       />
     </div>
+  )
+}
+
+export const YouTubeBlock = ({ videoId, caption }: YouTubeBlockContent) => {
+  return (
+    <>
+      <div className="aspect-video w-full">
+        <iframe
+          className="w-full h-full rounded-lg border border-secondary"
+          src={`https://www.youtube.com/embed/${videoId}`}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
+      </div>
+      {caption && (
+        <p className="mt-2 text-sm text-muted-foreground text-center">
+          {parseMarkdownLinks(caption)}
+        </p>
+      )}
+    </>
   )
 } 

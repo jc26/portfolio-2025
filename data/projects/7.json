@@ -26,15 +26,7 @@
         "width": "contained",
         "content": {
           "title": "What would be most helpful and relevant to a novice in crypto investing?",
-          "text": ["My goal was to design an app with minimal barriers of entry and a low learning curve so that a novice wouldn't feel overwhelmed. I placed my user approximately here on this spectrum."]
-        }
-      },
-      {
-        "id": "novice-expert",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505194/persona-spectrum_bbbnwn.png",
-            "alt": "iPhone mockup for home screen of crypto app"
+          "text": ["My goal was to design an app with minimal barriers of entry and a low learning curve so that a novice wouldn't feel overwhelmed. I placed my user more towards the novice end of the spectrum."]
         }
       },
       {
@@ -67,8 +59,8 @@
         "id": "design-graph",
         "type": "image",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505173/expertise-graph-2.0-min_vmppar.png",
-            "alt": "Graph of design learning curve"
+          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733209118/expertise-graph-3_xmvvao.jpg",
+          "alt": "Graph of design learning curve"
         }
       },
       {
