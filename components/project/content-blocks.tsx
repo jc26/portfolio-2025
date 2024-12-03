@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { parseMarkdownLinks } from '@/utils/markdown'
 import Image from 'next/image'
-import type { TextBlockContent, ImageBlockContent, VideoBlockContent, TwitterBlockContent } from '@/types/project'
+import type { TextBlockContent, ImageBlockContent, VideoBlockContent, TwitterBlockContent, FigmaBlockContent } from '@/types/project'
 import { useRef, useEffect, useState } from 'react'
 import MuxPlayer from '@mux/mux-player-react'
 import type { MuxPlayerRefAttributes } from '@mux/mux-player-react'
@@ -12,8 +12,8 @@ export const TextBlock = ({ title, text, buttonText, url }: TextBlockContent) =>
 
   return (
     <>
-      {title && <h2 className="text-base font-semibold mb-3">{title}</h2>}
-      <div className="space-y-3">
+      {title && <h2 className="text-base font-semibold mb-2">{title}</h2>}
+      <div className="space-y-2">
         {paragraphs.map((paragraph, index) => (
           <p key={index} className="text-base">
             {parseMarkdownLinks(paragraph)}
@@ -48,7 +48,7 @@ export const ImageBlock = ({ url, alt, images, aspectRatio, caption }: ImageBloc
                 alt={image.alt}
                 width={1000}
                 height={1000}
-                className="w-full rounded-lg"
+                className="w-full rounded-lg border border-secondary"
               />
             </div>
           ))}
@@ -71,7 +71,7 @@ export const ImageBlock = ({ url, alt, images, aspectRatio, caption }: ImageBloc
         alt={alt || ''}
         width={1000}
         height={1000}
-        className="w-full rounded-lg"
+        className="w-full rounded-lg border border-secondary"
         style={aspectRatio ? { aspectRatio } : undefined}
       />
       {caption && (
@@ -130,11 +130,15 @@ export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockConte
     '--media-object-fit': 'cover',
     '--media-object-position': 'center',
     '--media-background-color': 'transparent',
+    '--media-spacing': '0', // Remove default spacing
+    '--media-margin': '0', // Remove margins
+    'display': 'block', // Prevent inline spacing
+    'lineHeight': '0', // Remove line height spacing
   } as React.CSSProperties
 
   if (isPortrait) {
     return (
-      <div className="w-full bg-[#efefef] rounded-xl">
+      <div className="w-full bg-secondary">
         <div 
           ref={containerRef}
           className="relative w-full flex justify-center py-8"
@@ -150,7 +154,7 @@ export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockConte
                 minResolution="720p"
                 renditionOrder="desc"
                 style={playerStyle}
-                className="w-full rounded-md"
+                className="w-full rounded-lg"
               />
             )}
           </div>
@@ -177,7 +181,7 @@ export const VideoBlock = ({ url, isPortrait = false, caption }: VideoBlockConte
             minResolution="720p"
             renditionOrder="desc"
             style={playerStyle}
-            className="w-full rounded-lg overflow-hidden"
+            className="w-full rounded-lg overflow-hidden border border-secondary"
           />
         )}
       </div>
@@ -202,5 +206,17 @@ export const TwitterBlock = ({ tweetId, caption }: TwitterBlockContent) => {
         </p>
       )}
     </>
+  )
+}
+
+export const FigmaBlock = ({ url }: FigmaBlockContent) => {
+  return (
+    <div className="aspect-[16/9] w-full">
+      <iframe 
+        className="w-full h-full rounded-lg border border-secondary"
+        src={`${url}?embed-host=share`}
+        allowFullScreen
+      />
+    </div>
   )
 } 

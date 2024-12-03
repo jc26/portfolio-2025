@@ -1,30 +1,136 @@
 {
   "id": 1,
   "title": "Publishing Gumroad's Design System",
-  "heading": "Paving the way for open source",
+  "heading": "Publishing Gumroad's Design System",
   "client": "Antiwork",
   "year": "2024",
-  "description": "Led the design and development of Gumroad's first public design system...",
+  "description": "Collaborated with [Laura Garcia](https://www.laugardie.com/) and [Maya](https://x.com/Purple_Elf) to revamp and publish Gumroad's design system.",
   "action": {
     "text": "View Design System",
     "url": "https://www.figma.com/community/file/1405573618937136138"
   },
   "content": [
     {
-      "id": "demo",
-      "type": "video",
-      "width": "wide",
-      "content": {
-        "mediaUrl": ""
-      }
-    },
-    {
       "id": "figma",
       "type": "figma",
       "width": "wide",
       "content": {
-        "url": "https://embed.figma.com/design/yVgtqBKbfJxrchyOhw4s5n/Gumroad-Design-System-(Community-Beta)-(Community)",
-        "nodeId": "16631-33088"
+        "url": "https://embed.figma.com/design/zjU8inqUdlmnqXsbuopy8r/Gumroad-Design-System-(Community-Beta)-(Community)?node-id=16631-33088&embed-host=share"
+      }
+    },
+    {
+      "id": "intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "text": "We were losing time in development due to lack of alignment on our design system, and we also planned to eventually open source our codebase. So it was well-overdue that in 2024, we undertook the big task of revamping and standardizing our design system across Figma and in code. By leveraging Figma's latest component and variable features, we aligned our design components with their Storybook counterparts to reduce QA overhead and prioritize what's most important: shipping features."
+      }
+    },
+    {
+      "id": "task-list",
+      "type": "image",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733197780/tasks-cropped_ywcxrv.png",
+        "alt": "Design system task list",
+        "caption": "Components and variables me and Laura had to reconsider, and then some."
+      }
+    },
+    {
+      "id": "dx",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "DX: Designer/Developer Experience",
+        "text": [
+          "Our design system revamp focused on two key areas:",
+          "1. Improving DX (designer and developer experience) by creating scalable yet flexible components with intuitive interfaces that rarely require detaching or customization.",
+          "2. Establishing a shared language between designers and developers to minimize miscommunication. Some of the words we were using were only intuitive for either designer or developer, not both. As a remote-first ([not anymore](https://x.com/shl/status/1851590388898759037)) company, using clear, unambiguous terminology that both designers and developers could easily understand was crucial for reducing QA cycles and shipping features faster."
+        ]
+      }
+    },
+    {
+      "id": "components-screenshots",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733185881/button_hsttcg.jpg",
+            "alt": "Button"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733185877/radio_ny85k5.jpg",
+            "alt": "Radio cards"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733185877/color-primitives_rapffo.jpg",
+            "alt": "Color primitives",
+            "fullWidth": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "semantic-tokens",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Semantic tokens",
+        "text": "I led a comprehensive overhaul of our color variables to establish a robust semantic system that intuitively handles light and dark modes. The goal was perfect parity between design and code—ensuring designers and developers work with identical variables. It was also an exercise in restraint: I kept the system intentionally lean to make it more maintainable and scalable, avoiding an overly complex variable structure that becomes unwieldy over time."
+      }
+    },
+    {
+      "id": "color-variables",
+      "type": "video",
+      "width": "wide",
+      "content": {
+        "url": "color-variables.mp4",
+        "caption": "A screen recording I made for Laura to explain how our new primitives mapped to our semantic variables."
+      }
+    },
+    {
+      "id": "why-open-source-1",
+      "type": "text",
+      "width": "contained", 
+      "content": {
+        "title": "Open sourcing and building in public",
+        "text": "Built on the philosophy of building in public, Gumroad has gained quite a following. Sahil's core value has always been transparency–sharing both our successes and challenges openly. By making our design system public, we're continuing this tradition. Where we excel, we can help others learn. Where we fall short, the community can help us improve. This collaborative approach makes our products better and strengthens the entire ecosystem that many creators rely on for income."
+      }
+    },
+    {
+      "id": "sahil-announcement",
+      "type": "twitter",
+      "width": "wide",
+      "content": {
+        "tweetId": "1823746825783763439"
+      }
+    },
+    {
+      "id": "why-open-source-2", 
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Infrastructure as a service",
+        "text": "This is just the beginning. Having published our design system, we plan to [open source our entire codebase](https://www.youtube.com/watch?v=drMMDclhgsc). Our mission has always been to minimize barriers for creators to earn their first dollar online - it's that simple. Gumroad has already removed many traditional hurdles of selling online, giving creators a scalable foundation for storefronts. As we foster an open community around our platform, we can work together to make the product even better for creators everywhere."
+      }
+    },
+    {
+      "id": "gumroad-announcement",
+      "type": "twitter",
+      "width": "wide",
+      "content": {
+        "tweetId": "1824164280410968295"
+      }
+    },
+    {
+      "id": "credits",
+      "type": "text", 
+      "width": "contained",
+      "content": {
+        "title": "Credits",
+        "text": [
+          "In collaboration with [Sahil Lavingia](https://x.com/shl) (CEO), [Laura García](https://www.laugardie.com/) (Designer), and [Maya](https://x.com/Purple_Elf) (Engineer)."
+        ]
       }
     }
   ]

@@ -10,6 +10,8 @@ export function WorkExperience({ experiences }: { experiences: WorkExperience[] 
           <div key={experience.id}>
             <Link 
               href={experience.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="cursor-pointer rounded-xl transition-colors btn-no-underline"
             >
               <div className="flex justify-between items-start">

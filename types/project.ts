@@ -45,12 +45,17 @@ export type TwitterBlockContent = {
   caption?: string
 }
 
+// Add this new type
+export type FigmaBlockContent = {
+  url: string
+}
+
 // Main content block type
 export type ContentBlock = {
   id: string
-  type: 'text' | 'image' | 'video' | 'twitter'
+  type: 'text' | 'image' | 'video' | 'twitter' | 'figma'
   width: 'contained' | 'wide'
-  content: TextBlockContent | ImageBlockContent | VideoBlockContent | TwitterBlockContent
+  content: TextBlockContent | ImageBlockContent | VideoBlockContent | TwitterBlockContent | FigmaBlockContent
 }
 
 export type Project = {
