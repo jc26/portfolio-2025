@@ -15,4 +15,4 @@ export function ProjectContent({ content }: ProjectContentProps) {
       ))}
     </>
   )
-} 
+}

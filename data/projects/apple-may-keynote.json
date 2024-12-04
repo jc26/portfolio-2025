@@ -2,11 +2,12 @@
   "id": 3,
   "slug": "apple-ipad-keynote",
   "title": "Apple's iPad Keynote",
-  "heading": "Procreate × Apple: May 2024 iPad Keynote",
+  "heading": "Apple × Procreate: \"Let Loose\" Keynote",
   "client": "Procreate",
   "year": "2024",
-  "description": "Collaborated with Apple to showcase Procreate's latest innovations at their spring keynote event.",
-  "isVisible": false,
+  "description": "Collaborated with Apple to showcase Procreate's latest innovations at their May 2024 keynote event announcing a new line of iPads and the Apple Pencil Pro..",
+  "isVisible": true,
+  "theme": "dark",
   "mentions": [
     {
       "text": "Tom's Guide",
@@ -35,21 +36,231 @@
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Presenting at Apple's Spring Event",
+        "title": "A Historic Moment",
         "text": [
-          "Collaborated with Apple's keynote team to showcase Procreate's latest features and innovations, demonstrating how our tools are pushing the boundaries of digital creativity.",
-          "The presentation needed to balance technical capability with artistic inspiration, showing both the power of our tools and the magic they enable in the hands of artists."
+          "In a rare honor, Apple invited Procreate to participate in their spring 'Let Loose' keynote event. Our CEO James Cuda and artist Nikko Lockertson demonstrated how Procreate Dreams harnesses the power of the new Apple Pencil Pro, showcasing innovative features like squeeze gestures and intuitive rotation controls for animation.",
+          "This unprecedented opportunity wasn't just about demonstrating our latest innovations—it was Apple's public acknowledgment of our enduring partnership in advancing digital creativity."
         ]
       }
     },
     {
-      "id": "conclusion",
+      "id": "brand-evolution",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Evolving Our Brand",
+        "text": [
+          "With this milestone approaching, we undertook a comprehensive refresh of our digital presence. This included three key redesigns:",
+          "1. Homepage and product pages to clearly communicate our brand architecture.",
+          "2. A new \"Who We Are\" page to define Procreate as the parent brand.",
+          "3. An enhanced \"Careers\" page to attract world-class talent interested in shaping the future of creative tools."
+        ]
+      }
+    },
+    {
+      "id": "old-site-grid",
+      "type": "image",
+      "content": {  
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310947/old-hero-1_sziycb.jpg",
+            "alt": "old site hero image prioritizing Dreams"
+          },  
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310932/old-hero-2_hwsez5.jpg",
+            "alt": "old site hero image prioritizing Procreate"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310940/old-footer-3_xvzthl.jpg",
+            "alt": "old site footer image"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310940/old-procreate-hero-1_gzig78.jpg",
+            "alt": "old procreate hero image prioritizing Procreate"
+          }
+        ],
+        "caption": "The old homepage and product pages were an amalgamation of many years of hard work announcing multiple products, releases, and campaigns. Now it was time to consolidate our output and present a cohesive, unified brand to the world."
+      }
+    },
+    {
+      "id": "homepage-text",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Homepage Redesign",
+        "text": [
+          "Our homepage needed to evolve from being a collection of product announcements into a clear representation of our brand architecture. The challenge was to maintain the emotional impact of our previous designs while creating a clearer hierarchy that helps visitors understand our product ecosystem.",
+          "We simplified the navigation, created distinct sections for each product, and established a visual language that ties everything together while letting each product's unique character shine through."
+        ]
+      }
+    },
+    {
+      "id": "home-grid",
+      "type": "image",
+      "width": "wide",
+      "content": {  
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310933/home-hero_c7ngim.jpg",
+            "alt": "new site hero, above the fold, clear product/brand hierarchy",
+            "fullWidth": true
+          },  
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310947/hero-2_j82v4g.jpg",
+            "alt": "below the fold, our other products"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310929/footer_jc5is1.jpg",
+            "alt": "footer shows clear brand architecture"
+          }
+        ]
+      }
+    },
+    {
+      "id": "product-pages-text",
+      "type": "text",
+      "width": "contained", 
+      "content": {
+        "text": [
+          "The new product hero sections were re-designed to be cohesive so that each product is viewed as part of a broader family. The design and the art direction had to clearly underscore the core features of each product and what unique purpose they serve."
+        ]
+      }
+    },
+    {
+      "id": "product-pages-grid",
+      "type": "image",
+      "content": {  
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310943/procreate-new-hero_hkp7hl.jpg",
+            "alt": "procreate product page hero",
+            "fullWidth": true
+          },  
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310934/dreams-new-hero_u1aja0.jpg",
+            "alt": "dreams product page hero"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310941/pocket-new-hero_j4gvzt.jpg",
+            "alt": "pocket product page hero"
+          }
+        ]
+      }
+    },
+    {
+      "id": "who-we-are-text",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Who We Are",
+        "text": [
+          "For the first time, we needed to tell our story as Procreate—not just as individual products. This meant creating a narrative that connects our mission of making art accessible to everyone with our history of innovation and commitment to the creative community.",
+          "The new 'Who We Are' page introduces visitors to our values, our journey, and our vision for the future of digital creativity. It's designed to feel welcoming to newcomers while resonating with our existing community."
+        ]
+      }
+    },
+    {
+      "id": "who-we-are-grid",
+      "type": "image",
+      "width": "wide",
+      "content": {  
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310951/who-we-are-hero_hkebvi.jpg",
+            "alt": "Art is for everyone hero",
+            "fullWidth": true
+          },  
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310938/triptych_iuox5m.jpg",
+            "alt": "beautiful design triptych office"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310941/product-comp-1_emhrxl.jpg",
+            "alt": "composition of all products"
+          }
+        ]
+      }
+    },
+    {
+      "id": "careers-text",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Careers",
+        "text": [
+          "With our growing ambitions, we needed a careers section that would attract exceptional talent who share our passion for creativity and innovation. The challenge was to communicate both the exciting opportunities ahead and our unique culture.",
+          "We created an immersive experience that showcases our workplace, our values, and the impact that potential team members could have on the future of digital art. The design emphasizes both the technical challenges we tackle and the creative environment we foster."
+        ]
+      }
+    },
+    {
+      "id": "careers-grid",
+      "type": "image",
+      "width": "wide",
+      "content": {  
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310937/careers-hero_gkc4dr.jpg",
+            "alt": "careers hero",
+            "fullWidth": true
+          },  
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310930/world-class-talent_iqi6gd.jpg",
+            "alt": "world class talent"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310935/bento-box_z6v6fx.jpg",
+            "alt": "bento box"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733310947/careers-pads_emzcdr.jpg",
+            "alt": "careers pads",
+            "fullWidth": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "technical-showcase",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Technical Innovation",
+        "text": [
+          "During the keynote, we demonstrated how Procreate Dreams works with the new Apple Pencil Pro. The squeeze gesture opens custom tool menus, while the rolling motion controls object rotation and path animation—showing practical ways hardware and software can work together to improve creative workflows."
+        ]
+      }
+    },
+    {
+      "id": "impact",
       "type": "text",
       "width": "contained",
       "content": {
         "title": "Impact",
         "text": [
-          "The keynote presentation successfully demonstrated Procreate's commitment to innovation and our ongoing partnership with Apple in advancing digital art tools."
+          "Our surprise appearance generated waves of excitement throughout the creative community. The keynote drove over 50k views to our refreshed website during event week, while the technical demonstration reinforced our position as pioneers in digital creativity tools.",
+          "This moment marked not just a milestone for Procreate, but a celebration of our community's collective journey in pushing the boundaries of digital art."
+        ]
+      }
+    },
+    {
+      "id": "keynote-image",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733309944/james-keynote_qauddn.jpg",
+        "alt": "James Cuda and Nikko Lockertson at the Apple keynote"
+      }
+    },
+    {
+      "id": "credits",
+      "type": "text", 
+      "width": "contained",
+      "content": {
+        "title": "Credits",
+        "text": [
+          "i was responsible for all aspects of UI/UX design and selection, curation, and design of all art and photography.",
+          "In collaboration with: James Cuda (CEO), Nikko Lockertson (Artist), Owen Andrews (Head of Digital), Lauren Yates-Jones (Head of Communications), Ronan MacEwan (Copywriter), Sarah Schmidt (Developer), and many others who made this possible"
         ]
       }
     }

@@ -78,4 +78,5 @@ export type Project = {
   nominations?: AwardContent | AwardContent[]
   mentions?: AwardContent | AwardContent[]
   content: ContentBlock[]
+  theme?: 'light' | 'dark'
 }

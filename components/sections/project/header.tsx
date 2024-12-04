@@ -11,9 +11,16 @@ export function ProjectHeader({ project }: { project: Project }) {
   return (
     <div className="content-container mb-8 md:mb-16">
       <div className="mb-3">
-        <h1 className="text-base font-semibold">{project.heading}</h1>
+        <h1 className="text-base font-semibold mb-3">{project.heading}</h1>
+        <div className="mb-4">
+          {descriptions.map((paragraph, index) => (
+            <p key={index} className="text-base">
+              {parseMarkdownLinks(paragraph)} 
+            </p>
+          ))}
+        </div>
       </div>
-      <div className="mb-4">
+      <div className="mb-6">
         {project.award && (
           <div className="flex flex-wrap items-center gap-x-1 text-sm mb-2 pt-1">
             <span className="font-medium">🏆 Winner</span>
@@ -87,13 +94,6 @@ export function ProjectHeader({ project }: { project: Project }) {
             )}
           </div>
         )}
-      </div>
-      <div className="mb-5">
-        {descriptions.map((paragraph, index) => (
-          <p key={index} className="text-base">
-            {parseMarkdownLinks(paragraph)} 
-          </p>
-        ))}
       </div>
       {project.action && (
         <Button variant="default" asChild>
