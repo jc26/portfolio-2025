@@ -75,7 +75,7 @@ export function NavIsland({ pathname }: { pathname: string }) {
 
       {isClient && (
         <motion.div 
-          className="fixed bottom-10 left-0 right-0 flex justify-center z-50"
+          className="fixed bottom-8 left-0 right-0 flex justify-center z-50 md:bottom-10"
           initial={{ y: 100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={entranceSpring}

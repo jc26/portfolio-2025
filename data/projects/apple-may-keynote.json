@@ -7,6 +7,20 @@
   "year": "2024",
   "description": "Collaborated with Apple to showcase Procreate's latest innovations at their spring keynote event.",
   "isVisible": false,
+  "mentions": [
+    {
+      "text": "Tom's Guide",
+      "url": "https://www.tomsguide.com/computing/tablets/ipads/live/apple-let-loose-ipad-event-live-blog"
+    },
+    {
+      "text": "Sydney Morning Herald",
+      "url": "https://www.smh.com.au/technology/apple-s-ipad-event-five-things-you-should-know-20240505-p5fozw.html"
+    },
+    {
+      "text": "Procreate",
+      "url": "https://procreate.com/insight/2024/let-loose"
+    }
+  ],
   "content": [
     {
       "id": "apple-keynote",
