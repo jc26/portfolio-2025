@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import { ArrowUpRight } from 'lucide-react'
 import { parseMarkdownLinks } from '@/utils/markdown'
 import type { TextBlockContent } from '@/types/project'
 
@@ -18,14 +19,15 @@ export function TextBlock({ title, text, buttonText, url }: TextBlockContent) {
         ))}
       </div>
       {buttonText && url && (
-        <div className="mt-6">
+        <div className="mt-4">
           <Button variant="outline" asChild>
             <a href={url} target="_blank" rel="noopener noreferrer">
               {buttonText}
+              <ArrowUpRight className="w-4 h-4" />
             </a>
           </Button>
         </div>
       )}
     </>
   )
-} 
+}
