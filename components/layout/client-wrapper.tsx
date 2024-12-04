@@ -28,7 +28,7 @@ export function ClientWrapper({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <AnimatePresence mode="wait" initial={false} onExitComplete={resetScroll}>
+      <AnimatePresence mode="wait" initial={true} onExitComplete={resetScroll}>
         <motion.div
           key={pathname}
           initial={{ 
@@ -48,7 +48,8 @@ export function ClientWrapper({ children }: { children: React.ReactNode }) {
           }}
           transition={{
             duration: 0.8,
-            ease: [0.32, 0, 0.15, 1]
+            ease: [0.32, 0, 0.15, 1],
+            delay: 0.2
           }}
           className="transform-gpu"
         >
