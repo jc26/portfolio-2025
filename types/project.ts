@@ -64,6 +64,29 @@ export type ContentBlock = {
   content: TextBlockContent | ImageBlockContent | VideoBlockContent | TwitterBlockContent | FigmaBlockContent | YouTubeBlockContent
 }
 
+export type MetadataImage = {
+  url: string
+  width?: number
+  height?: number
+  alt?: string
+}
+
+export type ProjectMetadata = {
+  title?: string
+  description?: string
+  openGraph?: {
+    title?: string
+    description?: string
+    image?: string
+  }
+  twitter?: {
+    title?: string
+    description?: string
+    image?: string
+    card?: 'summary' | 'summary_large_image'
+  }
+}
+
 export type Project = {
   id: number
   slug: string
@@ -79,4 +102,5 @@ export type Project = {
   mentions?: AwardContent | AwardContent[]
   content: ContentBlock[]
   theme?: 'light' | 'dark'
+  metadata?: ProjectMetadata
 }

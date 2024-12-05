@@ -3,6 +3,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { ClientWrapper } from '@/components/layout/client-wrapper'
 import localFont from "next/font/local"
 import "./globals.css"
+import type { Metadata } from 'next'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -10,15 +11,26 @@ const geistSans = localFont({
   weight: "100 900",
 })
 
-export const metadata = {
-  title: 'J/CHANG',
-  description: 'Product Designer',
-  icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico' }
-    ],
-    apple: '/apple-touch-icon.png'
+export const metadata: Metadata = {
+  title: {
+    template: '%s | J/CHANG',
+    default: 'Product Designer'
+  },
+  description: 'Jason Chang is a product designer based in Australia.',
+  openGraph: {
+    type: 'website',
+    images: [
+      {
+        url: '/default-og.jpg', // Your default OG image
+        width: 1200,
+        height: 630,
+        alt: 'Default OG Image'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    creator: '@jchang_26'
   }
 }
 
