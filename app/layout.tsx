@@ -17,6 +17,16 @@ export const metadata: Metadata = {
     default: 'Product Designer'
   },
   description: 'Jason Chang is a product designer based in Australia.',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
+    ],
+    shortcut: { url: '/favicon.ico' },
+    apple: { url: '/apple-touch-icon.png' },
+    other: [
+      { rel: 'mask-icon', url: '/favicon.svg' },
+    ],
+  },
   openGraph: {
     type: 'website',
     images: [
