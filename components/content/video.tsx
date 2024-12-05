@@ -60,7 +60,7 @@ export function VideoBlock({ url, isPortrait = false, caption }: VideoBlockConte
 
   if (isPortrait) {
     return (
-      <div className="w-full bg-secondary rounded-lg">
+      <div className="w-full bg-[#efefef] rounded-lg">
         <div 
           ref={containerRef}
           className="relative w-full flex justify-center py-8"
