@@ -34,7 +34,7 @@ export function ClientWrapper({ children }: { children: React.ReactNode }) {
           initial={{ 
             opacity: 0, 
             y: -70,
-            filter: 'blur(10px)'
+            filter: 'blur(14px)'
           }}
           animate={{ 
             opacity: 1, 
@@ -44,10 +44,10 @@ export function ClientWrapper({ children }: { children: React.ReactNode }) {
           exit={{ 
             opacity: 0, 
             y: 70,
-            filter: 'blur(10px)'
+            filter: 'blur(14px)'
           }}
           transition={{
-            duration: 0.8,
+            duration: 1,
             ease: [0.32, 0, 0.15, 1],
             delay: 0.2
           }}

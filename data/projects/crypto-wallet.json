@@ -1,217 +1,231 @@
 {
-    "id": 7,
-    "slug": "crypto-wallet",
-    "title": "The Web3 Wallet",
-    "heading": "Designing a crypto wallet app for an open-minded Web2 user.",
-    "client": "Personal", 
-    "year": "2023",
-    "description": "Created a user-friendly cryptocurrency wallet focused on simplifying the Web3 experience for traditional finance users.",
-    "action": {
-      "text": "Try prototype",
-      "url": "https://www.figma.com/proto/XReaIvGg07uhbaQpBFeuUe/Crypto-Wallet-App"
-    },
-    "content": [
-      {
-        "id": "hero",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg",
-            "alt": "iPhone mockup for home screen of crypto app"
-        }
-      },
-      {
-        "id": "intro-1",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "What would be most helpful and relevant to a novice in crypto investing?",
-          "text": ["My goal was to design an app with minimal barriers of entry and a low learning curve so that a novice wouldn't feel overwhelmed. I placed my user more towards the novice end of the spectrum."]
-        }
-      },
-      {
-        "id": "intro-2",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "text": ["They've invested in stocks before but never in crypto, so they recognize the jargon but there will still be actions or words used that will be very new to them."]
-        }
-      },
-      {
-        "id": "competitor-research",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505206/market-research_zphdky.jpg",
-            "alt": "Competitor research of other crypto apps"
-        }
-      },
-      {
-        "id": "research-1",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Finding my own positioning among the competition.",
-          "text": ["I did tons of research primarily to evaluate two directions: what tried-and-true designs look like in current applications in the crypto space and what blue-sky designs other people have made that may look good but may not be experientially practical."]
-        }
-      },
-      {
-        "id": "design-graph",
-        "type": "image",
-        "content": {
-          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733209118/expertise-graph-3_xmvvao.jpg",
-          "alt": "Graph of design learning curve"
-        }
-      },
-      {
-        "id": "research-2",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "text": ["The above graph is referenced from Morgane Peng's Config 2022 talk. In my evaluation of every design I came across, each of them fell somewhere along this graph, finding the sweet spot for their own users depending on the expertise of their target audience, or some designs fell into the danger zones. I had to place my own user on this graph and walk the fine line between over-simplification and over-complication."]
-        }
-      },
-      {
-        "id": "visual-inspiration",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/dribbble-research_sswhan.jpg",
-            "alt": "Dribbble research and general visual inspiration"
-        }
-      },
-      {
-        "id": "ideation",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Getting all the bad ideas out first.",
-          "text": ["After my research, it was time to consolidate my ideas. I need to get as many ideas out as possible, good or bad. There are certain features I'm sure that my users will want, such as seeing the value of their portfolio first on the home screen. Other design decisions can be experimented with."]
-        }
-      },
-      {
-        "id": "sketches",
-        "type": "image",
-        "width": "wide",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/lofi-sketches_wvo5vf.jpg",
-            "alt": "Lofi sketches of crypto wallet app"
-        }
-      },
-      {
-        "id": "cognitive-load",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Reduce cognitive load. Remember Hick's Law.",
-          "text": ["I'm not designing for a power user. I need to keep extraneous actions hidden and strip the UI down to the most essential actions and information. Visual contrast should be restrained and reserved for what's most important.",
-          "For example, on the home screen, it is clear that the first action to do is click the plus button. In addition, primary actions tend to be towards the bottom of the screen making it easier for the thumb to reach."]
-        }
-      },
-      {
-        "id": "home-demo",
-        "type": "video",
-        "width": "contained",
-        "content": {
-          "url": "splash-and-home.mp4",
-          "isPortrait": true
-        }
-      },
-      {
-        "id": "swipe-reveal",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "The Swipe-to-Reveal Action",
-          "text": ["Instead of opening the buy/sell menu and then choosing the coin of interest, the swipe-to-reveal interaction is a very efficient way to input a specific parameter into a primary action with only a single swipe—in this case buying and selling crypto coins."]
-        }
-      },
-      {
-        "id": "swipe-reveal-interaction",
-        "type": "image",
-        "content": {
-          "images": [
-            {
-              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505278/mail_app-min_pt60v3.jpg",
-              "alt": "Mail app swipe-to-reveal interaction"
-            },
-            {
-              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505278/spotify-min_czhtwq.jpg",
-              "alt": "Spotify swipe-to-reveal interaction"
-            }
-          ]
-        }
-      },
-      {
-        "id": "buy-coin",
-        "type": "video",
-        "width": "contained",
-        "content": {
-          "url": "buy-coin.mp4",
-          "isPortrait": true
-        }
-      },
-      {
-        "id": "resources-1",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Integrating Resources into Real-Time Charts",
-          "text": ["A novice would likely find insights from crypto experts or news outlets very helpful. Having spoken to experienced crypto and stock investors, they usually do a ton of research across many different channels before buying or selling an asset."]
-        }
-      },
-      {
-        "id": "resources-image",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505279/soundcloud_fo91c7.jpg",
-            "alt": "Soundcloud music player"
-        }
-      },
-      {
-        "id": "resources-2",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "text": ["Taking some inspiration from Soundcloud's music player, it made sense to incorporate resources and insights in context to better assist purchasing or selling decisions."]
-        }
-      },
-      {
-        "id": "token-detail",
-        "type": "video",
-        "width": "contained",
-        "content": {
-          "url": "token-detail.mp4",
-          "isPortrait": true
-        }
-      },
-      {
-        "id": "function-over-form",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Function over form",
-          "text": ["Despite the visual disorder in the colors of the coins, it would benefit the user a lot to visually differentiate the coins they are not used to. In a new, unfamiliar space, monochromatic coins would be very confusing."]
-        }
-      },
-      {
-        "id": "profile-demo",
-        "type": "video",
-        "width": "contained",
-        "content": {
-          "url": "profile.mp4",
-          "isPortrait": true
-        }
-      },
-      {
-        "id": "conclusion",
-        "type": "text",
-        "width": "contained",
-        "content": {
-          "title": "Less is more",
-          "text": ["As of 2023, crypto is all the rage. It's uncertain whether this will last, but either way this was a great chance to dip my feet into a saturated space and consolidate all the product design principles and processes that I've picked up throughout many projects.",
-          "Much of good design is low-hanging fruit. It doesn't take a complex ground-breaking algorithm but requires only restraint and discipline to put yourselves in the user's shoes and strip an experience down to only the most essential elements."]
-        }
+  "id": 7,
+  "slug": "crypto-wallet",
+  "title": "The Web3 Wallet",
+  "heading": "Designing a crypto wallet app for an open-minded Web2 user.",
+  "client": "Personal", 
+  "year": "2023",
+  "description": "Created a user-friendly cryptocurrency wallet focused on simplifying the Web3 experience for traditional finance users.",
+  "metadata": {
+    "openGraph": {
+      "image": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg"
+    }
+  },
+  "action": {
+    "text": "Try prototype",
+    "url": "https://www.figma.com/proto/XReaIvGg07uhbaQpBFeuUe/Crypto-Wallet-App"
+  },
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505121/crypto-hero-1.0-min_zobfdx.jpg",
+          "alt": "iPhone mockup for home screen of crypto app"
       }
-    ]
-  } 
+    },
+    {
+      "id": "intro-1",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "What would be most helpful and relevant to a novice in crypto investing?",
+        "text": ["My goal was to design an app with minimal barriers of entry and a low learning curve so that a novice wouldn't feel overwhelmed. I placed my user more towards the novice end of the spectrum."]
+      }
+    },
+    {
+      "id": "intro-2",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "text": ["They've invested in stocks before but never in crypto, so they recognize the jargon but there will still be actions or words used that will be very new to them."]
+      }
+    },
+    {
+      "id": "competitor-research",
+      "type": "image",
+      "width": "wide",
+      "content": {
+          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505206/market-research_zphdky.jpg",
+          "alt": "Competitor research of other crypto apps"
+      }
+    },
+    {
+      "id": "research-1",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Finding my own positioning among the competition.",
+        "text": ["I did tons of research primarily to evaluate two directions: what tried-and-true designs look like in current applications in the crypto space and what blue-sky designs other people have made that may look good but may not be experientially practical."]
+      }
+    },
+    {
+      "id": "design-graph",
+      "type": "image",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733209118/expertise-graph-3_xmvvao.jpg",
+        "alt": "Graph of design learning curve"
+      }
+    },
+    {
+      "id": "research-2",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "text": ["The above graph is referenced from Morgane Peng's Config 2022 talk. In my evaluation of every design I came across, each of them fell somewhere along this graph, finding the sweet spot for their own users depending on the expertise of their target audience, or some designs fell into the danger zones. I had to place my own user on this graph and walk the fine line between over-simplification and over-complication."]
+      }
+    },
+    {
+      "id": "visual-inspiration",
+      "type": "image",
+      "width": "wide",
+      "content": {
+          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/dribbble-research_sswhan.jpg",
+          "alt": "Dribbble research and general visual inspiration"
+      }
+    },
+    {
+      "id": "ideation",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Getting all the bad ideas out first.",
+        "text": ["After my research, it was time to consolidate my ideas. I need to get as many ideas out as possible, good or bad. There are certain features I'm sure that my users will want, such as seeing the value of their portfolio first on the home screen. Other design decisions can be experimented with."]
+      }
+    },
+    {
+      "id": "sketches",
+      "type": "image",
+      "width": "wide",
+      "content": {
+          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505205/lofi-sketches_wvo5vf.jpg",
+          "alt": "Lofi sketches of crypto wallet app"
+      }
+    },
+    {
+      "id": "cognitive-load",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Reduce cognitive load. Remember Hick's Law.",
+        "text": ["I'm not designing for a power user. I need to keep extraneous actions hidden and strip the UI down to the most essential actions and information. Visual contrast should be restrained and reserved for what's most important.",
+        "For example, on the home screen, it is clear that the first action to do is click the plus button. In addition, primary actions tend to be towards the bottom of the screen making it easier for the thumb to reach."]
+      }
+    },
+    {
+      "id": "home-demo",
+      "type": "video",
+      "width": "contained",
+      "content": {
+        "url": "splash-and-home.mp4",
+        "isPortrait": true
+      }
+    },
+    {
+      "id": "swipe-reveal",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "The Swipe-to-Reveal Action",
+        "text": ["Instead of opening the buy/sell menu and then choosing the coin of interest, the swipe-to-reveal interaction is a very efficient way to input a specific parameter into a primary action with only a single swipe—in this case buying and selling crypto coins."]
+      }
+    },
+    {
+      "id": "swipe-reveal-interaction",
+      "type": "image",
+      "content": {
+        "images": [
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505278/mail_app-min_pt60v3.jpg",
+            "alt": "Mail app swipe-to-reveal interaction"
+          },
+          {
+            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505278/spotify-min_czhtwq.jpg",
+            "alt": "Spotify swipe-to-reveal interaction"
+          }
+        ]
+      }
+    },
+    {
+      "id": "buy-coin",
+      "type": "video",
+      "width": "contained",
+      "content": {
+        "url": "buy-coin.mp4",
+        "isPortrait": true
+      }
+    },
+    {
+      "id": "resources-1",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Integrating Resources into Real-Time Charts",
+        "text": ["A novice would likely find insights from crypto experts or news outlets very helpful. Having spoken to experienced crypto and stock investors, they usually do a ton of research across many different channels before buying or selling an asset."]
+      }
+    },
+    {
+      "id": "resources-image",
+      "type": "image",
+      "content": {
+          "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505279/soundcloud_fo91c7.jpg",
+          "alt": "Soundcloud music player"
+      }
+    },
+    {
+      "id": "resources-2",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "text": ["Taking some inspiration from Soundcloud's music player, it made sense to incorporate resources and insights in context to better assist purchasing or selling decisions."]
+      }
+    },
+    {
+      "id": "token-detail",
+      "type": "video",
+      "width": "contained",
+      "content": {
+        "url": "token-detail.mp4",
+        "isPortrait": true
+      }
+    },
+    {
+      "id": "function-over-form",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Function over form",
+        "text": ["Despite the visual disorder in the colors of the coins, it would benefit the user a lot to visually differentiate the coins they are not used to. In a new, unfamiliar space, monochromatic coins would be very confusing."]
+      }
+    },
+    {
+      "id": "profile-demo",
+      "type": "video",
+      "width": "contained",
+      "content": {
+        "url": "profile.mp4",
+        "isPortrait": true
+      }
+    },
+    {
+      "id": "conclusion",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Less is more",
+        "text": ["As of 2023, crypto is all the rage. It's uncertain whether this will last, but either way this was a great chance to dip my feet into a saturated space and consolidate all the product design principles and processes that I've picked up throughout many projects.",
+        "Much of good design is low-hanging fruit. It doesn't take a complex ground-breaking algorithm but requires only restraint and discipline to put yourselves in the user's shoes and strip an experience down to only the most essential elements."]
+      }
+    },
+    {
+      "id": "phone-mockup",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732505120/crypto-grid-img_yjfbru.jpg",
+        "alt": "iPhone mockup for crypto wallet app"
+      }
+    }
+  ]
+} 

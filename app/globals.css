@@ -22,6 +22,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 82%;
     --border-secondary: 0 0% 88%;
+    --border-underline: 0 0% 88%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --chart-1: 12 76% 61%;
@@ -52,6 +53,7 @@
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 30%;
     --border-secondary: 0 0% 18%;
+    --border-underline: 0 0% 34%;
     --input: 0 0% 14.9%;
     --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
@@ -80,14 +82,30 @@ p {
   text-wrap: pretty;
 }
 
-a[href^="http"]:not([class^="tweet"]), a[href^="mailto"], a[href^="tel"] {
+p:not([class*="tweet"]) a[href^="http"], 
+li:not([class*="tweet"]) a[href^="http"],
+article:not([class*="tweet"]) a[href^="http"]:not([class*="tweet"]),
+p:not([class*="tweet"]) a[href^="mailto"],
+li:not([class*="tweet"]) a[href^="mailto"],
+article:not([class*="tweet"]) a[href^="mailto"],
+p:not([class*="tweet"]) a[href^="tel"],
+li:not([class*="tweet"]) a[href^="tel"],
+article:not([class*="tweet"]) a[href^="tel"] {
   text-decoration-line: underline;
-  text-decoration-color: hsl(var(--border-secondary));
+  text-decoration-color: hsl(var(--border-underline));
   text-underline-offset: 3px;
   transition: text-decoration-color 0.2s ease;
 }
 
-a[href^="http"]:not([class^="tweet"]):hover, a[href^="mailto"]:hover, a[href^="tel"]:hover {
+p:not([class*="tweet"]) a[href^="http"]:hover,
+li:not([class*="tweet"]) a[href^="http"]:hover,
+article:not([class*="tweet"]) a[href^="http"]:not([class*="tweet"]):hover,
+p:not([class*="tweet"]) a[href^="mailto"]:hover,
+li:not([class*="tweet"]) a[href^="mailto"]:hover,
+article:not([class*="tweet"]) a[href^="mailto"]:hover,
+p:not([class*="tweet"]) a[href^="tel"]:hover,
+li:not([class*="tweet"]) a[href^="tel"]:hover,
+article:not([class*="tweet"]) a[href^="tel"]:hover {
   text-decoration-color: hsl(var(--foreground));
 }
 

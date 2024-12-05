@@ -13,7 +13,7 @@ const geistSans = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | J/CHANG',
+    template: '%s | JASON/C',
     default: 'Product Designer'
   },
   description: 'Jason Chang is a product designer based in Australia.',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/default-og.jpg', // Your default OG image
+        url: 'https://res.cloudinary.com/duuq9bfel/image/upload/v1733396395/nfl-social-min_fdhyal.jpg',
         width: 1200,
         height: 630,
         alt: 'Default OG Image'

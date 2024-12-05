@@ -6,6 +6,11 @@
     "client": "NFL",
     "year": "2022",
     "description": "Our team at La Visual refreshed the NFL+ brand identity for a 2022 launch with a strong visual identity centered around a Live Game mobile experience.",
+    "metadata": {
+      "openGraph": {
+        "image": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733396395/nfl-social-min_fdhyal.jpg"
+      }
+    },
     "action": {
       "text": "See NFL+",
       "url": "https://www.nfl.com/plus/learn-more"
@@ -92,35 +97,28 @@
         }
       },
       {
-        "id": "exploration-1",
+        "id": "explorations",
         "type": "image",
+        "width": "wide",
         "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-1-min_lccb9y.jpg",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-2",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429990/exploration-2-min_tqtdvj.jpg",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-3",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429991/exploration-3-min_quhve2.jpg",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
-        }
-      },
-      {
-        "id": "exploration-4",
-        "type": "image",
-        "content": {
-            "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-4-min_lezx4s.jpg",
-            "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+          "images": [
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-1-min_lccb9y.jpg",
+              "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429990/exploration-2-min_tqtdvj.jpg", 
+              "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429991/exploration-3-min_quhve2.jpg",
+              "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            },
+            {
+              "url": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732429988/exploration-4-min_lezx4s.jpg",
+              "alt": "Early landing page exploration for NFL+ showing mobile-first design with live game features"
+            }
+          ]
         }
       },
       {

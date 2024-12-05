@@ -52,7 +52,7 @@ export function SiteFooter() {
           <a href="https://www.linkedin.com/in/jason-c-a35a52126/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </p>
       </div>
-      <p className="text-base">J/CHANG © 2024</p>
+      <p className="text-base">JASON/C © {new Date().getFullYear()}</p>
     </footer>
   )
 }

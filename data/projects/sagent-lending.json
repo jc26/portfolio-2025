@@ -6,6 +6,11 @@
     "client": "Sagent Lending", 
     "year": "2023",
     "description": "Created a streamlined loan assumption workflow for banks and lenders who serve millions of consumers.",
+    "metadata": {
+      "openGraph": {
+        "image": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733396464/sagent-social-min_vayfvi.jpg"
+      }
+    },
     "action": {
       "text": "Try prototype",
       "url": "https://www.figma.com/proto/ueCaTM0rVGVu0N3G7hd0fY/UI-Refresh?page-id=1868%3A31674&node-id=1868-31675&viewport=-275%2C415%2C0.52&scaling=min-zoom&starting-point-node-id=1868%3A31675&show-proto-sidebar=1"

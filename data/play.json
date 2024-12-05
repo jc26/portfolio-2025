@@ -1,11 +1,14 @@
 {
     "id": 6,
-    "slug": "nfl-plus",
-    "title": "Launching NFL+, a new streaming service",
-    "heading": "Experimenting with different mediums for effective communication",
-    "client": "NFL+",
-    "year": "2022",
-    "description": "Outside of work, I like to draw traditionally, paint digitally, and explore 3D tools such as Blender and Cinema4D. The same principles apply here. Without intentional design, an image won't work. Less is more and contrast is king.",
+    "slug": "play",
+    "title": "Play",
+    "heading": "Experimenting with different mediums of communication",
+    "description": "Outside of product design and code, I like to draw traditionally, paint digitally, and explore 3D tools such as Blender and Cinema4D. The same principles apply here. Without intentional design, an image won't work. Less is more and contrast is king.",
+    "metadata": {
+      "openGraph": {
+        "image": "https://res.cloudinary.com/duuq9bfel/image/upload/v1732746205/trailer_desert-min_mtgi71.jpg"
+      }
+    },
     "content": [
       {
         "id": "trailer_desert-min_mtgi71",

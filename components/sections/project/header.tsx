@@ -35,7 +35,7 @@ export function ProjectHeader({ project }: { project: Project }) {
           </div>
         )}
         {project.nominations && (
-          <div className="flex flex-wrap items-center gap-x-1 text-sm mb-2">
+          <div className="flex flex-wrap items-center gap-x-1 gap-y-[0.2rem] text-sm mb-2">
             <span className="font-medium">💎 Nomination</span>
             {Array.isArray(project.nominations) ? (
               project.nominations?.map((nomination, index, array) => (
@@ -65,7 +65,7 @@ export function ProjectHeader({ project }: { project: Project }) {
           </div>
         )}
         {project.mentions && (
-          <div className="flex flex-wrap items-center gap-x-1 text-sm">
+          <div className="flex flex-wrap items-center gap-x-1 gap-y-[0.2rem] text-sm">
             <span className="font-medium">🗞️ Mentions</span>
             {Array.isArray(project.mentions) ? (
               project.mentions?.map((mention, index, array) => (

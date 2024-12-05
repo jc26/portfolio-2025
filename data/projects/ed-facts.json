@@ -6,6 +6,11 @@
   "client": "US Department of Education", 
   "year": "2022",
   "description": "Streamlined the education data submission process for state and local education agencies through automated quality checks and real-time progress tracking.",
+  "metadata": {
+    "openGraph": {
+      "image": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733399961/edfacts-social-min_i4vzzq.jpg"
+    }
+  },
   "action": {
     "text": "Try prototype",
     "url": "https://www.figma.com/proto/eICAPgz3Kh2t86S25MPPPP/EDFacts-UI?page-id=755%3A5923&type=design&node-id=989-14986&viewport=-3405%2C-359%2C0.37&scaling=scale-down&starting-point-node-id=989%3A14986&show-proto-sidebar=1"

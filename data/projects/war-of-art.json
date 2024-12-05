@@ -6,6 +6,11 @@
   "client": "Personal",
   "year": "2018", 
   "description": "Created an interactive VR experience to help creatives battle their inner demons of procrastination and self-doubt.",
+  "metadata": {
+    "openGraph": {
+      "image": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733396525/warofart-social-min_ognimk.jpg"
+    }
+  },
   "action": {
     "text": "Try me",
     "url": "https://jc26.github.io/War_of_Art_AFrame/"
