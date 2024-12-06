@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Jason Chang - Product Designer',
   openGraph: {
     title: 'Jason Chang',
-    description: 'Portfolio and work of Jason Chang - Product Designer',
+    description: 'Product Designer',
     url: 'https://jchang.cc',
     siteName: 'Jason Chang',
     images: [
