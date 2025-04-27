@@ -34,10 +34,9 @@ export function SiteFooter() {
         </p>
         <p className="text-base">
           🌏 Based in {' '}
-          <a href="https://maps.app.goo.gl/YwRzZKtWMD7SivreA" target="_blank" rel="noopener noreferrer">
-            Tasmania, Australia
+          <a href="https://maps.app.goo.gl/KJM3grBC4qk466cT6" target="_blank" rel="noopener noreferrer">
+            New York City
           </a>
-          , but prone to board planes
         </p>
       </div>
 
