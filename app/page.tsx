@@ -5,10 +5,10 @@ import { Intro, WorkExperience, ProjectList } from '@/components/sections/home'
 
 export const metadata: Metadata = {
   title: 'JASON/C',
-  description: 'Jason Chang - Product Designer',
+  description: 'Jason Chang - Design Engineer',
   openGraph: {
     title: 'Jason Chang',
-    description: 'Product Designer',
+    description: 'Design Engineer',
     url: 'https://jchang.cc',
     siteName: 'Jason Chang',
     images: [

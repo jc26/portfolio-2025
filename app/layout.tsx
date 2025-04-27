@@ -14,9 +14,9 @@ const geistSans = localFont({
 export const metadata: Metadata = {
   title: {
     template: '%s | JASON/C',
-    default: 'Product Designer'
+    default: 'Design Engineer'
   },
-  description: 'Jason Chang is a product designer based in Australia.',
+  description: 'Jason Chang is a design engineer based in New York City.',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml', sizes: 'any' },
