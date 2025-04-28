@@ -4,12 +4,12 @@ import React from 'react'
 
 export function SiteFooter() {
   const [time, setTime] = React.useState(
-    new Date().toLocaleTimeString('en-AU', { timeZone: 'Australia/Hobart', hour: '2-digit', minute: '2-digit' })
+    new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' })
   );
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setTime(new Date().toLocaleTimeString('en-AU', { timeZone: 'Australia/Hobart', hour: '2-digit', minute: '2-digit' }));
+      setTime(new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit' }));
     }, 1000);
 
     return () => clearInterval(timer);
