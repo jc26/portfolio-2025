@@ -26,17 +26,19 @@ export function ImageBlock({ url, alt, images, aspectRatio, caption }: ImageBloc
                   />
                 </div>
               </DialogTrigger>
-              <DialogContent className="p-0 border-none max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] xl:max-w-[60vw]">
-                 <Image
-                    src={image.url}
-                    alt={image.alt}
-                    width={1920}
-                    height={1080}
-                    className="w-full h-auto rounded-lg object-contain"
-                  />
-                  <VisuallyHidden>
-                    <DialogTitle>{image.alt}</DialogTitle>
-                  </VisuallyHidden>
+              <DialogContent className="border-none max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] xl:max-w-[60vw] p-2">
+                 <div className="max-h-[85vh] overflow-y-auto">
+                   <Image
+                     src={image.url}
+                     alt={image.alt}
+                     width={1920}
+                     height={1080}
+                     className="w-full h-auto rounded-lg object-contain"
+                   />
+                   <VisuallyHidden>
+                     <DialogTitle>{image.alt}</DialogTitle>
+                   </VisuallyHidden>
+                 </div>
               </DialogContent>
             </Dialog>
           ))}
@@ -67,17 +69,19 @@ export function ImageBlock({ url, alt, images, aspectRatio, caption }: ImageBloc
             />
           </div>
         </DialogTrigger>
-        <DialogContent className="p-0 border-none max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] xl:max-w-[60vw]">
-          <Image
-            src={url}
-            alt={alt || ''}
-            width={1920}
-            height={1080}
-            className="w-full h-auto rounded-lg object-contain"
-          />
-          <VisuallyHidden>
-            <DialogTitle>{alt || 'Project image'}</DialogTitle>
-          </VisuallyHidden>
+        <DialogContent className="border-none max-w-[90vw] md:max-w-[80vw] lg:max-w-[70vw] xl:max-w-[60vw]">
+          <div className="max-h-[85vh] py-12 px-4 overflow-y-auto">
+            <Image
+              src={url}
+              alt={alt || 'Project image'}
+              width={1920}
+              height={1080}
+              className="w-full h-auto rounded-lg object-contain"
+            />
+            <VisuallyHidden>
+              <DialogTitle>{alt || 'Project image'}</DialogTitle>
+            </VisuallyHidden>
+          </div>
         </DialogContent>
       </Dialog>
       {caption && (
