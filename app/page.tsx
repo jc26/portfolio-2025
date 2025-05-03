@@ -24,13 +24,21 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const projects = await getProjects()
+  const allProjects = await getProjects()
+
+  // Sort projects: exclusive first, then by original order (assuming getProjects preserves it or sorts by ID)
+  const sortedProjects = [...allProjects].sort((a, b) => {
+    if (a.exclusive && !b.exclusive) return -1; // a comes first
+    if (!a.exclusive && b.exclusive) return 1;  // b comes first
+    return 0; // Keep original relative order if both are same exclusivity
+    // Or sort by ID if needed: return a.id - b.id;
+  });
   
   return (
     <div className="content-container">
       <Intro />
       <WorkExperience experiences={work} />
-      <ProjectList projects={projects} />
+      <ProjectList projects={sortedProjects} />
     </div>
   )
 }

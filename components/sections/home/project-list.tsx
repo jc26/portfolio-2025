@@ -1,5 +1,6 @@
 import type { Project } from '@/types/project'
 import { WorkList } from '@/components/ui/work-list'
+import { Badge } from '@/components/ui/badge'
 
 interface ProjectListProps {
   projects: Project[]
@@ -19,10 +20,13 @@ export function ProjectList({ projects }: ProjectListProps) {
                 {project.title}
                 <span className="hidden md:inline font-normal text-muted-foreground"> • {project.client}</span>
               </h3>
-              <p className="text-base text-muted-foreground">
+              <div className="text-base text-muted-foreground flex items-center gap-2">
                 <span className="md:hidden">{project.client} • </span>
-                {project.year}
-              </p>
+                {project.exclusive && (
+                  <Badge variant="secondary">🔍<span className="ml-1.5">Exclusive</span></Badge>
+                )}
+                <span>{project.year}</span>
+              </div>
             </div>
           )
         }))}

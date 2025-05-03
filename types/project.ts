@@ -94,8 +94,9 @@ export type Project = {
   heading: string
   client: string
   year: string
-  description: string | string[]
   isVisible?: boolean
+  exclusive?: boolean
+  description: string | string[]
   action?: ButtonBlockContent
   award?: AwardContent
   nominations?: AwardContent | AwardContent[]
