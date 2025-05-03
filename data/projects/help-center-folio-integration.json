@@ -1,0 +1,119 @@
+{
+  "id": 13, 
+  "slug": "help-center-folio-integration",
+  "title": "Help Center & Folio Integration",
+  "heading": "Integrating Community Discussions into the Procreate Help Center",
+  "client": "Procreate",
+  "year": "2024",
+  "exclusive": true,
+  "description": [
+    "Led the design initiative to migrate Procreate's community discussions from the legacy Folio platform to a redesigned Help Center, addressing technical debt, brand inconsistency, and user experience challenges."
+  ],
+  "metadata": {
+    "openGraph": {
+      "image": "https://res.cloudinary.com/duuq9bfel/image/upload/v1733051302/default_en_h0oczm.jpg" 
+    }
+  },
+  "content": [
+    {
+      "id": "hero",
+      "type": "image",
+      "width": "wide",
+      "content": {
+        "url": "",
+        "alt": "Placeholder showing integrated Help Center and Discussions interface"
+      }
+    },
+    {
+      "id": "context",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "The Challenge: Sunsetting a Fossil, Revitalizing Discussions",
+        "text": [
+          "Procreate's community platform, Folio, was a relic from the company's early days, burdened with technical and brand debt. Analysis showed **99% of users visited only for Discussions** (feature requests, Q&A, resource sharing), while the image-sharing component had minimal ROI and high upkeep costs, mostly for moderation.",
+          "The site's usability had grown stale, not reflecting Procreate's quality standards. It had become a place where we'd sometimes scroll `/recent` just to share funny spam posts – it was hurting the brand. For a company valuing 'Care', Folio didn't show we genuinely invested in addressing user issues.",
+          "Simultaneously, our main support platform, Help Center, was read-only. Our CEO James Cuda decided that the only way forward that made sense was to **sunset Folio and migrate Discussions** to a redesigned Help Center, improving the overall help experience and reducing debt."
+        ]
+      }
+    },
+    {
+      "id": "actions-intro",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Approach: Research, Principles, and Design",
+        "text": [
+          "This migration required balancing user needs, technical constraints, brand alignment, and strategic goals. I approached it through research, defining core principles, and tackling the UX challenges head-on."
+        ]
+      }
+    },
+    {
+      "id": "research",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "subtitle": "Research & Defining Principles",
+        "title": "My Hypotheses",
+        "text": [
+          "I researched numerous discussion platforms and audited Folio. Key findings and guiding principles emerged:",
+          "**Context is critical for contribution:** Unlike Instagram comments, discussion board replies often address the whole thread. **Chronological order is crucial**, even for threads with 1000+ comments.",
+          "**Prevent duplicates proactively:** Duplicate posts should ideally be avoided *before* creation, not just merged after the fact.",
+          "**Simplify navigation:** Our existing tags, categories, and sub-pages were confusing. It wasn't clear where users should post their specific question or suggestion.",
+          "**Resolve the identity crisis:** Folio was caught between being a place for self-expression and product support. We needed to **pick one focus (product discussions)**, which meant streamlining features like removing profile cover images, guided by the question: 'Do we *really* need it?'"
+        ]
+      }
+    },
+    {
+      "id": "redesign",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Creative Solutions",
+        "text": [
+          "**A cohesive, natural user flow:** There was almost no uniting user flow in the old Folio. I believed if I solved that issue, the visual solutions would naturally follow. By cutting down so much of what we had, my vision was that users would naturally flow from Questions to Resources to Suggestions, a flow that could mirror their experience in-app.",
+          "**Suggestions & Roadmap:** This needed careful handling due to past unmet expectations. Users were furiously knocking on our doors. I designed the new Suggestions board to look like discussion threads but **removed misleading tags** like 'Planned' or 'Not Planned'. The goal was honest acknowledgment without over-promising, managing the delicate balance between product promises and user expectations.",
+          "**Post Creation Flow:** To tackle duplicates, the new flow integrated search upfront, functioning like a non-intrusive guide towards existing relevant discussions.",
+          "**Thread Digestion:** Explored ways to make digesting threads with 1000+ comments feasible (specific UI solutions omitted)."
+        ]
+      }
+    },
+    {
+      "id": "design-system",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "A new design system from the ground up",
+        "text": [
+          "I built a **new design system** from scratch, ensuring consistency with the Help Center aesthetic and considering its impact with every UX decision. I successfully pestered my manager and team to migrate to **Tailwind CSS** for long-term speed and maintainability.",
+          "I worked closely with developers to ensure Figma components mirrored code, establishing **code as the source of truth**. No matter how much I polished it, my Figma design system became merely a blurry reflection of the coded reality."
+        ]
+      }
+    },
+    {
+      "id": "stakeholders",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Looping in Stakeholders",
+        "text": [
+          "Working with stakeholders was key to success. Our **CTO** was particularly excited about the roadmap designs, believing they struck the right balance between transparency and maintaining control over our product direction.",
+          "**Customer Care** would be the other half of users on the platform, so I designed inline moderation tools where possible, reserving batch actions for a separate admin dashboard to fit their workflow."
+        ]
+      }
+    },
+    {
+      "id": "results",
+      "type": "text",
+      "width": "contained",
+      "content": {
+        "title": "Outcome & Current Status",
+        "text": [
+          "I completed the comprehensive design phase for the integrated Help Center/Discussions platform, including UX flows, UI components, the design system foundation, and specifications for the new database schema.",
+          "Before my departure from Procreate, the front-end development had commenced based on my designs, and the new database schema was being implemented.",
+          "While I wasn't able to see the project through to final launch and gather user feedback, the groundwork was laid for a significantly improved community interaction platform. The full migration is tentatively planned for later in 2024, likely coinciding with future major product releases like Procreate 5.4 and Procreate Dreams 2.0."
+        ]
+      }
+    }
+  ]
+} 
