@@ -33,10 +33,10 @@
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "The Opportunity: Making Discover the Destination",
+        "title": "Increasing Discover GMV",
         "text": [
           "Gumroad's Discover section accounted for roughly 10% of total GMV. Most users found products via external links rather than browsing Gumroad directly. The business goal, discussed in a board meeting I attended, was clear: **make Discover so compelling it becomes the default Gumroad homepage**, aiming for a 20% GMV share.",
-          "What began as a design challenge evolved into my primary responsibility over six months: redesign Gumroad Discover and oversee its implementation to boost direct discovery and sales."
+          "What began as a design challenge evolved into my primary responsibility over six months: **redesign Gumroad Discover and oversee its implementation to boost direct discovery and sales.**"
         ]
       }
     },
@@ -47,8 +47,9 @@
       "content": {
         "title": "Research & Inspiration",
         "text": [
-          "Before diving into the redesign, I studied platforms that successfully manage large volumes of user-generated content, including Kickstarter, Etsy, Patreon, Steam, Pinterest, and Amazon, looking beyond direct competitors for interesting discovery patterns. The key challenge these platforms face is helping users wade through irrelevant content to find exactly what they're looking for.",
-          "I was particularly inspired by Steam's featured and recommended carousel - I found myself regularly returning just to check what's new. I also loved Vimeo's approach with staff picks, which signals higher quality content worth considering in a sea of options. These curation strategies help build trust and keep users coming back to discover new content."
+          "Before diving into the redesign, I studied platforms that successfully manage large volumes of user-generated content, including Kickstarter, Etsy, Patreon, Steam, Pinterest, and Amazon, looking beyond direct competitors for interesting design patterns.",
+          "I was particularly inspired by **Steam's featured and recommended carousel** - I found myself regularly returning just to check what's new. I also loved **Vimeo's approach with staff picks**, which signals higher quality content worth considering in a sea of options. These curation strategies help build trust and keep users coming back to discover new content.",
+          "The main challenge all these platforms face is **helping users wade through irrelevant content to find exactly what they're looking for in as short a time as possible**. This was my goal too."
         ]
       }
     },
@@ -57,11 +58,11 @@
       "type": "text",
       "width": "contained",
       "content": {
-        "title": "Adding Buyer Onboarding",
+        "title": "Curating Discover",
         "text": [
-          "The first thing I did was add a new-buyer onboarding process. I designed a new multi-step form to quickly onboard new buyers by asking them what their interests are and what tools they use. This will yield a much more curated Discover page rather than the current page which tries to cater to buyers of all categories.",
-          "I am aware that Gumroad currently pulls from the customer's library to recommend 5 similar products on the Discover page, but personally, even as an avid buyer of Gumroad products, I have certain areas of interest that aren't represented in my library that I haven't even considered using Gumroad for. These questions would be able to capture those areas.",
-          "Below are the snapshots of this onboarding process. It wouldn't be hard for these questions to allow for a wide range of user input and make sure that the Discover experience is tailored to the needs of each person."
+          "In order to make Discover unique to each user, even a new one, I designed a new multi-step form to quickly onboard new buyers by asking them what their interests are and what tools they use. Rather than the current page which tries to cater to buyers of all categories, this could help with a much more personalized Discover experience.",
+          "As long-time Gumroad customer, I know I have certain areas of interest that aren't represented in my library that I haven't even considered using Gumroad for. These questions would be able to capture those areas.",
+          "With AI, it wouldn't be hard for these questions to allow for a wide range of user input and make sure that the Discover experience is tailored to the needs of each person."
         ]
       }
     },
@@ -109,8 +110,8 @@
       "content": {
         "title": "Navigation",
         "text": [
-          "The new header still makes Search very prominent. Retaining Search as the primary means of navigation will continue to instill confidence that Gumroad offers a vast variety of products.",
-          "However, currently, the alphabetical order of the categories in the header isn't very relevant to the user. It would be much more effective if these categories were tailored to the user based on their responses to the previous questions, in addition to their current library. Other categories can be hidden under \"More.\"",
+          "My new header navigation still makes Search very prominent. Retaining Search as the primary means of navigation will continue to instill confidence that Gumroad offers a vast variety of products.",
+          "However, currently, the alphabetical order of the categories in the header isn't very relevant to the user. It would be more effective if these categories were tailored to the user based on their responses to the previous questions, in addition to their current library. Other categories can be hidden under \"More.\"",
           "For convenience, I've also added a shopping cart and a profile icon to the header navigation.",
           "Lastly, I've added a new \"Start Selling\" CTA in the top right corner. Since [Gumroad.com/about](http://Gumroad.com/about) is really targeted at potential creators, we should still make sure there's easy visibility for those who are thinking of selling their own products. The CTA implies a low barrier of entry."
         ]
@@ -195,21 +196,6 @@
       }
     },
     {
-       "id": "constraints-and-tradeoffs",
-       "type": "text",
-       "width": "contained",
-       "content": {
-         "title": "Constraints & Tradeoffs",
-         "text": [
-           "While the initial redesign concepts came together relatively quickly, **finding compromises with constraints occupied 90% of the effort.** Technical feasibility was paramount; ideas needing complex backend changes without clear ROI were often deprioritized, optimizing for **value delivered relative to engineering time spent.**",
-           "**Deprioritizing 'Followed Creators' Feed:** Displaying products only from followed creators required significant backend work deemed too costly for the projected benefit at the time.",
-           "**Design System Constraints:** Updates to shared components required strong justification beyond aesthetics due to implementation costs and potential ripple effects. Maintaining a lean system sometimes meant foregoing 'ideal' design solutions.",
-           "**No Category Feature Posts:** Technical limitations prevented easily linking specific posts (installments) to category pages.",
-           "**Hard to maintain weekly Staff Picks:** The ongoing effort required for weekly staff picks was judged not worth the potential minimal impact on GMV (this informed the decision to not pursue the Staff Picks design element described earlier)."
-         ]
-       }
-    },
-    {
       "id": "collaboration",
       "type": "text",
       "width": "contained",
@@ -217,10 +203,25 @@
         "title": "Collaboration",
         "text": [
           "**Defining 'Trending':** Determining how to rank products (GMV vs. Units Sold vs. Paid Sales) was complex. Sorting by GMV favored high-priced items, potentially obscuring popular lower-priced or free products important for acquisition. We debated balancing revenue impact with broader user interest.",
-          "**Using Dev Mode:** Working effectively with engineers in an async, hourly context was crucial. Documenting, being specific, and sometimes overexplaining saved more time than it cost. Utilizing Figma's Dev Mode helped streamline handoffs immensely.",
-          "**Understand, then seek to be understood:** I also focused on up-skilling technically – learning to **write my own SQL queries** to analyze data directly saved significant back-and-forth and allowed engineers to focus on higher-value tasks. Speaking the same language as the database improved communication drastically."
+          "**Understand, then seek to be understood:** I also focused on up-skilling technically – learning to **write my own SQL queries** to analyze data directly saved significant back-and-forth and allowed engineers to focus on higher-value tasks. Speaking the same language as the database improved communication drastically.",
+          "**Using Dev Mode:** Working effectively with engineers in an async, hourly context was crucial. Documenting, being specific, and sometimes overexplaining saved more time than it cost. Utilizing Figma's Dev Mode helped streamline handoffs immensely."
         ]
       }
+    },
+    {
+       "id": "constraints-and-tradeoffs",
+       "type": "text",
+       "width": "contained",
+       "content": {
+         "title": "Constraints & Tradeoffs",
+         "text": [
+           "While the initial redesign concepts came together relatively quickly, **finding compromises when met with constraints occupied about 90% of the time and effort.** Ideas needing complex backend changes without clear ROI were often deprioritized, optimizing for **value delivered relative to engineering time spent.**",
+           "**Deprioritizing 'Followed' Feed:** Displaying products only from followed creators required significant backend work deemed too costly for the projected benefit at the time.",
+           "**Design System Constraints:** Updates to shared components required strong justification beyond aesthetics due to implementation costs and potential ripple effects. Maintaining a lean system sometimes meant foregoing 'ideal' design solutions.",
+           "**No Category Feature Posts:** Technical limitations prevented easily linking specific posts (called the 'installments' table in the database) to categories and in turn, recommendations.",
+           "**Hard to maintain weekly Staff Picks:** The ongoing effort required for weekly staff picks was judged not worth the potential minimal impact on GMV."
+         ]
+       }
     },
     {
       "id": "results-learnings",
@@ -232,20 +233,9 @@
           "Despite shipping a redesigned signed-in Discover experience, there was **no noticeable increase in Discover's share of GMV**, which remained around 10%. This indicated that users primarily purchase via direct links from creators, not through browsing the marketplace.",
           "**Design with Realistic Data:** My initial designs didn't account for the often eclectic mix of real products (e.g., numerous 3D creature avatars dominated visuals, making the platform feel niche or strange).",
           "**Discovery > Onboarding:** Perhaps forcing onboarding isn't the answer; letting users discover organically might be more effective.",
-          "**Avoid Designing for Self:** I realized some early decisions were based on my own preferences rather than broader user or creator needs.",
+          "**Designing for myself:** I realized some early decisions were based on my own preferences rather than broader user or creator needs.",
           "**Prioritize Creators:** The primary focus should be on empowering sellers, as they drive the platform's core value.",
           "**Engineering Collaboration is Key:** Reducing back-and-forth by meeting engineers where they are (e.g., understanding the database structure, using shared tools effectively) saves valuable time."
-        ]
-      }
-    },
-    {
-      "id": "conclusion",
-      "type": "text",
-      "width": "contained",
-      "content": {
-        "title": "Conclusion",
-        "text": [
-          "In summary, my main goal in this re-design is making Gumroad a personalized tool for buyers rather than an \"everything store\" where they need to filter through the chaos."
         ]
       }
     }
