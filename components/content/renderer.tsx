@@ -33,7 +33,9 @@ function isYouTubeContent(content: unknown): content is YouTubeBlockContent {
   return typeof content === 'object' && content !== null && 'videoId' in content
 }
 
-export function ContentRenderer({ block }: { block: ContentBlock }) {
+export function ContentRenderer({ block }: { block: ContentBlock & { isVisible?: boolean } }) {
+  if (block.isVisible === false) return null
+
   const width = block.width || 'contained'
   
   const widthClass = width === 'contained' 
